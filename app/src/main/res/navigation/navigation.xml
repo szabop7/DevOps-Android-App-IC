@@ -3,21 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/galleryFragment">
+    app:startDestination="@id/GalleryFragment">
 
     <fragment
         android:id="@+id/GalleryFragment"
         android:name="com.example.devops.GalleryFragment"
-        android:label="fragment_gallery"
+        android:label="Gallery"
         tools:layout="@layout/fragment_gallery" />
     <fragment
         android:id="@+id/MarketPlaceFragment"
         android:name="com.example.devops.MarketPlaceFragment"
-        android:label="fragment_market_place"
+        android:label="Market Place"
         tools:layout="@layout/fragment_market_place" />
     <fragment
         android:id="@+id/YoungArtFragment"
         android:name="com.example.devops.YoungArtFragment"
-        android:label="fragment_young_art"
+        android:label="YoungArt"
         tools:layout="@layout/fragment_young_art" />
 </navigation>
