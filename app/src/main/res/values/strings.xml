@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">DevOps</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="market_place_text">Market Place</string>
+    <string name="gallery_text">Gallery</string>
+    <string name="young_art_text">Young art</string>
+    <string name="content_desciption_frame">frame</string>
+</resources>
