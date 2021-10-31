@@ -1,13 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
 
+    <item android:title="Market Place">
+        <menu>
+            <item
+                android:icon="@drawable/outline_whatshot_black_24dp"
+                android:title="Trends" />
+            <item
+                android:icon="@drawable/outline_trending_up_black_24dp"
+                android:title="Bestselling Artist" />
+            <item
+                android:icon="@drawable/outline_new_releases_black_24dp"
+                android:title="Newest" />
+            <item
+                android:icon="@drawable/outline_star_black_24dp"
+                android:title="Sponsored" />
+        </menu>
+    </item>
+    <item android:title="Auctions"
+        android:icon="@drawable/outline_store_black_24dp">
+        <menu>
+            <item
+                android:icon="@drawable/outline_event_available_black_24dp"
+                android:title="Open" />
+            <item
+                android:icon="@drawable/outline_groups_black_24dp"
+                android:title="Popular" />
+        </menu>
+    </item>
+    <group>
+        <item
+            android:title="Young Art"
+            android:icon="@drawable/outline_palette_black_24dp"/>
+        <item
+            android:title="Upload"
+            android:icon="@drawable/outline_upgrade_black_24dp"/>
+    </group>
     <item
-        android:id="@+id/MarketPlaceFragment"
-        android:title="@string/market_place_text" />
-    <item
-        android:id="@+id/GalleryFragment"
-        android:title="@string/gallery_text" />
-    <item
-        android:id="@+id/YoungArtFragment"
-        android:title="@string/young_art_text" />
+        android:title="Logout"
+        android:icon="@drawable/outline_upgrade_black_24dp"/>
+
 </menu>
