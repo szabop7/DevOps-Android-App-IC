@@ -6,4 +6,9 @@
     <string name="gallery_text">Gallery</string>
     <string name="young_art_text">Young art</string>
     <string name="content_desciption_frame">frame</string>
+
+    <string name="com_auth0_client_id">fFPxEdQJbyPirdQcuzrSNuYiz7tp8nLL</string>
+    <string name="com_auth0_domain">dev-g6aj--a8.us.auth0.com</string>
+    <string name="login">Log in</string>
+    <string name="logout">Log out</string>
 </resources>

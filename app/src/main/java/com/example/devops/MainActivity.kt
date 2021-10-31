@@ -9,8 +9,14 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import com.example.devops.databinding.ActivityMainBinding
+import com.auth0.android.Auth0
+import com.auth0.android.authentication.AuthenticationException
+import com.auth0.android.provider.WebAuthProvider
+import com.auth0.android.result.Credentials
+import com.auth0.android.callback.Callback
 
 class MainActivity : AppCompatActivity() {
+
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
@@ -27,10 +33,16 @@ class MainActivity : AppCompatActivity() {
         NavigationUI.setupWithNavController(binding.navView,navController)
 
 
+
+
+
         account = Auth0(
             "fFPxEdQJbyPirdQcuzrSNuYiz7tp8nLL",
             "dev-g6aj--a8.us.auth0.com"
         )
+
+
+
 
     }
 
