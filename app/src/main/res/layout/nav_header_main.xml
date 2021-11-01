@@ -29,14 +29,14 @@
             android:layout_height="match_parent" >
 
             <TextView
-                android:id="@+id/textView9"
+                android:id="@+id/greetings_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="10"
                 android:fontFamily="sans-serif-black"
                 android:text="@string/presentation_text"
-                android:textSize="20sp" />
+                android:textSize="16sp" />
         </TableRow>
 
         <TableRow
