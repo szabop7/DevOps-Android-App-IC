@@ -1,6 +1,12 @@
 package com.example.devops
 
+import android.content.ClipData
 import android.os.Bundle
+import android.util.Log
+import android.view.MenuItem
+import android.view.View
+import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.drawerlayout.widget.DrawerLayout
@@ -10,10 +16,12 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import com.example.devops.databinding.ActivityMainBinding
 import com.auth0.android.Auth0
+import com.auth0.android.authentication.AuthenticationAPIClient
 import com.auth0.android.authentication.AuthenticationException
 import com.auth0.android.provider.WebAuthProvider
 import com.auth0.android.result.Credentials
 import com.auth0.android.callback.Callback
+import com.auth0.android.result.UserProfile
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,20 +40,16 @@ class MainActivity : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(navController.graph, binding.drawerLayout)
         NavigationUI.setupWithNavController(binding.navView,navController)
 
+        binding.navView.getHeaderView(0).findViewById<Button>(R.id.ButtonLogIn).setOnClickListener(){ loginWithBrowser()}
 
-
-
+        binding.navView.menu.findItem(R.id.ButtonLogOut).setOnMenuItemClickListener{ logout();
+             true}
 
         account = Auth0(
             "fFPxEdQJbyPirdQcuzrSNuYiz7tp8nLL",
             "dev-g6aj--a8.us.auth0.com"
         )
-
-
-
-
     }
-
 
 
     override fun onSupportNavigateUp(): Boolean {
@@ -71,6 +75,38 @@ class MainActivity : AppCompatActivity() {
                     // Get the access token from the credentials object.
                     // This can be used to call APIs
                     val accessToken = credentials.accessToken
+                }
+            })
+    }
+
+    private fun logout() {
+        WebAuthProvider.logout(account)
+            .withScheme("demo")
+            .start(this, object: Callback<Void?, AuthenticationException> {
+                override fun onSuccess(payload: Void?) {
+                    // The user has been logged out!
+                }
+
+                override fun onFailure(error: AuthenticationException) {
+                    // Something went wrong!
+                }
+            })
+    }
+
+    private fun showUserProfile(accessToken: String) {
+        var client = AuthenticationAPIClient(account)
+
+        // With the access token, call `userInfo` and get the profile from Auth0.
+        client.userInfo(accessToken)
+            .start(object : Callback<UserProfile, AuthenticationException> {
+                override fun onFailure(exception: AuthenticationException) {
+                    // Something went wrong!
+                }
+
+                override fun onSuccess(profile: UserProfile) {
+                    // We have the user's profile!
+                    val email = profile.email
+                    val name = profile.name
                 }
             })
     }
