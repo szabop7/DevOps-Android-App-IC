@@ -5,7 +5,6 @@ import android.app.SearchManager
 import android.content.Intent
 
 import android.content.ClipData
->>>>>>> refs/remotes/origin/dev
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
@@ -55,7 +54,6 @@ class MainActivity : AppCompatActivity() {
         binding.navView.menu.findItem(R.id.ButtonLogOut).setOnMenuItemClickListener{ logout();
              true}
 
->>>>>>> refs/remotes/origin/dev
         account = Auth0(
             "fFPxEdQJbyPirdQcuzrSNuYiz7tp8nLL",
             "dev-g6aj--a8.us.auth0.com"
@@ -72,8 +70,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun doMySearch(query: String) {
 
-=======
->>>>>>> refs/remotes/origin/dev
+
     }
 
 
