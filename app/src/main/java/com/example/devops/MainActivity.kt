@@ -29,6 +29,9 @@ import com.auth0.android.callback.Callback
 import com.auth0.android.management.ManagementException
 import com.auth0.android.management.UsersAPIClient
 import com.auth0.android.result.UserProfile
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
@@ -184,5 +187,9 @@ class MainActivity : AppCompatActivity() {
                     val country = profile.getUserMetadata()["country"] as String?
                 }
             })
+    }
+
+    fun trendsOnClick(item: android.view.MenuItem) {
+        
     }
 }

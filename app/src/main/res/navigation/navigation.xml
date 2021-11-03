@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/GalleryFragment">
+    app:startDestination="@id/homeScreen">
 
     <fragment
         android:id="@+id/GalleryFragment"
@@ -20,4 +20,8 @@
         android:name="com.example.devops.YoungArtFragment"
         android:label="YoungArt"
         tools:layout="@layout/fragment_young_art" />
+    <fragment
+        android:id="@+id/homeScreen"
+        android:name="com.example.devops.HomeScreen"
+        android:label="HomeScreen" />
 </navigation>
