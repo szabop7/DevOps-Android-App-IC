@@ -19,12 +19,40 @@
         android:background="@color/cylan"
         android:src="@mipmap/ic_launcher_round" />
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Hello, Alexander"
-        android:textSize="24sp" />
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/greetings_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="10"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/presentation_text"
+                android:textSize="16sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/ButtonLogIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:background="@android:color/transparent"
+                android:text="@string/log_in_sign_in"
+                android:textColor="@color/teal_700" />
+        </TableRow>
+
+    </TableLayout>
+
 </LinearLayout>

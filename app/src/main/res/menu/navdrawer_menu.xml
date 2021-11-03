@@ -41,7 +41,13 @@
             android:icon="@drawable/outline_upgrade_black_24dp"/>
     </group>
     <item
+
         android:title="Logout"
         android:icon="@drawable/outline_logout_black_24dp"/>
 
+
+        android:id="@+id/ButtonLogOut"
+        android:icon="@drawable/log_out"
+        android:title="@string/logout" />
+>>>>>>> refs/remotes/origin/dev
 </menu>

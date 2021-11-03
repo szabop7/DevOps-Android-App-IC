@@ -11,4 +11,7 @@
     <string name="com_auth0_domain">dev-g6aj--a8.us.auth0.com</string>
     <string name="login">Log in</string>
     <string name="logout">Log out</string>
+    <string name="presentation_text">Hello, Alexander</string>
+    <string name="log_in_sign_in">Log in / Sign in</string>
+    <string name="hello_text">Hello!</string>
 </resources>
