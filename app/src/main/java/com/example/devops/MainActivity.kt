@@ -1,5 +1,7 @@
 package com.example.devops
 
+import android.app.SearchManager
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -32,20 +34,22 @@ class MainActivity : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(navController.graph, binding.drawerLayout)
         NavigationUI.setupWithNavController(binding.navView,navController)
 
-
-
-
-
         account = Auth0(
             "fFPxEdQJbyPirdQcuzrSNuYiz7tp8nLL",
             "dev-g6aj--a8.us.auth0.com"
         )
 
-
-
+        if (Intent.ACTION_SEARCH == intent.action) {
+            intent.getStringExtra(SearchManager.QUERY)?.also { query ->
+                doMySearch(query)
+            }
+        }
 
     }
 
+    private fun doMySearch(query: String) {
+
+    }
 
 
     override fun onSupportNavigateUp(): Boolean {

@@ -11,9 +11,9 @@
             <item
                 android:icon="@drawable/outline_trending_up_black_24dp"
                 android:title="Bestselling Artist" />
-            <item
+            <!-- <item
                 android:icon="@drawable/outline_new_releases_black_24dp"
-                android:title="Newest" />
+                android:title="Newest" />-->
             <item
                 android:icon="@drawable/outline_star_black_24dp"
                 android:title="Sponsored" />
@@ -30,7 +30,9 @@
                 android:title="Popular" />
         </menu>
     </item>
-    <group>
+    <group
+        android:id="@+id/mid"
+        android:checkableBehavior="single">">
         <item
             android:title="Young Art"
             android:icon="@drawable/outline_palette_black_24dp"/>
@@ -40,6 +42,6 @@
     </group>
     <item
         android:title="Logout"
-        android:icon="@drawable/outline_upgrade_black_24dp"/>
+        android:icon="@drawable/outline_logout_black_24dp"/>
 
 </menu>

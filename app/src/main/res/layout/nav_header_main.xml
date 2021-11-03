@@ -7,7 +7,7 @@
     android:background="@color/cylan"
     android:gravity="top"
     android:orientation="horizontal"
-    android:paddingTop="120dp">
+    android:paddingTop="127dp">
 
 
     <ImageView
