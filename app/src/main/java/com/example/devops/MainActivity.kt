@@ -190,6 +190,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun trendsOnClick(item: android.view.MenuItem) {
-        
+
     }
 }

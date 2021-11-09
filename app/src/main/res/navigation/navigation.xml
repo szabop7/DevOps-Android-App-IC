@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
     app:startDestination="@id/homeScreen">
-
     <fragment
         android:id="@+id/GalleryFragment"
         android:name="com.example.devops.GalleryFragment"
@@ -23,5 +22,12 @@
     <fragment
         android:id="@+id/homeScreen"
         android:name="com.example.devops.HomeScreen"
-        android:label="HomeScreen" />
+        android:label="HomeScreen">
+        <action
+              android:id="@+id/action_homeScreen_to_YoungArtFragment"
+                app:destination="@id/YoungArtFragment" />
+           <action
+               android:id="@+id/action_homeScreen_to_MarketPlaceFragment"
+               app:destination="@id/MarketPlaceFragment" />
+    </fragment>
 </navigation>

@@ -6,8 +6,8 @@
     <item android:title="Market Place">
         <menu>
             <item
+                android:id="@+id/MarketPlaceFragment"
                 android:icon="@drawable/outline_whatshot_black_24dp"
-                android:onClick="trendsOnClick"
                 android:title="Trends" />
             <item
                 android:icon="@drawable/outline_trending_up_black_24dp"
@@ -35,6 +35,7 @@
         android:id="@+id/mid"
         android:checkableBehavior="single">">
         <item
+            android:id="@+id/YoungArtFragment"
             android:title="Young Art"
             android:icon="@drawable/outline_palette_black_24dp"/>
         <item
