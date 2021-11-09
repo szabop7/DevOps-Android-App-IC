@@ -3,43 +3,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <item android:title="Market Place">
+    <item android:title="@string/market_place_text">
         <menu>
             <item
                 android:id="@+id/MarketPlaceFragment"
                 android:icon="@drawable/outline_whatshot_black_24dp"
-                android:title="Trends" />
+                android:title="@string/trends_text" />
             <item
                 android:icon="@drawable/outline_trending_up_black_24dp"
-                android:title="Bestselling Artist" />
+                android:title="@string/bestselling_artist_text" />
             <!-- <item
                 android:icon="@drawable/outline_new_releases_black_24dp"
                 android:title="Newest" />-->
             <item
                 android:icon="@drawable/outline_star_black_24dp"
-                android:title="Sponsored" />
+                android:title="@string/sponsored_text" />
+            <item
+                android:id="@+id/shoppingCartFragment"
+                android:icon="@drawable/shopping_cart"
+                android:title="@string/shopping_cart_text" />
         </menu>
     </item>
-    <item android:title="Auctions"
+    <item android:title="@string/auctions_text"
         android:icon="@drawable/outline_store_black_24dp">
         <menu>
             <item
                 android:icon="@drawable/outline_event_available_black_24dp"
-                android:title="Open" />
+                android:title="@string/open_text" />
             <item
                 android:icon="@drawable/outline_groups_black_24dp"
-                android:title="Popular" />
+                android:title="@string/popular_text" />
         </menu>
     </item>
     <group
         android:id="@+id/mid"
-        android:checkableBehavior="single">">
+        android:checkableBehavior="single">
         <item
             android:id="@+id/YoungArtFragment"
-            android:title="Young Art"
-            android:icon="@drawable/outline_palette_black_24dp"/>
+            android:icon="@drawable/outline_palette_black_24dp"
+            android:title="@string/young_art_text" />
         <item
-            android:title="Upload"
+            android:title="@string/upload_text"
             android:icon="@drawable/outline_upgrade_black_24dp"/>
     </group>
     <item

@@ -5,23 +5,22 @@
     android:id="@+id/navigation"
     app:startDestination="@id/homeScreen">
     <fragment
-        android:id="@+id/GalleryFragment"
-        android:name="com.example.devops.GalleryFragment"
-        android:label="Gallery"
-        tools:layout="@layout/fragment_gallery" />
-    <fragment
         android:id="@+id/MarketPlaceFragment"
-        android:name="com.example.devops.MarketPlaceFragment"
+        android:name="com.example.devops.fragments.MarketPlaceFragment"
         android:label="Market Place"
-        tools:layout="@layout/fragment_market_place" />
+        tools:layout="@layout/fragment_market_place" >
+        <action
+            android:id="@+id/action_MarketPlaceFragment_to_detailViewFragment"
+            app:destination="@id/detailViewFragment" />
+    </fragment>
     <fragment
         android:id="@+id/YoungArtFragment"
-        android:name="com.example.devops.YoungArtFragment"
+        android:name="com.example.devops.fragments.YoungArtFragment"
         android:label="YoungArt"
         tools:layout="@layout/fragment_young_art" />
     <fragment
         android:id="@+id/homeScreen"
-        android:name="com.example.devops.HomeScreen"
+        android:name="com.example.devops.fragments.HomeScreen"
         android:label="HomeScreen">
         <action
               android:id="@+id/action_homeScreen_to_YoungArtFragment"
@@ -29,5 +28,18 @@
            <action
                android:id="@+id/action_homeScreen_to_MarketPlaceFragment"
                app:destination="@id/MarketPlaceFragment" />
+        <action
+            android:id="@+id/action_homeScreen_to_shoppingCartFragment"
+            app:destination="@id/shoppingCartFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/detailViewFragment"
+        android:name="com.example.devops.fragments.DetailViewFragment"
+        android:label="fragment_detail_view"
+        tools:layout="@layout/fragment_detail_view" />
+    <fragment
+        android:id="@+id/shoppingCartFragment"
+        android:name="com.example.devops.fragments.ShoppingCartFragment"
+        android:label="fragment_shopping_cart"
+        tools:layout="@layout/fragment_shopping_cart" />
 </navigation>
