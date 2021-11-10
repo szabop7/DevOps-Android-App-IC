@@ -32,34 +32,37 @@
                     android:src="@drawable/foto3" />
 
                 <LinearLayout
-                    android:layout_width="138dp"
+                    android:layout_width="78dp"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/textView1"
+                        style="@style/Normal_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Title" />
+                        android:text="@string/title_text" />
 
                     <TextView
                         android:id="@+id/textView6"
+                        style="@style/Normal_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Artist" />
+                        android:text="@string/artist_name_text" />
 
                     <TextView
                         android:id="@+id/textView7"
+                        style="@style/Normal_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Price" />
+                        android:text="@string/price_text" />
 
                 </LinearLayout>
 
                 <ImageButton
                     android:id="@+id/imageButton4"
-                    android:layout_width="33dp"
-                    android:layout_height="33dp"
+                    android:layout_width="42dp"
+                    android:layout_height="41dp"
                     android:layout_gravity="bottom|right"
                     android:background="@android:color/transparent"
                     android:padding="1dp"
@@ -86,21 +89,24 @@
 
                     <TextView
                         android:id="@+id/textView9"
+                        style="@style/Normal_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Title" />
+                        android:text="@string/title_text" />
 
                     <TextView
                         android:id="@+id/textView10"
+                        style="@style/Normal_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Artist" />
+                        android:text="@string/artist_name_text" />
 
                     <TextView
                         android:id="@+id/textView11"
+                        style="@style/Normal_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Price" />
+                        android:text="@string/price_text" />
 
                 </LinearLayout>
 
@@ -134,21 +140,24 @@
 
                     <TextView
                         android:id="@+id/textView14"
+                        style="@style/Normal_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Title" />
+                        android:text="@string/title_text" />
 
                     <TextView
                         android:id="@+id/textView15"
+                        style="@style/Normal_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Artist" />
+                        android:text="@string/artist_name_text" />
 
                     <TextView
                         android:id="@+id/textView16"
+                        style="@style/Normal_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Price" />
+                        android:text="@string/price_text" />
 
                 </LinearLayout>
 
@@ -182,21 +191,24 @@
 
                     <TextView
                         android:id="@+id/textView19"
+                        style="@style/Normal_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Title" />
+                        android:text="@string/title_text" />
 
                     <TextView
                         android:id="@+id/textView21"
+                        style="@style/Normal_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Artist" />
+                        android:text="@string/artist_name_text" />
 
                     <TextView
                         android:id="@+id/textView22"
+                        style="@style/Normal_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Price" />
+                        android:text="@string/price_text" />
 
                 </LinearLayout>
 
@@ -230,18 +242,21 @@
 
                     <TextView
                         android:id="@+id/textView20"
+                        style="@style/Normal_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Title" />
 
                     <TextView
                         android:id="@+id/textView"
+                        style="@style/Normal_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Artist" />
 
                     <TextView
                         android:id="@+id/textView12"
+                        style="@style/Normal_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Price" />
@@ -274,11 +289,10 @@
 
         <TextView
             android:id="@+id/textView17"
-            android:layout_width="wrap_content"
+            style="@style/Normal_text"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="35dp"
             android:layout_weight="1"
-            android:text="Price" />
+            android:text="@string/price_text" />
 
         <Button
             android:id="@+id/button3"

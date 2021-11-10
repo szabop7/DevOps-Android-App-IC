@@ -23,4 +23,10 @@
     <string name="popular_text">Popular</string>
     <string name="upload_text">Upload</string>
     <string name="checkout_text">Checkout</string>
+    <string name="title_text">Title</string>
+    <string name="artist_name_text">Artist name</string>
+    <string name="price_text">Price</string>
+    <string name="description_text">Description</string>
+    <string name="add_to_cart_text">Add to cart</string>
+    <string name="time_text">Time</string>
 </resources>

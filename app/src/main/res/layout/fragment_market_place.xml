@@ -37,22 +37,25 @@
                 android:contentDescription="@string/content_desciption_frame"
                 android:focusable="true"
                 android:hapticFeedbackEnabled="false"
-                android:src="@drawable/gold" />
+                android:src="@drawable/gold"
+                tools:ignore="DuplicateSpeakableTextCheck" />
 
             <TextView
                 android:id="@+id/textView2"
+                style="@style/Normal_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="Price" />
+                android:text="@string/price_text" />
 
             <TextView
                 android:id="@+id/textView3"
+                style="@style/Normal_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="40dp"
                 android:gravity="center"
-                android:text="Time" />
+                android:text="@string/time_text" />
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -75,7 +78,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="Price" />
+                android:text="@string/price_text" />
 
             <TextView
                 android:id="@+id/textView5"
@@ -83,7 +86,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="40dp"
                 android:gravity="center"
-                android:text="Time" />
+                android:text="@string/time_text" />
 
             <ImageView
                 android:id="@+id/imageView3"
@@ -106,14 +109,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="Price" />
+                android:text="@string/price_text" />
 
             <TextView
                 android:id="@+id/textView7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Time" />
+                android:text="@string/time_text" />
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
@@ -125,6 +128,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:text="@string/market_place_text"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"

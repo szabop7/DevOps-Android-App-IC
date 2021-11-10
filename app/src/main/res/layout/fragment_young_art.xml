@@ -39,18 +39,20 @@
 
             <TextView
                 android:id="@+id/textView2"
+                style="@style/Title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="Name" />
+                android:text="@string/title_text" />
 
             <TextView
                 android:id="@+id/textView3"
+                style="@style/Normal_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="40dp"
                 android:gravity="center"
-                android:text="Artist" />
+                android:text="@string/artist_name_text" />
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -70,18 +72,20 @@
 
             <TextView
                 android:id="@+id/textView4"
+                style="@style/Title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="Name" />
+                android:text="@string/title_text" />
 
             <TextView
                 android:id="@+id/textView5"
+                style="@style/Normal_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="40dp"
                 android:gravity="center"
-                android:text="Artist" />
+                android:text="@string/artist_name_text" />
 
             <ImageView
                 android:id="@+id/imageView3"
@@ -101,17 +105,19 @@
 
             <TextView
                 android:id="@+id/textView6"
+                style="@style/Title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="Name" />
+                android:text="@string/title_text" />
 
             <TextView
                 android:id="@+id/textView7"
+                style="@style/Normal_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Artist" />
+                android:text="@string/artist_name_text" />
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
