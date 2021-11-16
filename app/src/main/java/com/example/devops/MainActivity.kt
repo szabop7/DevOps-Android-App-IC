@@ -3,15 +3,6 @@ package com.example.devops
 
 import android.app.SearchManager
 import android.content.Intent
-
-
-import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
-import androidx.databinding.DataBindingUtil
-import androidx.drawerlayout.widget.DrawerLayout
-
 import android.content.ClipData
 import android.os.Bundle
 import android.util.Log

@@ -28,4 +28,9 @@ public class HomeScreenDirections {
   public static NavDirections actionHomeScreenToProfileFragment() {
     return new ActionOnlyNavDirections(R.id.action_homeScreen_to_ProfileFragment);
   }
+
+  @NonNull
+  public static NavDirections actionHomeScreenToGalleryFragment() {
+    return new ActionOnlyNavDirections(R.id.action_homeScreen_to_galleryFragment);
+  }
 }

@@ -32,22 +32,17 @@
             android:id="@+id/action_homeScreen_to_shoppingCartFragment"
             app:destination="@id/ShoppingCartFragment" />
         <action
-<<<<<<< HEAD
             android:id="@+id/action_homeScreen_to_ProfileFragment"
             app:destination="@id/ProfileFragment" />
-=======
+        <action
             android:id="@+id/action_homeScreen_to_galleryFragment"
             app:destination="@id/galleryFragment" />
->>>>>>> origin/dev
+
     </fragment>
     <fragment
         android:id="@+id/detailViewFragment"
         android:name="com.example.devops.fragments.DetailViewFragment"
-<<<<<<< HEAD
         android:label="fragment_detail_view"
-=======
-        android:label="Detail View"
->>>>>>> origin/dev
         tools:layout="@layout/fragment_detail_view" />
     <fragment
         android:id="@+id/ShoppingCartFragment"
@@ -55,15 +50,13 @@
         android:label="Shopping Cart"
         tools:layout="@layout/fragment_shopping_cart" />
     <fragment
-<<<<<<< HEAD
         android:id="@+id/ProfileFragment"
         android:name="com.example.devops.fragments.ProfileFragment"
         android:label="Profile"
         tools:layout="@layout/fragment_profile" />
-=======
+    <fragment
         android:id="@+id/galleryFragment"
         android:name="com.example.devops.fragments.GalleryFragment"
         android:label="fragment_gallery"
         tools:layout="@layout/fragment_gallery" />
->>>>>>> origin/dev
 </navigation>

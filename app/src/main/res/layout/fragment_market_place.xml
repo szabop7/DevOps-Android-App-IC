@@ -23,13 +23,8 @@
 
             <ImageView
                 android:id="@+id/picture_market_place"
-<<<<<<< HEAD
-                android:layout_width="262dp"
-                android:layout_height="348dp"
-=======
                 android:layout_width="210dp"
                 android:layout_height="258dp"
->>>>>>> origin/dev
                 android:layout_gravity="center"
                 android:layout_margin="0dp"
                 android:layout_marginStart="30dp"
@@ -42,29 +37,17 @@
                 android:contentDescription="@string/content_desciption_frame"
                 android:focusable="true"
                 android:hapticFeedbackEnabled="false"
-<<<<<<< HEAD
-                android:src="@drawable/gold"
-=======
                 android:rotation="90"
                 android:src="@drawable/foto1"
->>>>>>> origin/dev
                 tools:ignore="DuplicateSpeakableTextCheck" />
 
             <TextView
                 android:id="@+id/textView2"
-<<<<<<< HEAD
-                style="@style/Normal_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:text="@string/price_text" />
-=======
                 style="@style/Title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text="@string/wooden_clown" />
->>>>>>> origin/dev
 
             <TextView
                 android:id="@+id/textView3"
@@ -73,11 +56,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="40dp"
                 android:gravity="center"
-<<<<<<< HEAD
-                android:text="@string/time_text" />
-=======
                 android:text="@string/tabitha_gilbert" />
->>>>>>> origin/dev
 
             <ImageView
                 android:id="@+id/imageView2"
