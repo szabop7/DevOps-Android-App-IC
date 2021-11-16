@@ -13,6 +13,7 @@
                 android:icon="@drawable/outline_trending_up_black_24dp"
                 android:title="@string/bestselling_artist_text" />
             <item
+                android:id="@+id/GalleryFragment"
                 android:icon="@drawable/outline_star_black_24dp"
                 android:title="@string/sponsored_text" />
             <item

@@ -53,7 +53,6 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.navView.getHeaderView(0).findViewById<Button>(R.id.ButtonLogIn).setOnClickListener(){ loginWithBrowser()}
-
         binding.navView.menu.findItem(R.id.ButtonLogOut).setOnMenuItemClickListener{ logout();
              true}
 
@@ -75,7 +74,6 @@ class MainActivity : AppCompatActivity() {
 
 
     }
-
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = this.findNavController(R.id.navHostFragment)

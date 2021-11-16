@@ -31,15 +31,23 @@
         <action
             android:id="@+id/action_homeScreen_to_shoppingCartFragment"
             app:destination="@id/ShoppingCartFragment" />
+        <action
+            android:id="@+id/action_homeScreen_to_galleryFragment"
+            app:destination="@id/galleryFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailViewFragment"
         android:name="com.example.devops.fragments.DetailViewFragment"
-        android:label="fragment_detail_view"
+        android:label="Detail View"
         tools:layout="@layout/fragment_detail_view" />
     <fragment
         android:id="@+id/ShoppingCartFragment"
         android:name="com.example.devops.fragments.ShoppingCartFragment"
         android:label="Shopping Cart"
         tools:layout="@layout/fragment_shopping_cart" />
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="com.example.devops.fragments.GalleryFragment"
+        android:label="fragment_gallery"
+        tools:layout="@layout/fragment_gallery" />
 </navigation>
