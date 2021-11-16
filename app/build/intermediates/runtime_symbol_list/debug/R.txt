@@ -2428,7 +2428,6 @@ int id textSpacerNoButtons 0x7f0801ef
 int id textSpacerNoTitle 0x7f0801f0
 int id textStart 0x7f0801f1
 int id textTop 0x7f0801f2
-int id textView 0x7f0801f3
 int id textView10 0x7f0801f5
 int id textView11 0x7f0801f6
 int id textView12 0x7f0801f7

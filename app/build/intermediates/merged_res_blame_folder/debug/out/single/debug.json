@@ -8,12 +8,12 @@
         "source": "C:\\Users\\usuario\\Desktop\\Uni gante\\devops\\Android\\DevOps-Android-App-IC-dev\\app\\src\\main\\res\\drawable\\fondo_young_art.jpeg"
     },
     {
-        "merged": "C:\\Users\\usuario\\Desktop\\Uni gante\\devops\\Android\\DevOps-Android-App-IC-dev\\app\\build\\intermediates\\merged_res\\debug\\drawable_outline_star_black_24dp.png.flat",
-        "source": "C:\\Users\\usuario\\Desktop\\Uni gante\\devops\\Android\\DevOps-Android-App-IC-dev\\app\\src\\main\\res\\drawable\\outline_star_black_24dp.png"
-    },
-    {
         "merged": "C:\\Users\\usuario\\Desktop\\Uni gante\\devops\\Android\\DevOps-Android-App-IC-dev\\app\\build\\intermediates\\merged_res\\debug\\drawable_outline_store_black_24dp.png.flat",
         "source": "C:\\Users\\usuario\\Desktop\\Uni gante\\devops\\Android\\DevOps-Android-App-IC-dev\\app\\src\\main\\res\\drawable\\outline_store_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\usuario\\Desktop\\Uni gante\\devops\\Android\\DevOps-Android-App-IC-dev\\app\\build\\intermediates\\merged_res\\debug\\drawable_outline_star_black_24dp.png.flat",
+        "source": "C:\\Users\\usuario\\Desktop\\Uni gante\\devops\\Android\\DevOps-Android-App-IC-dev\\app\\src\\main\\res\\drawable\\outline_star_black_24dp.png"
     },
     {
         "merged": "C:\\Users\\usuario\\Desktop\\Uni gante\\devops\\Android\\DevOps-Android-App-IC-dev\\app\\build\\intermediates\\merged_res\\debug\\drawable_outline_upgrade_black_24dp.png.flat",
@@ -48,12 +48,12 @@
         "source": "C:\\Users\\usuario\\Desktop\\Uni gante\\devops\\Android\\DevOps-Android-App-IC-dev\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\usuario\\Desktop\\Uni gante\\devops\\Android\\DevOps-Android-App-IC-dev\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\usuario\\Desktop\\Uni gante\\devops\\Android\\DevOps-Android-App-IC-dev\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
-    },
-    {
         "merged": "C:\\Users\\usuario\\Desktop\\Uni gante\\devops\\Android\\DevOps-Android-App-IC-dev\\app\\build\\intermediates\\merged_res\\debug\\xml_searchable.xml.flat",
         "source": "C:\\Users\\usuario\\Desktop\\Uni gante\\devops\\Android\\DevOps-Android-App-IC-dev\\app\\src\\main\\res\\xml\\searchable.xml"
+    },
+    {
+        "merged": "C:\\Users\\usuario\\Desktop\\Uni gante\\devops\\Android\\DevOps-Android-App-IC-dev\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\usuario\\Desktop\\Uni gante\\devops\\Android\\DevOps-Android-App-IC-dev\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\usuario\\Desktop\\Uni gante\\devops\\Android\\DevOps-Android-App-IC-dev\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_shopping_cart.xml.flat",
