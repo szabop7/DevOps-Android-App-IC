@@ -1,0 +1,10 @@
+com/example/devops/fragments/HomeScreenDirections.java
+ com.example.devops.fragments.HomeScreenDirections
+com/example/devops/databinding/ActivityMainBinding.java
+ com.example.devops.databinding.ActivityMainBinding
+com/example/devops/fragments/MarketPlaceFragmentDirections.java
+ com.example.devops.fragments.MarketPlaceFragmentDirections
+com/example/devops/DataBindingTriggerClass.java
+ com.example.devops.DataBindingTriggerClass
+com/example/devops/BuildConfig.java
+ com.example.devops.BuildConfig

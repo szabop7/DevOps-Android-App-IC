@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:title="@string/market_place_text">
+        <menu>
+            <item
+                android:id="@+id/MarketPlaceFragment"
+                android:icon="@drawable/outline_whatshot_black_24dp"
+                android:title="@string/trends_text" />
+            <item
+                android:icon="@drawable/outline_trending_up_black_24dp"
+                android:title="@string/bestselling_artist_text" />
+            <item
+                android:icon="@drawable/outline_star_black_24dp"
+                android:title="@string/sponsored_text" />
+            <item
+                android:id="@+id/ShoppingCartFragment"
+                android:icon="@drawable/shopping_cart"
+                android:title="@string/shopping_cart_text" />
+        </menu>
+    </item>
+    <item android:title="@string/auctions_text"
+        android:icon="@drawable/outline_store_black_24dp">
+        <menu>
+            <item
+                android:icon="@drawable/outline_event_available_black_24dp"
+                android:title="@string/open_text" />
+            <item
+                android:icon="@drawable/outline_groups_black_24dp"
+                android:title="@string/popular_text" />
+        </menu>
+    </item>
+    <group
+        android:id="@+id/mid"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/youngArtFragment"
+            android:icon="@drawable/outline_palette_black_24dp"
+            android:title="@string/young_art_text" />
+        <item
+            android:title="@string/upload_text"
+            android:icon="@drawable/outline_upgrade_black_24dp"/>
+    </group>
+    <item
+
+        android:id="@+id/ProfileFragment"
+        android:icon="@drawable/user"
+        android:title="@string/profile" />
+    <item
+
+        android:id="@+id/ButtonLogOut"
+        android:icon="@drawable/log_out"
+        android:title="@string/logout" />
+
+</menu>

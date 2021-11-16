@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeScreen">
+    <fragment
+        android:id="@+id/MarketPlaceFragment"
+        android:name="com.example.devops.fragments.MarketPlaceFragment"
+        android:label="Market Place"
+        tools:layout="@layout/fragment_market_place" >
+        <action
+            android:id="@+id/action_MarketPlaceFragment_to_detailViewFragment"
+            app:destination="@id/detailViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/youngArtFragment"
+        android:name="com.example.devops.fragments.YoungArtFragment"
+        android:label="YoungArt"
+        tools:layout="@layout/fragment_young_art" />
+    <fragment
+        android:id="@+id/homeScreen"
+        android:name="com.example.devops.fragments.HomeScreen"
+        android:label="HomeScreen">
+        <action
+              android:id="@+id/action_homeScreen_to_YoungArtFragment"
+                app:destination="@id/youngArtFragment" />
+           <action
+               android:id="@+id/action_homeScreen_to_MarketPlaceFragment"
+               app:destination="@id/MarketPlaceFragment" />
+        <action
+            android:id="@+id/action_homeScreen_to_shoppingCartFragment"
+            app:destination="@id/ShoppingCartFragment" />
+        <action
+            android:id="@+id/action_homeScreen_to_ProfileFragment"
+            app:destination="@id/ProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailViewFragment"
+        android:name="com.example.devops.fragments.DetailViewFragment"
+        android:label="fragment_detail_view"
+        tools:layout="@layout/fragment_detail_view" />
+    <fragment
+        android:id="@+id/ShoppingCartFragment"
+        android:name="com.example.devops.fragments.ShoppingCartFragment"
+        android:label="Shopping Cart"
+        tools:layout="@layout/fragment_shopping_cart" />
+    <fragment
+        android:id="@+id/ProfileFragment"
+        android:name="com.example.devops.fragments.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

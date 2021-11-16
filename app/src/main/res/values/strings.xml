@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">DevOps</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="market_place_text">Market Place</string>
+    <string name="gallery_text">Gallery</string>
+    <string name="young_art_text">Young Art</string>
+    <string name="content_desciption_frame">frame</string>
+
+    <string name="com_auth0_client_id">fFPxEdQJbyPirdQcuzrSNuYiz7tp8nLL</string>
+    <string name="com_auth0_domain">dev-g6aj--a8.us.auth0.com</string>
+    <string name="login">Log in</string>
+    <string name="logout">Log out</string>
+    <string name="presentation_text">Hello!</string>
+    <string name="log_in_sign_in">Log in / Sign in</string>
+    <string name="hello_text">Hello!</string>
+    <string name="shopping_cart_text">Shopping Cart</string>
+    <string name="trends_text">Trends</string>
+    <string name="bestselling_artist_text">Bestselling Artist</string>
+    <string name="sponsored_text">Sponsored</string>
+    <string name="auctions_text">Auctions</string>
+    <string name="open_text">Open</string>
+    <string name="popular_text">Popular</string>
+    <string name="upload_text">Upload</string>
+    <string name="checkout_text">Checkout</string>
+    <string name="title_text">Title</string>
+    <string name="artist_name_text">Artist name</string>
+    <string name="price_text">Price</string>
+    <string name="description_text">Description</string>
+    <string name="add_to_cart_text">Add to cart</string>
+    <string name="time_text">Time</string>
+    <string name="profile">Profile</string>
+</resources>
