@@ -29,5 +29,16 @@
     <string name="description_text">Description</string>
     <string name="add_to_cart_text">Add to cart</string>
     <string name="time_text">Time</string>
+<<<<<<< HEAD
     <string name="profile">Profile</string>
+=======
+    <string name="wooden_candle_holders">Wooden Candle Holders</string>
+    <string name="theobold_miller">Theobold Miller</string>
+    <string name="wooden_apple">Wooden Apple</string>
+    <string name="rosemary_kain">Rosemary Kain</string>
+    <string name="wooden_clown">Wooden Clown</string>
+    <string name="tabitha_gilbert">Tabitha Gilbert</string>
+    <string name="bin">Bin</string>
+    <string name="my_cart">My Cart</string>
+>>>>>>> origin/dev
 </resources>

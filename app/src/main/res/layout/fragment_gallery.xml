@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+=======
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+>>>>>>> origin/dev
     tools:context=".fragments.GalleryFragment">
 
     <androidx.core.widget.NestedScrollView
@@ -22,6 +31,7 @@
             android:orientation="vertical">
 
             <ImageView
+<<<<<<< HEAD
                 android:id="@+id/picture_market_place"
                 android:layout_width="262dp"
                 android:layout_height="348dp"
@@ -36,6 +46,13 @@
                 android:contentDescription="@string/content_desciption_frame"
                 android:hapticFeedbackEnabled="false"
                 android:src="@drawable/gold" />
+=======
+                android:id="@+id/photo1"
+                android:layout_width="match_parent"
+                android:layout_height="344dp"
+                android:contentDescription="@string/content_desciption_frame"
+                android:src="@drawable/foto2" />
+>>>>>>> origin/dev
 
             <TextView
                 android:id="@+id/textView2"
@@ -43,7 +60,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
+<<<<<<< HEAD
                 android:text="@string/title_text" />
+=======
+                android:text="@string/wooden_candle_holders" />
+>>>>>>> origin/dev
 
             <TextView
                 android:id="@+id/textView3"
@@ -52,6 +73,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="40dp"
                 android:gravity="center"
+<<<<<<< HEAD
                 android:text="@string/artist_name_text" />
 
             <ImageView
@@ -69,6 +91,15 @@
                 android:contentDescription="@string/content_desciption_frame"
                 android:hapticFeedbackEnabled="false"
                 android:src="@drawable/gold" />
+=======
+                android:text="@string/theobold_miller" />
+
+            <ImageView
+                android:id="@+id/photo2"
+                android:layout_width="match_parent"
+                android:layout_height="359dp"
+                android:src="@drawable/foto3" />
+>>>>>>> origin/dev
 
             <TextView
                 android:id="@+id/textView4"
@@ -76,7 +107,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
+<<<<<<< HEAD
                 android:text="@string/title_text" />
+=======
+                android:text="@string/wooden_apple" />
+>>>>>>> origin/dev
 
             <TextView
                 android:id="@+id/textView5"
@@ -85,6 +120,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="40dp"
                 android:gravity="center"
+<<<<<<< HEAD
                 android:text="@string/artist_name_text" />
 
             <ImageView
@@ -102,6 +138,15 @@
                 android:contentDescription="@string/content_desciption_frame"
                 android:hapticFeedbackEnabled="false"
                 android:src="@drawable/gold" />
+=======
+                android:text="@string/rosemary_kain" />
+
+            <ImageView
+                android:id="@+id/photo3"
+                android:layout_width="match_parent"
+                android:layout_height="261dp"
+                android:src="@drawable/foto1" />
+>>>>>>> origin/dev
 
             <TextView
                 android:id="@+id/textView6"
@@ -109,7 +154,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
+<<<<<<< HEAD
                 android:text="@string/title_text" />
+=======
+                android:text="@string/wooden_clown" />
+>>>>>>> origin/dev
 
             <TextView
                 android:id="@+id/textView7"
@@ -117,7 +166,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+<<<<<<< HEAD
                 android:text="@string/artist_name_text" />
+=======
+                android:text="@string/tabitha_gilbert" />
+>>>>>>> origin/dev
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

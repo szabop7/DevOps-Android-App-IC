@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:layout_marginTop="15dp"
     android:orientation="vertical"
     tools:context=".fragments.ShoppingCartFragment">
@@ -13,6 +14,34 @@
         android:layout_height="615dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
+=======
+    android:layout_gravity="left"
+    android:orientation="vertical"
+    tools:context=".fragments.ShoppingCartFragment"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="19dp">
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/Title"
+        android:layout_width="409dp"
+        android:layout_height="38dp"
+        android:gravity="center"
+        android:text="@string/my_cart"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.095" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="409dp"
+        android:layout_height="643dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+>>>>>>> origin/dev
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -23,6 +52,7 @@
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+<<<<<<< HEAD
                 android:layout_marginBottom="20dp">
 
                 <ImageView
@@ -33,28 +63,61 @@
 
                 <LinearLayout
                     android:layout_width="78dp"
+=======
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="182dp"
+                    android:layout_height="147dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="30dp"
+                    android:contentDescription="@string/content_desciption_frame"
+                    android:src="@drawable/foto3" />
+
+                <LinearLayout
+                    android:layout_width="224dp"
+>>>>>>> origin/dev
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
                     <TextView
+<<<<<<< HEAD
                         android:id="@+id/textView1"
                         style="@style/Normal_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/title_text" />
+=======
+                        style="@style/Title"
+                        android:layout_width="149dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/wooden_apple" />
+>>>>>>> origin/dev
 
                     <TextView
                         android:id="@+id/textView6"
                         style="@style/Normal_text"
+<<<<<<< HEAD
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/artist_name_text" />
+=======
+                        android:layout_width="138dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/rosemary_kain" />
+>>>>>>> origin/dev
 
                     <TextView
                         android:id="@+id/textView7"
                         style="@style/Normal_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+<<<<<<< HEAD
                         android:text="@string/price_text" />
 
                 </LinearLayout>
@@ -71,16 +134,52 @@
 
             </TableRow>
 
+=======
+                        android:layout_marginStart="0dp"
+                        android:text="100 €" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton5"
+                        android:layout_width="135dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="bottom|end"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="@string/bin"
+                        android:padding="1dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/bin"
+                        tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="10dp"
+                android:background="#636363" />
+
+>>>>>>> origin/dev
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="20dp">
 
                 <ImageView
+<<<<<<< HEAD
                     android:id="@+id/imageView8"
                     android:layout_width="229dp"
                     android:layout_height="152dp"
                     android:src="@drawable/foto3" />
+=======
+                    android:id="@+id/imageView11"
+                    android:layout_width="184dp"
+                    android:layout_height="141dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/foto2" />
+>>>>>>> origin/dev
 
                 <LinearLayout
                     android:layout_width="138dp"
@@ -89,23 +188,41 @@
 
                     <TextView
                         android:id="@+id/textView9"
+<<<<<<< HEAD
                         style="@style/Normal_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/title_text" />
+=======
+                        style="@style/Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/wooden_candle_holders"
+                        android:textSize="18sp" />
+>>>>>>> origin/dev
 
                     <TextView
                         android:id="@+id/textView10"
                         style="@style/Normal_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+<<<<<<< HEAD
                         android:text="@string/artist_name_text" />
+=======
+                        android:layout_marginStart="0dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/theobold_miller" />
+>>>>>>> origin/dev
 
                     <TextView
                         android:id="@+id/textView11"
                         style="@style/Normal_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+<<<<<<< HEAD
                         android:text="@string/price_text" />
 
                 </LinearLayout>
@@ -122,16 +239,52 @@
 
             </TableRow>
 
+=======
+                        android:layout_marginStart="0dp"
+                        android:text="350 €" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton3"
+                        android:layout_width="133dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="bottom|end"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="@string/bin"
+                        android:padding="1dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/bin"
+                        tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="10dp"
+                android:background="#636363" />
+
+>>>>>>> origin/dev
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="20dp">
 
                 <ImageView
+<<<<<<< HEAD
                     android:id="@+id/imageView13"
                     android:layout_width="229dp"
                     android:layout_height="152dp"
                     android:src="@drawable/foto3" />
+=======
+                    android:id="@+id/imageView12"
+                    android:layout_width="161dp"
+                    android:layout_height="170dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/foto1" />
+>>>>>>> origin/dev
 
                 <LinearLayout
                     android:layout_width="138dp"
@@ -140,23 +293,40 @@
 
                     <TextView
                         android:id="@+id/textView14"
+<<<<<<< HEAD
                         style="@style/Normal_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/title_text" />
+=======
+                        style="@style/Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/wooden_clown" />
+>>>>>>> origin/dev
 
                     <TextView
                         android:id="@+id/textView15"
                         style="@style/Normal_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+<<<<<<< HEAD
                         android:text="@string/artist_name_text" />
+=======
+                        android:layout_marginStart="0dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/tabitha_gilbert" />
+>>>>>>> origin/dev
 
                     <TextView
                         android:id="@+id/textView16"
                         style="@style/Normal_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+<<<<<<< HEAD
                         android:text="@string/price_text" />
 
                 </LinearLayout>
@@ -295,4 +465,58 @@
             android:text="@string/checkout_text" />
     </LinearLayout>
 
+=======
+                        android:layout_marginStart="0dp"
+                        android:text="700 €" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton4"
+                        android:layout_width="133dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="bottom|end"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="@string/bin"
+                        android:padding="1dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/bin"
+                        tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="10dp"
+                android:background="#636363" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView12"
+                    style="@style/Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:text="Total: 1350 €" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:layout_marginEnd="100dp"
+                    android:gravity="right"
+                    android:text="@string/checkout_text"
+                    android:textColor="@color/white" />
+
+            </TableRow>
+
+
+        </TableLayout>
+    </ScrollView>
+
+>>>>>>> origin/dev
 </androidx.constraintlayout.widget.ConstraintLayout>

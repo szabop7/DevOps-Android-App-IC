@@ -13,6 +13,10 @@
                 android:icon="@drawable/outline_trending_up_black_24dp"
                 android:title="@string/bestselling_artist_text" />
             <item
+<<<<<<< HEAD
+=======
+                android:id="@+id/GalleryFragment"
+>>>>>>> origin/dev
                 android:icon="@drawable/outline_star_black_24dp"
                 android:title="@string/sponsored_text" />
             <item
@@ -45,11 +49,14 @@
     </group>
     <item
 
+<<<<<<< HEAD
         android:id="@+id/ProfileFragment"
         android:icon="@drawable/user"
         android:title="@string/profile" />
     <item
 
+=======
+>>>>>>> origin/dev
         android:id="@+id/ButtonLogOut"
         android:icon="@drawable/log_out"
         android:title="@string/logout" />
