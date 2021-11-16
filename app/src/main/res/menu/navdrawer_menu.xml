@@ -12,14 +12,11 @@
             <item
                 android:icon="@drawable/outline_trending_up_black_24dp"
                 android:title="@string/bestselling_artist_text" />
-            <!-- <item
-                android:icon="@drawable/outline_new_releases_black_24dp"
-                android:title="Newest" />-->
             <item
                 android:icon="@drawable/outline_star_black_24dp"
                 android:title="@string/sponsored_text" />
             <item
-                android:id="@+id/shoppingCartFragment"
+                android:id="@+id/ShoppingCartFragment"
                 android:icon="@drawable/shopping_cart"
                 android:title="@string/shopping_cart_text" />
         </menu>
@@ -39,7 +36,7 @@
         android:id="@+id/mid"
         android:checkableBehavior="single">
         <item
-            android:id="@+id/YoungArtFragment"
+            android:id="@+id/youngArtFragment"
             android:icon="@drawable/outline_palette_black_24dp"
             android:title="@string/young_art_text" />
         <item

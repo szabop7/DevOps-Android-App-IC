@@ -14,7 +14,7 @@
             app:destination="@id/detailViewFragment" />
     </fragment>
     <fragment
-        android:id="@+id/YoungArtFragment"
+        android:id="@+id/youngArtFragment"
         android:name="com.example.devops.fragments.YoungArtFragment"
         android:label="YoungArt"
         tools:layout="@layout/fragment_young_art" />
@@ -24,13 +24,13 @@
         android:label="HomeScreen">
         <action
               android:id="@+id/action_homeScreen_to_YoungArtFragment"
-                app:destination="@id/YoungArtFragment" />
+                app:destination="@id/youngArtFragment" />
            <action
                android:id="@+id/action_homeScreen_to_MarketPlaceFragment"
                app:destination="@id/MarketPlaceFragment" />
         <action
             android:id="@+id/action_homeScreen_to_shoppingCartFragment"
-            app:destination="@id/shoppingCartFragment" />
+            app:destination="@id/ShoppingCartFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailViewFragment"
@@ -38,8 +38,8 @@
         android:label="fragment_detail_view"
         tools:layout="@layout/fragment_detail_view" />
     <fragment
-        android:id="@+id/shoppingCartFragment"
+        android:id="@+id/ShoppingCartFragment"
         android:name="com.example.devops.fragments.ShoppingCartFragment"
-        android:label="fragment_shopping_cart"
+        android:label="Shopping Cart"
         tools:layout="@layout/fragment_shopping_cart" />
 </navigation>
