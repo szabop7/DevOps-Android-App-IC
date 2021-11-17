@@ -6,127 +6,127 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="24"
-8-->C:\Users\usuario\Desktop\Uni gante\devops\Android\DevOps-Android-App-IC-dev\app\src\main\AndroidManifest.xml
+8-->C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="30" />
-9-->C:\Users\usuario\Desktop\Uni gante\devops\Android\DevOps-Android-App-IC-dev\app\src\main\AndroidManifest.xml
+9-->C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Users\usuario\Desktop\Uni gante\devops\Android\DevOps-Android-App-IC-dev\app\src\main\AndroidManifest.xml:4:5-67
-11-->C:\Users\usuario\Desktop\Uni gante\devops\Android\DevOps-Android-App-IC-dev\app\src\main\AndroidManifest.xml:4:22-64
+11-->C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:4:5-67
+11-->C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:4:22-64
 12
 13    <queries>
-13-->[com.auth0.android:auth0:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:14:5-22:15
+13-->[com.auth0.android:auth0:2.5.1] C:\Users\alici\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:14:5-22:15
 14        <intent>
-14-->[com.auth0.android:auth0:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:15:9-21:18
+14-->[com.auth0.android:auth0:2.5.1] C:\Users\alici\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:15:9-21:18
 15            <action android:name="android.intent.action.VIEW" />
-15-->[com.auth0.android:auth0:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:16:13-65
-15-->[com.auth0.android:auth0:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:16:21-62
+15-->[com.auth0.android:auth0:2.5.1] C:\Users\alici\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:16:13-65
+15-->[com.auth0.android:auth0:2.5.1] C:\Users\alici\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:16:21-62
 16
 17            <category android:name="android.intent.category.BROWSABLE" />
-17-->[com.auth0.android:auth0:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:18:13-74
-17-->[com.auth0.android:auth0:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:18:23-71
+17-->[com.auth0.android:auth0:2.5.1] C:\Users\alici\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:18:13-74
+17-->[com.auth0.android:auth0:2.5.1] C:\Users\alici\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:18:23-71
 18
 19            <data android:scheme="https" />
-19-->[com.auth0.android:auth0:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:20:13-44
-19-->[com.auth0.android:auth0:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:20:19-41
+19-->[com.auth0.android:auth0:2.5.1] C:\Users\alici\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:20:13-44
+19-->[com.auth0.android:auth0:2.5.1] C:\Users\alici\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:20:19-41
 20        </intent>
 21    </queries>
 22
 23    <application
-23-->C:\Users\usuario\Desktop\Uni gante\devops\Android\DevOps-Android-App-IC-dev\app\src\main\AndroidManifest.xml:5:5-24:19
+23-->C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:5:5-24:19
 24        android:allowBackup="true"
-24-->C:\Users\usuario\Desktop\Uni gante\devops\Android\DevOps-Android-App-IC-dev\app\src\main\AndroidManifest.xml:6:9-35
+24-->C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:6:9-35
 25        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-25-->[androidx.core:core:1.6.0] C:\Users\usuario\.gradle\caches\transforms-3\1fea4a740cc9f8b3101b1ddcf14940da\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
+25-->[androidx.core:core:1.6.0] C:\Users\alici\.gradle\caches\transforms-3\1fea4a740cc9f8b3101b1ddcf14940da\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
 26        android:debuggable="true"
 27        android:extractNativeLibs="false"
 28        android:icon="@mipmap/ic_launcher"
-28-->C:\Users\usuario\Desktop\Uni gante\devops\Android\DevOps-Android-App-IC-dev\app\src\main\AndroidManifest.xml:7:9-43
+28-->C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:7:9-43
 29        android:label="@string/app_name"
-29-->C:\Users\usuario\Desktop\Uni gante\devops\Android\DevOps-Android-App-IC-dev\app\src\main\AndroidManifest.xml:8:9-41
+29-->C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:8:9-41
 30        android:roundIcon="@mipmap/ic_launcher_round"
-30-->C:\Users\usuario\Desktop\Uni gante\devops\Android\DevOps-Android-App-IC-dev\app\src\main\AndroidManifest.xml:9:9-54
+30-->C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:9:9-54
 31        android:supportsRtl="true"
-31-->C:\Users\usuario\Desktop\Uni gante\devops\Android\DevOps-Android-App-IC-dev\app\src\main\AndroidManifest.xml:10:9-35
+31-->C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:10:9-35
 32        android:testOnly="true"
 33        android:theme="@style/Theme.DevOps" >
-33-->C:\Users\usuario\Desktop\Uni gante\devops\Android\DevOps-Android-App-IC-dev\app\src\main\AndroidManifest.xml:11:9-44
+33-->C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:11:9-44
 34        <activity
-34-->C:\Users\usuario\Desktop\Uni gante\devops\Android\DevOps-Android-App-IC-dev\app\src\main\AndroidManifest.xml:12:9-22:20
+34-->C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:12:9-22:20
 35            android:name="com.example.devops.MainActivity"
-35-->C:\Users\usuario\Desktop\Uni gante\devops\Android\DevOps-Android-App-IC-dev\app\src\main\AndroidManifest.xml:13:13-41
+35-->C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:13:13-41
 36            android:exported="true" >
-36-->C:\Users\usuario\Desktop\Uni gante\devops\Android\DevOps-Android-App-IC-dev\app\src\main\AndroidManifest.xml:14:13-36
+36-->C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:14:13-36
 37            <intent-filter>
-37-->C:\Users\usuario\Desktop\Uni gante\devops\Android\DevOps-Android-App-IC-dev\app\src\main\AndroidManifest.xml:15:13-19:29
+37-->C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:15:13-19:29
 38                <action android:name="android.intent.action.MAIN" />
-38-->C:\Users\usuario\Desktop\Uni gante\devops\Android\DevOps-Android-App-IC-dev\app\src\main\AndroidManifest.xml:16:17-69
-38-->C:\Users\usuario\Desktop\Uni gante\devops\Android\DevOps-Android-App-IC-dev\app\src\main\AndroidManifest.xml:16:25-66
+38-->C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:16:17-69
+38-->C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:16:25-66
 39                <action android:name="android.intent.action.SEARCH" />
-39-->C:\Users\usuario\Desktop\Uni gante\devops\Android\DevOps-Android-App-IC-dev\app\src\main\AndroidManifest.xml:17:17-71
-39-->C:\Users\usuario\Desktop\Uni gante\devops\Android\DevOps-Android-App-IC-dev\app\src\main\AndroidManifest.xml:17:25-68
+39-->C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:17:17-71
+39-->C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:17:25-68
 40
 41                <category android:name="android.intent.category.LAUNCHER" />
-41-->C:\Users\usuario\Desktop\Uni gante\devops\Android\DevOps-Android-App-IC-dev\app\src\main\AndroidManifest.xml:18:17-77
-41-->C:\Users\usuario\Desktop\Uni gante\devops\Android\DevOps-Android-App-IC-dev\app\src\main\AndroidManifest.xml:18:27-74
+41-->C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:18:17-77
+41-->C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:18:27-74
 42            </intent-filter>
 43
 44            <meta-data
-44-->C:\Users\usuario\Desktop\Uni gante\devops\Android\DevOps-Android-App-IC-dev\app\src\main\AndroidManifest.xml:20:13-21:53
+44-->C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:20:13-21:53
 45                android:name="android.app.searchable"
-45-->C:\Users\usuario\Desktop\Uni gante\devops\Android\DevOps-Android-App-IC-dev\app\src\main\AndroidManifest.xml:20:24-61
+45-->C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:20:24-61
 46                android:resource="@xml/searchable" />
-46-->C:\Users\usuario\Desktop\Uni gante\devops\Android\DevOps-Android-App-IC-dev\app\src\main\AndroidManifest.xml:21:17-51
+46-->C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:21:17-51
 47        </activity>
 48        <activity
-48-->[com.auth0.android:auth0:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:25:9-29:75
+48-->[com.auth0.android:auth0:2.5.1] C:\Users\alici\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:25:9-29:75
 49            android:name="com.auth0.android.provider.AuthenticationActivity"
-49-->[com.auth0.android:auth0:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:26:13-77
+49-->[com.auth0.android:auth0:2.5.1] C:\Users\alici\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:26:13-77
 50            android:exported="false"
-50-->[com.auth0.android:auth0:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:27:13-37
+50-->[com.auth0.android:auth0:2.5.1] C:\Users\alici\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:27:13-37
 51            android:launchMode="singleTask"
-51-->[com.auth0.android:auth0:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:28:13-44
+51-->[com.auth0.android:auth0:2.5.1] C:\Users\alici\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:28:13-44
 52            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-52-->[com.auth0.android:auth0:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:29:13-72
+52-->[com.auth0.android:auth0:2.5.1] C:\Users\alici\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:29:13-72
 53        <activity
-53-->[com.auth0.android:auth0:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:30:9-46:20
+53-->[com.auth0.android:auth0:2.5.1] C:\Users\alici\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:30:9-46:20
 54            android:name="com.auth0.android.provider.RedirectActivity"
-54-->[com.auth0.android:auth0:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:31:13-71
+54-->[com.auth0.android:auth0:2.5.1] C:\Users\alici\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:31:13-71
 55            android:exported="true" >
-55-->[com.auth0.android:auth0:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:32:13-36
+55-->[com.auth0.android:auth0:2.5.1] C:\Users\alici\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:32:13-36
 56            <intent-filter android:autoVerify="true" >
-56-->[com.auth0.android:auth0:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:33:13-45:29
-56-->[com.auth0.android:auth0:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:34:17-42
+56-->[com.auth0.android:auth0:2.5.1] C:\Users\alici\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:33:13-45:29
+56-->[com.auth0.android:auth0:2.5.1] C:\Users\alici\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:34:17-42
 57                <action android:name="android.intent.action.VIEW" />
-57-->[com.auth0.android:auth0:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:16:13-65
-57-->[com.auth0.android:auth0:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:16:21-62
+57-->[com.auth0.android:auth0:2.5.1] C:\Users\alici\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:16:13-65
+57-->[com.auth0.android:auth0:2.5.1] C:\Users\alici\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:16:21-62
 58
 59                <category android:name="android.intent.category.DEFAULT" />
-59-->[com.auth0.android:auth0:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:38:17-76
-59-->[com.auth0.android:auth0:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:38:27-73
+59-->[com.auth0.android:auth0:2.5.1] C:\Users\alici\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:38:17-76
+59-->[com.auth0.android:auth0:2.5.1] C:\Users\alici\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:38:27-73
 60                <category android:name="android.intent.category.BROWSABLE" />
-60-->[com.auth0.android:auth0:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:18:13-74
-60-->[com.auth0.android:auth0:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:18:23-71
+60-->[com.auth0.android:auth0:2.5.1] C:\Users\alici\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:18:13-74
+60-->[com.auth0.android:auth0:2.5.1] C:\Users\alici\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:18:23-71
 61
 62                <data
-62-->[com.auth0.android:auth0:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:20:13-44
+62-->[com.auth0.android:auth0:2.5.1] C:\Users\alici\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:20:13-44
 63                    android:host="@string/com_auth0_domain"
 64                    android:pathPrefix="/android/com.example.devops/callback"
 65                    android:scheme="demo" />
-65-->[com.auth0.android:auth0:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:20:19-41
+65-->[com.auth0.android:auth0:2.5.1] C:\Users\alici\.gradle\caches\transforms-3\00d3acb966bed548c4780a5830a6a217\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:20:19-41
 66            </intent-filter>
 67        </activity>
 68
 69        <provider
-69-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\usuario\.gradle\caches\transforms-3\ccb505b1f4a277d91ec92ffd6c0a42f8\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+69-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\alici\.gradle\caches\transforms-3\ccb505b1f4a277d91ec92ffd6c0a42f8\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
 70            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-70-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\usuario\.gradle\caches\transforms-3\ccb505b1f4a277d91ec92ffd6c0a42f8\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+70-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\alici\.gradle\caches\transforms-3\ccb505b1f4a277d91ec92ffd6c0a42f8\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
 71            android:authorities="com.example.devops.lifecycle-process"
-71-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\usuario\.gradle\caches\transforms-3\ccb505b1f4a277d91ec92ffd6c0a42f8\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+71-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\alici\.gradle\caches\transforms-3\ccb505b1f4a277d91ec92ffd6c0a42f8\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
 72            android:exported="false"
-72-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\usuario\.gradle\caches\transforms-3\ccb505b1f4a277d91ec92ffd6c0a42f8\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+72-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\alici\.gradle\caches\transforms-3\ccb505b1f4a277d91ec92ffd6c0a42f8\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
 73            android:multiprocess="true" />
-73-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\usuario\.gradle\caches\transforms-3\ccb505b1f4a277d91ec92ffd6c0a42f8\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+73-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\alici\.gradle\caches\transforms-3\ccb505b1f4a277d91ec92ffd6c0a42f8\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
 74    </application>
 75
 76</manifest>

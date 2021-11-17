@@ -1,5 +1,6 @@
 package com.example.devops.fragments
 
+import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.transition.Slide
@@ -7,13 +8,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import com.example.devops.R
 import com.example.devops.adapters.SliderAdapterDetailView
 import com.example.devops.models.SliderItemDetailView
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType
 import com.smarteist.autoimageslider.SliderAnimations
 import com.smarteist.autoimageslider.SliderView
-
 
 
 
@@ -41,7 +42,6 @@ class DetailViewFragment : Fragment() {
         var view = inflater.inflate(R.layout.fragment_detail_view, container, false)
         sliderView = view.findViewById(R.id.imageSlider)
 
-
         adapter = SliderAdapterDetailView(requireContext())
 
         sliderView?.setSliderAdapter(adapter!!)
@@ -64,5 +64,19 @@ class DetailViewFragment : Fragment() {
         )
 
         adapter?.renewItems(items)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        view.findViewById<Button>(R.id.addToCartButton).setOnClickListener {
+            requireActivity().getSharedPreferences("shopping_cart", Context.MODE_PRIVATE).edit()
+                .apply {
+                    putString("cart_amount", "twenty dollars")
+                    putString("cart_tax", "twenty dollars")
+                    putString("cart_quantity", "twenty dollars")
+                    putString("cart_latest_item", "la mona lisa")
+                }.apply()
+        }
     }
 }

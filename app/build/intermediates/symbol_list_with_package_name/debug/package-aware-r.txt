@@ -2012,6 +2012,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addToCartButton
 id alertTitle
 id aligned
 id all
@@ -2050,7 +2051,6 @@ id button
 id button2
 id button3
 id buttonPanel
-id button_add_to_cart
 id cache_measures
 id cancel_action
 id cancel_button
@@ -2211,6 +2211,7 @@ id iv_gif_container
 id jumpToEnd
 id jumpToStart
 id labeled
+id latestItemCart
 id layout
 id left
 id leftToRight
