@@ -33,9 +33,9 @@ data class Product (
     @ColumnInfo(name = "product_description")
     var productDescription: String = "",
 
-    val userBuyerId: Long,
+    val userBuyerId: Long = 0L,
 
-    val buyOrderId : Long?,
+    val buyOrderId : Long? = 0L,
 
-    val userOwnerId: Long
+    val userOwnerId: Long = 0L,
     )

@@ -5,18 +5,33 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.devops.database.devops.artist.Artist
+import com.example.devops.database.devops.artist.ArtistDao
 import com.example.devops.database.devops.bet.Bet
+import com.example.devops.database.devops.bet.BetDao
 import com.example.devops.database.devops.order.Order
+import com.example.devops.database.devops.order.OrderDao
 import com.example.devops.database.devops.product.Product
+import com.example.devops.database.devops.product.ProductDao
 import com.example.devops.database.devops.review.Review
+import com.example.devops.database.devops.review.ReviewDao
 import com.example.devops.database.devops.shoppingcart.ShoppingCart
+import com.example.devops.database.devops.shoppingcart.ShoppingCartDao
 import com.example.devops.database.devops.tag.Tag
+import com.example.devops.database.devops.tag.TagDao
 import com.example.devops.database.devops.userart.UserArt
+import com.example.devops.database.devops.userart.UserArtDao
 
 @Database(entities = [Artist::class, Bet::class, Order::class, Product::class, Review::class, ShoppingCart::class, Tag::class, UserArt::class], version = 1, exportSchema = false)
 abstract class DevOpsDatabase : RoomDatabase() {
 
-    //abstract val devOpsDatabaseDao: DevOpsDatabase
+    abstract val artistDao: ArtistDao
+    abstract val betDao: BetDao
+    abstract val orderDao: OrderDao
+    abstract val productDao: ProductDao
+    abstract val reviewDao: ReviewDao
+    abstract val shoppingCartDao: ShoppingCartDao
+    abstract val tagDao: TagDao
+    abstract val userArtDao: UserArtDao
 
     companion object {
 

@@ -1,9 +1,8 @@
-package com.example.devops.fragments
+package com.example.devops.fragments.detailview
 
 import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
-import android.transition.Slide
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
