@@ -1,10 +1,27 @@
-com/example/devops/BuildConfig.java
- com.example.devops.BuildConfig
-com/example/devops/DataBindingTriggerClass.java
- com.example.devops.DataBindingTriggerClass
+com/example/devops/databinding/ActivityMainBindingImpl.java
+ com.example.devops.databinding.ActivityMainBindingImpl
+com/example/devops/database/devops/DevOpsDatabase_Impl.java
+ com.example.devops.database.devops.DevOpsDatabase_Impl
+ com.example.devops.database.devops.DevOpsDatabase_Impl$1
 com/example/devops/fragments/HomeScreenDirections.java
  com.example.devops.fragments.HomeScreenDirections
+androidx/databinding/DataBinderMapperImpl.java
+ androidx.databinding.DataBinderMapperImpl
 com/example/devops/databinding/ActivityMainBinding.java
  com.example.devops.databinding.ActivityMainBinding
+com/example/devops/DataBinderMapperImpl.java
+ com.example.devops.DataBinderMapperImpl
+ com.example.devops.DataBinderMapperImpl$InnerBrLookup
+ com.example.devops.DataBinderMapperImpl$InnerLayoutIdLookup
+androidx/databinding/library/baseAdapters/BR.java
+ androidx.databinding.library.baseAdapters.BR
 com/example/devops/fragments/MarketPlaceFragmentDirections.java
  com.example.devops.fragments.MarketPlaceFragmentDirections
+androidx/databinding/DataBindingComponent.java
+ androidx.databinding.DataBindingComponent
+com/example/devops/BR.java
+ com.example.devops.BR
+com/example/devops/DataBindingTriggerClass.java
+ com.example.devops.DataBindingTriggerClass
+com/example/devops/BuildConfig.java
+ com.example.devops.BuildConfig

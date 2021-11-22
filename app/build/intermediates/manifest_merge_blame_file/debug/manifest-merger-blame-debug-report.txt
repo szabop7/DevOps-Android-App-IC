@@ -117,16 +117,25 @@
 66            </intent-filter>
 67        </activity>
 68
-69        <provider
-69-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\alici\.gradle\caches\transforms-3\ccb505b1f4a277d91ec92ffd6c0a42f8\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
-70            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-70-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\alici\.gradle\caches\transforms-3\ccb505b1f4a277d91ec92ffd6c0a42f8\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
-71            android:authorities="com.example.devops.lifecycle-process"
-71-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\alici\.gradle\caches\transforms-3\ccb505b1f4a277d91ec92ffd6c0a42f8\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
-72            android:exported="false"
-72-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\alici\.gradle\caches\transforms-3\ccb505b1f4a277d91ec92ffd6c0a42f8\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
-73            android:multiprocess="true" />
-73-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\alici\.gradle\caches\transforms-3\ccb505b1f4a277d91ec92ffd6c0a42f8\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
-74    </application>
-75
-76</manifest>
+69        <service
+69-->[androidx.room:room-runtime:2.3.0] C:\Users\alici\.gradle\caches\transforms-3\a49ca0916e138771b71f9c8162548d4e\transformed\room-runtime-2.3.0\AndroidManifest.xml:25:9-28:40
+70            android:name="androidx.room.MultiInstanceInvalidationService"
+70-->[androidx.room:room-runtime:2.3.0] C:\Users\alici\.gradle\caches\transforms-3\a49ca0916e138771b71f9c8162548d4e\transformed\room-runtime-2.3.0\AndroidManifest.xml:26:13-74
+71            android:directBootAware="true"
+71-->[androidx.room:room-runtime:2.3.0] C:\Users\alici\.gradle\caches\transforms-3\a49ca0916e138771b71f9c8162548d4e\transformed\room-runtime-2.3.0\AndroidManifest.xml:27:13-43
+72            android:exported="false" />
+72-->[androidx.room:room-runtime:2.3.0] C:\Users\alici\.gradle\caches\transforms-3\a49ca0916e138771b71f9c8162548d4e\transformed\room-runtime-2.3.0\AndroidManifest.xml:28:13-37
+73
+74        <provider
+74-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\alici\.gradle\caches\transforms-3\ccb505b1f4a277d91ec92ffd6c0a42f8\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+75            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+75-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\alici\.gradle\caches\transforms-3\ccb505b1f4a277d91ec92ffd6c0a42f8\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+76            android:authorities="com.example.devops.lifecycle-process"
+76-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\alici\.gradle\caches\transforms-3\ccb505b1f4a277d91ec92ffd6c0a42f8\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+77            android:exported="false"
+77-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\alici\.gradle\caches\transforms-3\ccb505b1f4a277d91ec92ffd6c0a42f8\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+78            android:multiprocess="true" />
+78-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\alici\.gradle\caches\transforms-3\ccb505b1f4a277d91ec92ffd6c0a42f8\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+79    </application>
+80
+81</manifest>
