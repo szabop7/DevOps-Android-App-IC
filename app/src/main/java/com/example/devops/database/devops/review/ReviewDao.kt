@@ -13,16 +13,16 @@ interface ReviewDao {
     @Update
     suspend fun update(review: Review)
 
-    @Query("SELECT * from review_table WHERE Id = :key")
+    @Query("SELECT * from review_table WHERE reviewId = :key")
     suspend fun get(key: Long): Review?
 
     @Query("DELETE FROM review_table")
     suspend fun clear()
 
-    @Query("SELECT * FROM review_table ORDER BY Id DESC")
+    @Query("SELECT * FROM review_table ORDER BY reviewId DESC")
     suspend fun getAllReviews(): List<Review>
 
-    @Query("SELECT * FROM review_table ORDER BY Id DESC LIMIT 1")
+    @Query("SELECT * FROM review_table ORDER BY reviewId DESC LIMIT 1")
     suspend fun getLastReview(): Review?
 
     @Query("SELECT COUNT(*) FROM review_table")

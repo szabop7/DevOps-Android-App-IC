@@ -6,22 +6,27 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.devops.database.devops.artist.Artist
 import com.example.devops.database.devops.artist.ArtistDao
+import com.example.devops.database.devops.artist.ArtistWithProducts
+import com.example.devops.database.devops.artist.ArtistWithReviews
 import com.example.devops.database.devops.bet.Bet
 import com.example.devops.database.devops.bet.BetDao
 import com.example.devops.database.devops.order.Order
 import com.example.devops.database.devops.order.OrderDao
-import com.example.devops.database.devops.product.Product
-import com.example.devops.database.devops.product.ProductDao
+import com.example.devops.database.devops.order.OrderWithProducts
+import com.example.devops.database.devops.product.*
 import com.example.devops.database.devops.review.Review
 import com.example.devops.database.devops.review.ReviewDao
 import com.example.devops.database.devops.shoppingcart.ShoppingCart
 import com.example.devops.database.devops.shoppingcart.ShoppingCartDao
+import com.example.devops.database.devops.shoppingcart.ShoppingCartProductCrossRef
+import com.example.devops.database.devops.shoppingcart.ShoppingCartWithProducts
 import com.example.devops.database.devops.tag.Tag
 import com.example.devops.database.devops.tag.TagDao
-import com.example.devops.database.devops.userart.UserArt
-import com.example.devops.database.devops.userart.UserArtDao
+import com.example.devops.database.devops.tag.TagProductCrossRef
+import com.example.devops.database.devops.tag.TagWithProducts
+import com.example.devops.database.devops.userart.*
 
-@Database(entities = [Artist::class, Bet::class, Order::class, Product::class, Review::class, ShoppingCart::class, Tag::class, UserArt::class], version = 1, exportSchema = false)
+@Database(entities = [Artist::class, ProductTagCrossRef::class, ShoppingCartProductCrossRef::class,TagProductCrossRef::class, Bet::class, Order::class, Product::class, Review::class, ShoppingCart::class, Tag::class, UserArt::class], version = 1, exportSchema = false)
 abstract class DevOpsDatabase : RoomDatabase() {
 
     abstract val artistDao: ArtistDao

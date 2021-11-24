@@ -1,6 +1,8 @@
 package com.example.devops.fragments.marketplace
 
 import android.app.Application
+import android.content.Context
+import android.widget.Toast
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.devops.database.devops.DevOpsDatabase
@@ -17,6 +19,7 @@ class MarketPlaceViewModel(val database: ProductDao, application: Application): 
     private fun initializeLiveData(){
         viewModelScope.launch{
             createProduct()
+            getProduct()
         }
     }
 

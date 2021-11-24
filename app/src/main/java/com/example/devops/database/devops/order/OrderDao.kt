@@ -13,16 +13,16 @@ interface OrderDao {
     @Update
     suspend fun update(order: Order)
 
-    @Query("SELECT * from order_table WHERE Id = :key")
+    @Query("SELECT * from order_table WHERE orderId = :key")
     suspend fun get(key: Long): Order?
 
     @Query("DELETE FROM order_table")
     suspend fun clear()
 
-    @Query("SELECT * FROM order_table ORDER BY Id DESC")
+    @Query("SELECT * FROM order_table ORDER BY orderId DESC")
     suspend fun getAllOrders(): List<Order>
 
-    @Query("SELECT * FROM order_table ORDER BY Id DESC LIMIT 1")
+    @Query("SELECT * FROM order_table ORDER BY orderId DESC LIMIT 1")
     suspend fun getLastOrder(): Order?
 
     @Query("SELECT COUNT(*) FROM order_table")

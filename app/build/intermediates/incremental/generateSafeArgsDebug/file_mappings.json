@@ -1,1 +1,1 @@
-[{"navFile":"src\\main\\res\\navigation\\navigation.xml","javaFiles":["com.example.devops.fragments.MarketPlaceFragmentDirections","com.example.devops.fragments.HomeScreenDirections"]}]
+[{"navFile":"src\\main\\res\\navigation\\navigation.xml","javaFiles":["com.example.devops.fragments.marketplace.MarketPlaceFragmentDirections","com.example.devops.fragments.home.HomeScreenDirections"]}]

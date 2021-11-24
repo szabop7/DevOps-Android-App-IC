@@ -26,6 +26,6 @@ interface TagDao {
     suspend fun numberOfTags(): Int
 
     @Transaction
-    @Query("SELECT * FROM product_table")
+    @Query("SELECT * FROM tag_table")
     fun getTagsWithProducts(): List<TagWithProducts>
 }
