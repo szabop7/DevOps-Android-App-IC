@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <item
+        android:id="@+id/MarketPlaceFragment"
+        android:enabled="true"
+        android:icon="@drawable/outline_whatshot_black_24dp"
+        android:title="@string/trends_text"/>
+    <item
+        android:id="@+id/ProfileFragment"
+        android:enabled="true"
+        android:icon="@drawable/user"
+        android:title="@string/profile"/>
+    <item
+        android:id="@+id/ShoppingCartFragment"
+        android:enabled="true"
+        android:icon="@drawable/shopping_cart"
+        android:title="@string/shopping_cart_text"/>
+</menu>

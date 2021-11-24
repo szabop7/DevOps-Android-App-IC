@@ -55,6 +55,7 @@ class MainActivity : AppCompatActivity() {
 
         appBarConfiguration = AppBarConfiguration(navController.graph, binding.drawerLayout)
         NavigationUI.setupWithNavController(binding.navView,navController)
+        NavigationUI.setupWithNavController(binding.bottomNavigation,navController)
 
 
 

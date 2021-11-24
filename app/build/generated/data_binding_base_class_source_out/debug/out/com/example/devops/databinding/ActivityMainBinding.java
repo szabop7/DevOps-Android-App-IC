@@ -10,11 +10,15 @@ import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.drawerlayout.widget.DrawerLayout;
 import com.example.devops.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import java.lang.Deprecated;
 import java.lang.Object;
 
 public abstract class ActivityMainBinding extends ViewDataBinding {
+  @NonNull
+  public final BottomNavigationView bottomNavigation;
+
   @NonNull
   public final DrawerLayout drawerLayout;
 
@@ -22,8 +26,9 @@ public abstract class ActivityMainBinding extends ViewDataBinding {
   public final NavigationView navView;
 
   protected ActivityMainBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      DrawerLayout drawerLayout, NavigationView navView) {
+      BottomNavigationView bottomNavigation, DrawerLayout drawerLayout, NavigationView navView) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.bottomNavigation = bottomNavigation;
     this.drawerLayout = drawerLayout;
     this.navView = navView;
   }

@@ -2038,6 +2038,7 @@ id beginning
 id bestChoice
 id blocking
 id bottom
+id bottomNavigation
 id bounce
 id bounceBoth
 id bounceEnd
@@ -2681,6 +2682,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+menu bottom_navigation_menu
 menu navdrawer_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
