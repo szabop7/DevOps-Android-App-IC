@@ -12,22 +12,25 @@ import kotlinx.coroutines.launch
 
 class MarketPlaceViewModel(val database: ProductDao, application: Application): AndroidViewModel(application) {
 
+    val products = database.getAllProductsLive()
     init {
         initializeLiveData()
     }
 
     private fun initializeLiveData(){
         viewModelScope.launch{
-            createProduct()
-            getProduct()
+            deleteAllProducts()
+            createProducts()
         }
     }
 
-    private suspend fun createProduct(){
-        database.insert(Product(1,"alicia"))
+    private suspend fun createProducts(){
+        database.insert(Product(1, "Product 1", 3.0, "", "The first of the products"))
+        database.insert(Product(2, "Product 2", 3.0, "", "The second of the products"))
+        database.insert(Product(3, "Product 3", 5.0, "", "The third of the products"))
     }
 
-    private suspend fun getProduct(){
-        database.get(1)
+    private suspend fun deleteAllProducts(){
+        database.clear()
     }
 }

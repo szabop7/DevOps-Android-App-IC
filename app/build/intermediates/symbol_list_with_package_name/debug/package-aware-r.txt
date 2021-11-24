@@ -2211,7 +2211,6 @@ id iv_gif_container
 id jumpToEnd
 id jumpToStart
 id labeled
-id latestItemCart
 id layout
 id left
 id leftToRight
@@ -2327,6 +2326,9 @@ id pin
 id position
 id postLayout
 id previous
+id product_description_textview
+id product_list
+id product_title_textview
 id progress_circular
 id progress_horizontal
 id radio
@@ -2599,6 +2601,7 @@ layout fragment_profile
 layout fragment_shopping_cart
 layout fragment_young_art
 layout image_slider_layout_item
+layout list_item_product
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider

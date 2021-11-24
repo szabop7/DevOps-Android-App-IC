@@ -2210,7 +2210,6 @@ int id iv_gif_container 0x7f080117
 int id jumpToEnd 0x7f080118
 int id jumpToStart 0x7f080119
 int id labeled 0x7f08011a
-int id latestItemCart 0x7f08011b
 int id layout 0x7f08011c
 int id left 0x7f08011d
 int id leftToRight 0x7f08011e
@@ -2326,6 +2325,9 @@ int id pin 0x7f08018b
 int id position 0x7f08018c
 int id postLayout 0x7f08018d
 int id previous 0x7f08018e
+int id product_description_textview 0x7f080240
+int id product_list 0x7f080241
+int id product_title_textview 0x7f080242
 int id progress_circular 0x7f08018f
 int id progress_horizontal 0x7f080190
 int id radio 0x7f080191
@@ -2598,6 +2600,7 @@ int layout fragment_profile 0x7f0b0033
 int layout fragment_shopping_cart 0x7f0b0034
 int layout fragment_young_art 0x7f0b0035
 int layout image_slider_layout_item 0x7f0b0036
+int layout list_item_product 0x7f0b0086
 int layout material_chip_input_combo 0x7f0b0037
 int layout material_clock_display 0x7f0b0038
 int layout material_clock_display_divider 0x7f0b0039

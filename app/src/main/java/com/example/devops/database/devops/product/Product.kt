@@ -18,6 +18,9 @@ data class Product (
     @ColumnInfo(name = "product_Img_Path")
     var productImgPath: String = "",
 
+    @ColumnInfo(name = "product_description")
+    var productDescription: String = "",
+
     @ColumnInfo(name = "product_deadline")
     var productDeadline: String = "0000-00-00T00:00:00",
 
@@ -29,9 +32,6 @@ data class Product (
 
     @ColumnInfo(name = "product_height")
     var productHeight: Double = 0.0,
-
-    @ColumnInfo(name = "product_description")
-    var productDescription: String = "",
 
     val userBuyerId: Long = 0L,
 

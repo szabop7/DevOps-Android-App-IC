@@ -1,5 +1,6 @@
 package com.example.devops.database.devops.product
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 
 @Dao
@@ -19,6 +20,9 @@ interface ProductDao {
 
     @Query("SELECT * FROM product_table ORDER BY productId DESC")
     suspend fun getAllProducts(): List<Product>
+
+    @Query("SELECT * FROM product_table ORDER BY productId DESC")
+    fun getAllProductsLive(): LiveData<List<Product>>
 
     @Query("SELECT * FROM product_table ORDER BY productId DESC LIMIT 1")
     suspend fun getLastProduct(): Product?

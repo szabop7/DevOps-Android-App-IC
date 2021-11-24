@@ -8,7 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.example.devops.R
@@ -23,6 +25,10 @@ class MarketPlaceFragment : Fragment() {
     private lateinit var binding: FragmentMarketPlaceBinding
     private lateinit var viewModel : MarketPlaceViewModel
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -30,7 +36,7 @@ class MarketPlaceFragment : Fragment() {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_market_place, container, false)
 
-        binding.pictureMarketPlace.setOnClickListener(this::onClickListener)
+        // binding.pictureMarketPlace.setOnClickListener(this::onClickListener)
         //Get an instance of the appContext to setup the database
         val appContext = requireNotNull(this.activity).application
         val dataSource = DevOpsDatabase.getInstance(appContext).productDao
@@ -39,10 +45,24 @@ class MarketPlaceFragment : Fragment() {
         val viewModelFactory = MarketPlaceViewModelFactory(dataSource, appContext)
         viewModel = ViewModelProvider(this, viewModelFactory).get(MarketPlaceViewModel::class.java)
 
+        binding.viewModel = viewModel
+        binding.lifecycleOwner = this
+
+        val adapter = ProductAdapter(ProductListener { productId: Long ->
+            Toast.makeText(context, productId.toString(), Toast.LENGTH_SHORT).show()
+            onClickListener()
+        })
+
+        binding.productList.adapter = adapter
+
+        viewModel.products.observe(viewLifecycleOwner, Observer{
+             adapter.submitList(it)
+        })
+
         return binding.root
     }
 
-    public fun onClickListener(view_: View){
+    fun onClickListener(){
         view?.findNavController()?.navigate(R.id.action_MarketPlaceFragment_to_detailViewFragment)
     }
 
@@ -53,7 +73,7 @@ class MarketPlaceFragment : Fragment() {
         val textViewText = requireActivity().getSharedPreferences("shopping_cart", Context.MODE_PRIVATE)
             .getString("cart_latest_item", "default value")
 
-        view.findViewById<TextView>(R.id.latestItemCart).text = textViewText
+        // view.findViewById<TextView>(R.id.latestItemCart).text = textViewText
     }
 
 }

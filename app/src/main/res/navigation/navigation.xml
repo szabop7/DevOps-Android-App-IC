@@ -42,7 +42,7 @@
     <fragment
         android:id="@+id/detailViewFragment"
         android:name="com.example.devops.fragments.detailview.DetailViewFragment"
-        android:label="fragment_detail_view"
+        android:label="Detail View"
         tools:layout="@layout/fragment_detail_view" />
     <fragment
         android:id="@+id/ShoppingCartFragment"

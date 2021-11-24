@@ -29,6 +29,9 @@ import com.auth0.android.callback.Callback
 import com.auth0.android.management.ManagementException
 import com.auth0.android.management.UsersAPIClient
 import com.auth0.android.result.UserProfile
+import com.example.devops.database.devops.DevOpsDatabase
+import com.example.devops.database.devops.product.Product
+import com.example.devops.login.CredentialsManager
 
 
 import kotlinx.coroutines.Dispatchers
@@ -66,7 +69,6 @@ class MainActivity : AppCompatActivity() {
             "fFPxEdQJbyPirdQcuzrSNuYiz7tp8nLL",
             "dev-g6aj--a8.us.auth0.com"
         )
-
 
         if (Intent.ACTION_SEARCH == intent.action) {
             intent.getStringExtra(SearchManager.QUERY)?.also { query ->
@@ -107,11 +109,21 @@ class MainActivity : AppCompatActivity() {
                 override fun onSuccess(credentials: Credentials) {
                     // Get the access token from the credentials object.
                     // This can be used to call APIs
-                    val accessToken = credentials.accessToken
-                    showUserProfile(accessToken)
-
+                    CredentialsManager.saveCredentials(applicationContext, credentials)
+                    checkIfToken()
                 }
             })
+    }
+
+    private fun checkIfToken() {
+        val token = CredentialsManager.getAccessToken(applicationContext)
+        if(token != null){
+            // checking if the token works...
+            showUserProfile(token)
+        }
+        else {
+            Toast.makeText(applicationContext, "Token doesn't exist", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun logout() {
