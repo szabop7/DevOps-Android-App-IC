@@ -20,12 +20,12 @@
         "source": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\src\\main\\res\\layout\\fragment_young_art.xml"
     },
     {
-        "merged": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\searching_activity.xml",
-        "source": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\src\\main\\res\\layout\\searching_activity.xml"
-    },
-    {
         "merged": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_shopping_cart.xml",
         "source": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\src\\main\\res\\layout\\fragment_shopping_cart.xml"
+    },
+    {
+        "merged": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\searching_activity.xml",
+        "source": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\src\\main\\res\\layout\\searching_activity.xml"
     },
     {
         "merged": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\image_slider_layout_item.xml",
@@ -36,19 +36,15 @@
         "source": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\bottom_navigation_layout.xml",
-        "source": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\src\\main\\res\\layout\\bottom_navigation_layout.xml"
-    },
-    {
         "merged": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_home_screen.xml",
         "source": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\src\\main\\res\\layout\\fragment_home_screen.xml"
     },
     {
-        "merged": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_gallery.xml",
-        "source": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\src\\main\\res\\layout\\fragment_gallery.xml"
-    },
-    {
         "merged": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\list_item_product.xml",
         "source": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\src\\main\\res\\layout\\list_item_product.xml"
+    },
+    {
+        "merged": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_gallery.xml",
+        "source": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\src\\main\\res\\layout\\fragment_gallery.xml"
     }
 ]

@@ -37,6 +37,9 @@ import com.example.devops.login.CredentialsManager
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import kotlinx.android.synthetic.main.activity_main.*
+
+
 
 
 class MainActivity : AppCompatActivity() {
@@ -60,6 +63,7 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.navView.getHeaderView(0).findViewById<Button>(R.id.ButtonLogIn).setOnClickListener(){ loginWithBrowser()}
+
 
 
 
@@ -110,6 +114,7 @@ class MainActivity : AppCompatActivity() {
                 override fun onSuccess(credentials: Credentials) {
                     // Get the access token from the credentials object.
                     // This can be used to call APIs
+                    binding.navView.getHeaderView(0).findViewById<Button>(R.id.ButtonLogIn).visibility = View.INVISIBLE
                     CredentialsManager.saveCredentials(applicationContext, credentials)
                     checkIfToken()
                 }
@@ -155,7 +160,6 @@ class MainActivity : AppCompatActivity() {
 
                 override fun onSuccess(profile: UserProfile) {
                     // We have the user's profile!
-
                     val email = profile.email
                     val name = profile.name
                     binding.navView.getHeaderView(0).findViewById<TextView>(R.id.greetings_text).text = "Hello, ${name}"
