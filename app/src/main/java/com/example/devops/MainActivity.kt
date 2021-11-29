@@ -140,6 +140,8 @@ class MainActivity : AppCompatActivity() {
                     // The user has been logged out!
                     binding.navView.getHeaderView(0).findViewById<TextView>(R.id.greetings_text).text = getString(
                                             R.string.hello_text)
+                    binding.navView.getHeaderView(0).findViewById<Button>(R.id.ButtonLogIn).visibility = View.VISIBLE
+
                 }
 
                 override fun onFailure(error: AuthenticationException) {
