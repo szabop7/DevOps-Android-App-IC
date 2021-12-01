@@ -30,6 +30,7 @@ interface ProductDao {
     @Query("SELECT COUNT(*) FROM product_table")
     suspend fun numberOfProducts(): Int
 
+
     @Transaction
     @Query("SELECT * FROM product_table")
     fun getProductsWithTags(): List<ProductWithTags>

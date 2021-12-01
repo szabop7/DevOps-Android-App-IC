@@ -22,10 +22,10 @@ interface ShoppingCartDao {
     //suspend fun getAllProducts(shoppingCart: ShoppingCart): List<Product>
 
     @Query("SELECT * FROM shopping_cart_table ORDER BY shoppingCartId DESC LIMIT 1")
-    suspend fun getLastTag(): ShoppingCart?
+    suspend fun getLastShoppingCart(): ShoppingCart?
 
     @Query("SELECT COUNT(*) FROM shopping_cart_table")
-    suspend fun numberOfTags(): Int
+    suspend fun numberOfShoppingCarts(): Int
 
     @Transaction
     @Query("SELECT * FROM shopping_cart_table")
