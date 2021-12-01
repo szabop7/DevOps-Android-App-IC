@@ -46,6 +46,13 @@
                 android:resource="@xml/searchable" />
         </activity>
         <activity
+            android:name="com.example.devops.SearchResultsActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="com.auth0.android.provider.AuthenticationActivity"
             android:exported="false"
             android:launchMode="singleTask"

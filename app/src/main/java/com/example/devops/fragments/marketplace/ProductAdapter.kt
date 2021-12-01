@@ -2,24 +2,17 @@ package com.example.devops.fragments.marketplace
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Filter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.devops.database.devops.product.Product
 import com.example.devops.databinding.ListItemProductBinding
+import java.util.*
+import kotlin.collections.ArrayList
 
 class ProductAdapter(val clickListener: ProductListener) : ListAdapter<Product, ViewHolder>(ProductDiffCallback()){
-    //taken care of by ListAdapter
-    /*var data = listOf<Joke>()
-    set(value) {
-        field = value
-        notifyDataSetChanged()
-    }*/
 
-    /*
-    override fun getItemCount(): Int {
-        return data.size
-    }*/
 
     //fill up the item you need (e.g. set texts and images)
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {

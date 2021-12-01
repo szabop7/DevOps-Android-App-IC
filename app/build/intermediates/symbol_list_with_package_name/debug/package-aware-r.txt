@@ -1920,6 +1920,7 @@ drawable outline_store_black_24dp
 drawable outline_trending_up_black_24dp
 drawable outline_upgrade_black_24dp
 drawable outline_whatshot_black_24dp
+drawable search
 drawable shopping_cart
 drawable stars
 drawable sternennacht
@@ -2187,7 +2188,6 @@ id imageButton5
 id imageSlider
 id imageView
 id imageView1
-id imageView10
 id imageView11
 id imageView12
 id imageView14
@@ -2196,7 +2196,6 @@ id imageView2
 id imageView3
 id imageView4
 id imageView5
-id imageView6
 id imageView7
 id imageView8
 id imageView9
@@ -2688,6 +2687,7 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 navigation navigation
 plurals mtrl_badge_content_description
+raw definitions
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

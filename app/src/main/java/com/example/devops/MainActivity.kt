@@ -4,11 +4,14 @@ package com.example.devops
 import android.app.SearchManager
 import android.content.Intent
 import android.content.ClipData
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
+import android.widget.SearchView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -29,6 +32,7 @@ import com.auth0.android.callback.Callback
 import com.auth0.android.management.ManagementException
 import com.auth0.android.management.UsersAPIClient
 import com.auth0.android.result.UserProfile
+import com.example.devops.database.devops.DatabaseTable
 import com.example.devops.database.devops.DevOpsDatabase
 import com.example.devops.database.devops.product.Product
 import com.example.devops.login.CredentialsManager
@@ -48,6 +52,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
     private lateinit var account: Auth0
+    private val db = DatabaseTable(this)
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -217,4 +223,7 @@ class MainActivity : AppCompatActivity() {
     fun trendsOnClick(item: android.view.MenuItem) {
 
     }
+
+
+
 }

@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.widget.SearchView
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -58,7 +59,16 @@ class MarketPlaceFragment : Fragment() {
         viewModel.products.observe(viewLifecycleOwner, Observer{
              adapter.submitList(it)
         })
-
+        binding.searchBar.setOnQueryTextListener(object : SearchView.OnQueryTextListener
+        {
+            override fun onQueryTextChange(qString: String): Boolean {
+                viewModel.setFilter(qString)
+                return true
+            }
+            override fun onQueryTextSubmit(qString: String): Boolean {
+                return true
+            }
+        })
         return binding.root
     }
 

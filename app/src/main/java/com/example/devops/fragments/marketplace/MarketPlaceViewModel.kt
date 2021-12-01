@@ -3,8 +3,7 @@ package com.example.devops.fragments.marketplace
 import android.app.Application
 import android.content.Context
 import android.widget.Toast
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import com.example.devops.database.devops.DevOpsDatabase
 import com.example.devops.database.devops.product.Product
 import com.example.devops.database.devops.product.ProductDao
@@ -12,9 +11,14 @@ import kotlinx.coroutines.launch
 
 class MarketPlaceViewModel(val database: ProductDao, application: Application): AndroidViewModel(application) {
 
-    val products = database.getAllProductsLive()
+    var products: LiveData<List<Product>>
+    var filter = MutableLiveData<String>("%")
+
     init {
         initializeLiveData()
+        products = Transformations.switchMap(filter) { filter ->
+            database.getProductsFiltered(filter)
+        }
     }
 
     private fun initializeLiveData(){
@@ -25,12 +29,22 @@ class MarketPlaceViewModel(val database: ProductDao, application: Application): 
     }
 
     private suspend fun createProducts(){
-        database.insert(Product(1, "Product 1", 3.0, "", "The first of the products"))
-        database.insert(Product(2, "Product 2", 3.0, "", "The second of the products"))
-        database.insert(Product(3, "Product 3", 5.0, "", "The third of the products"))
+        database.insert(Product(1, "Winter", 3.0, "", "A cold winter morning"))
+        database.insert(Product(2, "Fall", 3.0, "", "Brown leaves"))
+        database.insert(Product(3, "Summer", 5.0, "", "Sunny days"))
     }
 
     private suspend fun deleteAllProducts(){
         database.clear()
+    }
+
+    // set the filter for allItemsFiltered
+    fun setFilter(newFilter: String) {
+        // optional: add wildcards to the filter
+        val f = when {
+            newFilter.isEmpty() -> "%"
+            else -> "%$newFilter%"
+        }
+        filter.postValue(f) // apply the filter
     }
 }

@@ -30,6 +30,9 @@ interface ProductDao {
     @Query("SELECT COUNT(*) FROM product_table")
     suspend fun numberOfProducts(): Int
 
+    // Dao query with filter
+    @Query("SELECT * from product_table WHERE product_name LIKE :filter OR product_description LIKE :filter ORDER BY productId")
+    fun getProductsFiltered(filter: String): LiveData<List<Product>>
 
     @Transaction
     @Query("SELECT * FROM product_table")
