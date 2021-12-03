@@ -1,4 +1,4 @@
-package com.example.devops.fragments.marketplace
+package com.example.devops.screens.marketplace
 
 import android.app.Application
 import androidx.lifecycle.ViewModel

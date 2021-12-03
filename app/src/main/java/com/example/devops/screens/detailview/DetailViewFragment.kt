@@ -1,4 +1,4 @@
-package com.example.devops.fragments.detailview
+package com.example.devops.screens.detailview
 
 import android.content.Context
 import android.graphics.Color

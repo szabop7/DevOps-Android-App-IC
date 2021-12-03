@@ -1,4 +1,4 @@
-package com.example.devops.fragments.marketplace
+package com.example.devops.screens.marketplace
 
 import android.content.Context
 import android.os.Bundle
@@ -6,8 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.databinding.DataBindingUtil
@@ -17,8 +15,6 @@ import androidx.navigation.findNavController
 import com.example.devops.R
 import com.example.devops.database.devops.DevOpsDatabase
 import com.example.devops.databinding.FragmentMarketPlaceBinding
-
-import com.example.devops.database.devops.product.Product
 
 
 class MarketPlaceFragment : Fragment() {
@@ -47,7 +43,7 @@ class MarketPlaceFragment : Fragment() {
         viewModel = ViewModelProvider(this, viewModelFactory).get(MarketPlaceViewModel::class.java)
 
         binding.viewModel = viewModel
-        binding.lifecycleOwner = this
+        binding.lifecycleOwner = viewLifecycleOwner
 
         val adapter = ProductAdapter(ProductListener { productId: Long ->
             Toast.makeText(context, productId.toString(), Toast.LENGTH_SHORT).show()

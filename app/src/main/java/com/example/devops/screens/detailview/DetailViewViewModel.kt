@@ -1,4 +1,4 @@
-package com.example.devops.fragments.detailview
+package com.example.devops.screens.detailview
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

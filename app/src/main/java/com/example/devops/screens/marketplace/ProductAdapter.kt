@@ -1,15 +1,13 @@
-package com.example.devops.fragments.marketplace
+package com.example.devops.screens.marketplace
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Filter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.devops.database.devops.product.Product
 import com.example.devops.databinding.ListItemProductBinding
 import java.util.*
-import kotlin.collections.ArrayList
 
 class ProductAdapter(val clickListener: ProductListener) : ListAdapter<Product, ViewHolder>(ProductDiffCallback()){
 

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="left"
     android:orientation="vertical"
-    tools:context=".fragments.shoppingcart.ShoppingCartFragment"
+    tools:context=".screens.shoppingcart.ShoppingCartFragment"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="19dp">
 

@@ -10,7 +10,7 @@
             type="com.example.devops.database.devops.product.Product" />
         <variable
             name="clickListener"
-            type="com.example.devops.fragments.marketplace.ProductListener" />
+            type="com.example.devops.screens.marketplace.ProductListener" />
 
     </data>
 

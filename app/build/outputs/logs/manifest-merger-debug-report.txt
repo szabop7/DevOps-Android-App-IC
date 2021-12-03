@@ -28,6 +28,7 @@ MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\alici\.gradle\cac
 MERGED from [com.github.smarteist:autoimageslider:1.4.0] C:\Users\alici\.gradle\caches\transforms-3\5d97b67507014dcf35b07375310f1fc6\transformed\jetified-autoimageslider-1.4.0\AndroidManifest.xml:2:1-17:12
 MERGED from [androidx.room:room-runtime:2.3.0] C:\Users\alici\.gradle\caches\transforms-3\a49ca0916e138771b71f9c8162548d4e\transformed\room-runtime-2.3.0\AndroidManifest.xml:17:1-31:12
 MERGED from [androidx.security:security-crypto-ktx:1.1.0-alpha02] C:\Users\alici\.gradle\caches\transforms-3\3cf30c38a254f4938c8eaa0a49a6e758\transformed\jetified-security-crypto-ktx-1.1.0-alpha02\AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.bumptech.glide:glide:4.8.0] C:\Users\alici\.gradle\caches\transforms-3\9a8da387cce858afdfa3cc2c853cd9ca\transformed\jetified-glide-4.8.0\AndroidManifest.xml:2:1-12:12
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\alici\.gradle\caches\transforms-3\d310166a337bfc452f274838c9e2c655\transformed\lifecycle-extensions-2.2.0\AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\alici\.gradle\caches\transforms-3\85dd3d51e60fbd0472e2a39da0b8e106\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\alici\.gradle\caches\transforms-3\412e10116693ca0c9e944c2dfcaf7b5d\transformed\navigation-fragment-2.3.5\AndroidManifest.xml:17:1-24:12
@@ -63,6 +64,7 @@ MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\alici\.gradle\caches
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\alici\.gradle\caches\transforms-3\8fe935c54f836475e610d75e67c4c7c7\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\alici\.gradle\caches\transforms-3\ae5bf2f56fa32674f7952157b0f74fcd\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.security:security-crypto:1.1.0-alpha02] C:\Users\alici\.gradle\caches\transforms-3\ea40512c902b09591609a2fdafa54331\transformed\jetified-security-crypto-1.1.0-alpha02\AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.8.0] C:\Users\alici\.gradle\caches\transforms-3\e9ad876247efd9f654d58e79922deb75\transformed\jetified-gifdecoder-4.8.0\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.4.0] C:\Users\alici\.gradle\caches\transforms-3\c1029be584484a388eded321ff178766\transformed\lifecycle-livedata-2.4.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.4.0] C:\Users\alici\.gradle\caches\transforms-3\1dca46a2fc97590d1fae0b2f4888bc05\transformed\jetified-lifecycle-livedata-core-ktx-2.4.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.4.0] C:\Users\alici\.gradle\caches\transforms-3\be29ed8fc4e413eb25eb20a10ddf35cb\transformed\lifecycle-livedata-core-2.4.0\AndroidManifest.xml:17:1-24:12
@@ -111,12 +113,16 @@ MERGED from [com.github.smarteist:autoimageslider:1.4.0] C:\Users\alici\.gradle\
 MERGED from [com.github.smarteist:autoimageslider:1.4.0] C:\Users\alici\.gradle\caches\transforms-3\5d97b67507014dcf35b07375310f1fc6\transformed\jetified-autoimageslider-1.4.0\AndroidManifest.xml:11:5-15:19
 MERGED from [androidx.room:room-runtime:2.3.0] C:\Users\alici\.gradle\caches\transforms-3\a49ca0916e138771b71f9c8162548d4e\transformed\room-runtime-2.3.0\AndroidManifest.xml:24:5-29:19
 MERGED from [androidx.room:room-runtime:2.3.0] C:\Users\alici\.gradle\caches\transforms-3\a49ca0916e138771b71f9c8162548d4e\transformed\room-runtime-2.3.0\AndroidManifest.xml:24:5-29:19
+MERGED from [com.github.bumptech.glide:glide:4.8.0] C:\Users\alici\.gradle\caches\transforms-3\9a8da387cce858afdfa3cc2c853cd9ca\transformed\jetified-glide-4.8.0\AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.8.0] C:\Users\alici\.gradle\caches\transforms-3\9a8da387cce858afdfa3cc2c853cd9ca\transformed\jetified-glide-4.8.0\AndroidManifest.xml:10:5-20
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\alici\.gradle\caches\transforms-3\d310166a337bfc452f274838c9e2c655\transformed\lifecycle-extensions-2.2.0\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\alici\.gradle\caches\transforms-3\d310166a337bfc452f274838c9e2c655\transformed\lifecycle-extensions-2.2.0\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.core:core:1.6.0] C:\Users\alici\.gradle\caches\transforms-3\1fea4a740cc9f8b3101b1ddcf14940da\transformed\core-1.6.0\AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.6.0] C:\Users\alici\.gradle\caches\transforms-3\1fea4a740cc9f8b3101b1ddcf14940da\transformed\core-1.6.0\AndroidManifest.xml:24:5-89
 MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\alici\.gradle\caches\transforms-3\ccb505b1f4a277d91ec92ffd6c0a42f8\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:24:5-30:19
 MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\alici\.gradle\caches\transforms-3\ccb505b1f4a277d91ec92ffd6c0a42f8\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:24:5-30:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.8.0] C:\Users\alici\.gradle\caches\transforms-3\e9ad876247efd9f654d58e79922deb75\transformed\jetified-gifdecoder-4.8.0\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.8.0] C:\Users\alici\.gradle\caches\transforms-3\e9ad876247efd9f654d58e79922deb75\transformed\jetified-gifdecoder-4.8.0\AndroidManifest.xml:9:5-20
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\alici\.gradle\caches\transforms-3\f13a4e1227112391b5e5252a48a7f7c1\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\alici\.gradle\caches\transforms-3\f13a4e1227112391b5e5252a48a7f7c1\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 	android:appComponentFactory
@@ -219,6 +225,8 @@ MERGED from [androidx.room:room-runtime:2.3.0] C:\Users\alici\.gradle\caches\tra
 MERGED from [androidx.room:room-runtime:2.3.0] C:\Users\alici\.gradle\caches\transforms-3\a49ca0916e138771b71f9c8162548d4e\transformed\room-runtime-2.3.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.security:security-crypto-ktx:1.1.0-alpha02] C:\Users\alici\.gradle\caches\transforms-3\3cf30c38a254f4938c8eaa0a49a6e758\transformed\jetified-security-crypto-ktx-1.1.0-alpha02\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.security:security-crypto-ktx:1.1.0-alpha02] C:\Users\alici\.gradle\caches\transforms-3\3cf30c38a254f4938c8eaa0a49a6e758\transformed\jetified-security-crypto-ktx-1.1.0-alpha02\AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.bumptech.glide:glide:4.8.0] C:\Users\alici\.gradle\caches\transforms-3\9a8da387cce858afdfa3cc2c853cd9ca\transformed\jetified-glide-4.8.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.8.0] C:\Users\alici\.gradle\caches\transforms-3\9a8da387cce858afdfa3cc2c853cd9ca\transformed\jetified-glide-4.8.0\AndroidManifest.xml:6:5-8:41
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\alici\.gradle\caches\transforms-3\d310166a337bfc452f274838c9e2c655\transformed\lifecycle-extensions-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\alici\.gradle\caches\transforms-3\d310166a337bfc452f274838c9e2c655\transformed\lifecycle-extensions-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\alici\.gradle\caches\transforms-3\85dd3d51e60fbd0472e2a39da0b8e106\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
@@ -289,6 +297,8 @@ MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\alici\.gradle\caches\tra
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\alici\.gradle\caches\transforms-3\ae5bf2f56fa32674f7952157b0f74fcd\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.security:security-crypto:1.1.0-alpha02] C:\Users\alici\.gradle\caches\transforms-3\ea40512c902b09591609a2fdafa54331\transformed\jetified-security-crypto-1.1.0-alpha02\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.security:security-crypto:1.1.0-alpha02] C:\Users\alici\.gradle\caches\transforms-3\ea40512c902b09591609a2fdafa54331\transformed\jetified-security-crypto-1.1.0-alpha02\AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.8.0] C:\Users\alici\.gradle\caches\transforms-3\e9ad876247efd9f654d58e79922deb75\transformed\jetified-gifdecoder-4.8.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.8.0] C:\Users\alici\.gradle\caches\transforms-3\e9ad876247efd9f654d58e79922deb75\transformed\jetified-gifdecoder-4.8.0\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.4.0] C:\Users\alici\.gradle\caches\transforms-3\c1029be584484a388eded321ff178766\transformed\lifecycle-livedata-2.4.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.4.0] C:\Users\alici\.gradle\caches\transforms-3\c1029be584484a388eded321ff178766\transformed\lifecycle-livedata-2.4.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.4.0] C:\Users\alici\.gradle\caches\transforms-3\1dca46a2fc97590d1fae0b2f4888bc05\transformed\jetified-lifecycle-livedata-core-ktx-2.4.0\AndroidManifest.xml:20:5-22:41

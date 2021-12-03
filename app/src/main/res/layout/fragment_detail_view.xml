@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.detailview.DetailViewFragment"
+    tools:context=".screens.detailview.DetailViewFragment"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView

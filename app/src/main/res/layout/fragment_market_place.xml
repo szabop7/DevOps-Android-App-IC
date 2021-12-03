@@ -7,7 +7,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.devops.fragments.marketplace.MarketPlaceViewModel" />
+            type="com.example.devops.screens.marketplace.MarketPlaceViewModel" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -35,7 +35,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/search_bar"
-            tools:context=".fragments.marketplace.MarketPlaceFragment" />
+            tools:context=".screens.marketplace.MarketPlaceFragment" />
 
        <!-- <TextView
             android:id="@+id/latestItemCart"

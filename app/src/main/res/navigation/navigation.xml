@@ -6,7 +6,7 @@
     app:startDestination="@id/homeScreen">
     <fragment
         android:id="@+id/MarketPlaceFragment"
-        android:name="com.example.devops.fragments.marketplace.MarketPlaceFragment"
+        android:name="com.example.devops.screens.marketplace.MarketPlaceFragment"
         android:label="Market Place"
         tools:layout="@layout/fragment_market_place" >
         <action
@@ -15,12 +15,12 @@
     </fragment>
     <fragment
         android:id="@+id/youngArtFragment"
-        android:name="com.example.devops.fragments.youngart.YoungArtFragment"
+        android:name="com.example.devops.screens.youngart.YoungArtFragment"
         android:label="YoungArt"
         tools:layout="@layout/fragment_young_art" />
     <fragment
         android:id="@+id/homeScreen"
-        android:name="com.example.devops.fragments.home.HomeScreen"
+        android:name="com.example.devops.screens.home.HomeScreen"
         android:label="HomeScreen">
         <action
               android:id="@+id/action_homeScreen_to_YoungArtFragment"
@@ -41,22 +41,22 @@
     </fragment>
     <fragment
         android:id="@+id/detailViewFragment"
-        android:name="com.example.devops.fragments.detailview.DetailViewFragment"
+        android:name="com.example.devops.screens.detailview.DetailViewFragment"
         android:label="Detail View"
         tools:layout="@layout/fragment_detail_view" />
     <fragment
         android:id="@+id/ShoppingCartFragment"
-        android:name="com.example.devops.fragments.shoppingcart.ShoppingCartFragment"
+        android:name="com.example.devops.screens.shoppingcart.ShoppingCartFragment"
         android:label="Shopping Cart"
         tools:layout="@layout/fragment_shopping_cart" />
     <fragment
         android:id="@+id/ProfileFragment"
-        android:name="com.example.devops.fragments.profile.ProfileFragment"
+        android:name="com.example.devops.screens.profile.ProfileFragment"
         android:label="Profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/galleryFragment"
-        android:name="com.example.devops.fragments.gallery.GalleryFragment"
+        android:name="com.example.devops.screens.gallery.GalleryFragment"
         android:label="fragment_gallery"
         tools:layout="@layout/fragment_gallery" />
 </navigation>

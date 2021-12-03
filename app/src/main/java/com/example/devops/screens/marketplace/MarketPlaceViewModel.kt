@@ -1,15 +1,27 @@
-package com.example.devops.fragments.marketplace
+package com.example.devops.screens.marketplace
 
 import android.app.Application
-import android.content.Context
-import android.widget.Toast
 import androidx.lifecycle.*
-import com.example.devops.database.devops.DevOpsDatabase
 import com.example.devops.database.devops.product.Product
 import com.example.devops.database.devops.product.ProductDao
+import com.example.devops.network.ApiProduct
+import com.example.devops.network.DevOpsApi
+import com.example.devops.network.DevOpsApiService
+import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
+import retrofit2.await
+
+enum class DevOpsApiStatus { LOADING, ERROR, DONE }
 
 class MarketPlaceViewModel(val database: ProductDao, application: Application): AndroidViewModel(application) {
+
+    private var _apiResponse = MutableLiveData<ApiProduct>()
+    val apiResponse: LiveData<ApiProduct>
+        get() = _apiResponse
+
+    private val _status = MutableLiveData<DevOpsApiStatus>()
+    val status: LiveData<DevOpsApiStatus>
+        get() = _status
 
     var products: LiveData<List<Product>>
     var filter = MutableLiveData<String>("%")
@@ -18,6 +30,9 @@ class MarketPlaceViewModel(val database: ProductDao, application: Application): 
         initializeLiveData()
         products = Transformations.switchMap(filter) { filter ->
             database.getProductsFiltered(filter)
+        }
+        viewModelScope.launch {
+            getProductsFromAPI()
         }
     }
 
@@ -47,4 +62,23 @@ class MarketPlaceViewModel(val database: ProductDao, application: Application): 
         }
         filter.postValue(f) // apply the filter
     }
+
+    private suspend fun getProductsFromAPI() {
+        _status.value = DevOpsApiStatus.LOADING
+        var getProductsDeferred = DevOpsApi.retrofitService.getProducts()
+
+        try {
+            var res = getProductsDeferred.await()
+            _status.value = DevOpsApiStatus.DONE
+            _apiResponse.value = res
+        } catch (e: Exception){
+            _status.value = DevOpsApiStatus.ERROR
+        }
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        viewModelScope.cancel()
+    }
+
 }
