@@ -51,13 +51,16 @@ class MainActivity : AppCompatActivity() {
 
         binding.navView.getHeaderView(0).findViewById<Button>(R.id.ButtonLogIn).setOnClickListener() { loginWithBrowser() }
 
-        binding.navView.menu.findItem(R.id.ButtonLogOut).setOnMenuItemClickListener { logout()
+        var logOutButton: MenuItem = binding.navView.menu.findItem(R.id.ButtonLogOut)
+        logOutButton.setOnMenuItemClickListener { logout()
                     true }
 
         account = Auth0(
             "fFPxEdQJbyPirdQcuzrSNuYiz7tp8nLL",
             "dev-g6aj--a8.us.auth0.com"
         )
+
+        logOutButton.setVisible(false)
 
         if (Intent.ACTION_SEARCH == intent.action) {
             intent.getStringExtra(SearchManager.QUERY)?.also { query ->
@@ -93,7 +96,7 @@ class MainActivity : AppCompatActivity() {
                 override fun onSuccess(credentials: Credentials) {
                     // Get the access token from the credentials object.
                     // This can be used to call APIs
-                    binding.navView.getHeaderView(0).findViewById<Button>(R.id.ButtonLogIn).visibility = View.INVISIBLE
+
                     CredentialsManager.saveCredentials(applicationContext, credentials)
                     checkIfToken()
                 }
@@ -118,7 +121,7 @@ class MainActivity : AppCompatActivity() {
                     // The user has been logged out!
                     binding.navView.getHeaderView(0).findViewById<TextView>(R.id.greetings_text).text = getString(
                                             R.string.hello_text)
-                    binding.navView.getHeaderView(0).findViewById<Button>(R.id.ButtonLogIn).visibility = View.VISIBLE
+                    logButtonsVisibilityToggle(true)
                 }
 
                 override fun onFailure(error: AuthenticationException) {
@@ -142,6 +145,7 @@ class MainActivity : AppCompatActivity() {
                     val email = profile.email
                     val name = profile.name
                     binding.navView.getHeaderView(0).findViewById<TextView>(R.id.greetings_text).text = "Hello, $name"
+                    logButtonsVisibilityToggle(false)
                 }
             })
     }
@@ -191,5 +195,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun trendsOnClick(item: android.view.MenuItem) {
+    }
+
+    fun logButtonsVisibilityToggle(bool: Boolean) {
+        var buttonVisLogIn: Int = View.VISIBLE
+
+        if (!bool) {
+            buttonVisLogIn = View.INVISIBLE
+        }
+        binding.navView.getHeaderView(0).findViewById<Button>(R.id.ButtonLogIn).visibility = buttonVisLogIn
+        binding.navView.menu.findItem(R.id.ButtonLogOut).setVisible(!bool)
     }
 }
