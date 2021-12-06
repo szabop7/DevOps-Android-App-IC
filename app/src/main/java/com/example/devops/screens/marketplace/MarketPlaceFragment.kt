@@ -16,29 +16,29 @@ import com.example.devops.R
 import com.example.devops.database.devops.DevOpsDatabase
 import com.example.devops.databinding.FragmentMarketPlaceBinding
 
-
 class MarketPlaceFragment : Fragment() {
 
     private lateinit var binding: FragmentMarketPlaceBinding
-    private lateinit var viewModel : MarketPlaceViewModel
+    private lateinit var viewModel: MarketPlaceViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_market_place, container, false)
 
         // binding.pictureMarketPlace.setOnClickListener(this::onClickListener)
-        //Get an instance of the appContext to setup the database
+        // Get an instance of the appContext to setup the database
         val appContext = requireNotNull(this.activity).application
         val dataSource = DevOpsDatabase.getInstance(appContext).productDao
 
-        //use a factory to pass the database reference to the viewModel
+        // use a factory to pass the database reference to the viewModel
         val viewModelFactory = MarketPlaceViewModelFactory(dataSource, appContext)
         viewModel = ViewModelProvider(this, viewModelFactory).get(MarketPlaceViewModel::class.java)
 
@@ -52,11 +52,10 @@ class MarketPlaceFragment : Fragment() {
 
         binding.productList.adapter = adapter
 
-        viewModel.products.observe(viewLifecycleOwner, Observer{
-             adapter.submitList(it)
+        viewModel.products.observe(viewLifecycleOwner, Observer {
+                    adapter.submitList(it)
         })
-        binding.searchBar.setOnQueryTextListener(object : SearchView.OnQueryTextListener
-        {
+        binding.searchBar.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextChange(qString: String): Boolean {
                 viewModel.setFilter(qString)
                 return true
@@ -68,18 +67,16 @@ class MarketPlaceFragment : Fragment() {
         return binding.root
     }
 
-    fun onClickListener(){
+    fun onClickListener() {
         view?.findNavController()?.navigate(R.id.action_MarketPlaceFragment_to_detailViewFragment)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
         val textViewText = requireActivity().getSharedPreferences("shopping_cart", Context.MODE_PRIVATE)
             .getString("cart_latest_item", "default value")
 
         // view.findViewById<TextView>(R.id.latestItemCart).text = textViewText
     }
-
 }

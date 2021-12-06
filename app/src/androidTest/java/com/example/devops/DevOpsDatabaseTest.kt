@@ -64,6 +64,4 @@ class DevOpsDatabaseTest {
         val lastProduct = productDao.getLastProduct()
         assertEquals(lastProduct?.productName, "")
     }*/
-
-
 }

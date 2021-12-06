@@ -6,7 +6,6 @@ import android.content.SharedPreferences
 import androidx.security.crypto.EncryptedSharedPreferences
 import androidx.security.crypto.MasterKeys
 
-
 object CredentialsManager {
     private val ACCESS_TOKEN = "access_token"
 

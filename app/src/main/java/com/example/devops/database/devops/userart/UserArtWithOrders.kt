@@ -4,7 +4,7 @@ import androidx.room.Embedded
 import androidx.room.Relation
 import com.example.devops.database.devops.order.Order
 
-data class UserArtWithOrders (
+data class UserArtWithOrders(
     @Embedded val user: UserArt,
     @Relation(
         parentColumn = "userArtId",

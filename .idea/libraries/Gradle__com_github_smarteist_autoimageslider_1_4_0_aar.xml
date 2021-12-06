@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.smarteist:autoimageslider:1.4.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/5d97b67507014dcf35b07375310f1fc6/transformed/jetified-autoimageslider-1.4.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/5d97b67507014dcf35b07375310f1fc6/transformed/jetified-autoimageslider-1.4.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/5d97b67507014dcf35b07375310f1fc6/transformed/jetified-autoimageslider-1.4.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4e730d6aa3d95666fdd02eeee73ee5dc/transformed/jetified-autoimageslider-1.4.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/4e730d6aa3d95666fdd02eeee73ee5dc/transformed/jetified-autoimageslider-1.4.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4e730d6aa3d95666fdd02eeee73ee5dc/transformed/jetified-autoimageslider-1.4.0/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.smarteist/autoimageslider/1.4.0/a5aa7c44c7db046b4ab52c4cd1ed375bafd8ba8b/autoimageslider-1.4.0-javadoc.jar!/" />

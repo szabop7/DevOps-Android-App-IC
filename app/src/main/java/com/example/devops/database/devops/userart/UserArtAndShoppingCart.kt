@@ -4,7 +4,7 @@ import androidx.room.Embedded
 import androidx.room.Relation
 import com.example.devops.database.devops.shoppingcart.ShoppingCart
 
-data class UserArtAndShoppingCart (
+data class UserArtAndShoppingCart(
 
     @Embedded
     val user: UserArt,

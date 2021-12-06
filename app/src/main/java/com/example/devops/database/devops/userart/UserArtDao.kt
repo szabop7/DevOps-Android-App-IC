@@ -41,7 +41,4 @@ interface UserArtDao {
     @Transaction
     @Query("SELECT * FROM user_art_table")
     fun getUsersWithReviews(): List<UserWithReviews>
-
-
-
 }

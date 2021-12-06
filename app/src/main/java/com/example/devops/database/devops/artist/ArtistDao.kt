@@ -33,5 +33,4 @@ interface ArtistDao {
     @Transaction
     @Query("SELECT * FROM artist_table")
     fun getArtistWithReviews(): List<ArtistWithReviews>
-
 }

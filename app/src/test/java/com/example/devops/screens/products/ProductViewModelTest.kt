@@ -7,7 +7,7 @@ import org.junit.Rule
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
-class ProductViewModelTest{
+class ProductViewModelTest {
     @get:Rule
     var instantExecutorRule = InstantTaskExecutorRule()
 
@@ -21,5 +21,4 @@ class ProductViewModelTest{
 
         assertThat(value, not(nullValue()))
     }*/
-
 }

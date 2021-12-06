@@ -1867,6 +1867,7 @@ drawable foto2
 drawable foto3
 drawable gold
 drawable human
+drawable ic_baseline_edit_24
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background

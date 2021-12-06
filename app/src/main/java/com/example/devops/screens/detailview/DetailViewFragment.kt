@@ -15,26 +15,20 @@ import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnima
 import com.smarteist.autoimageslider.SliderAnimations
 import com.smarteist.autoimageslider.SliderView
 
-
-
-
 class DetailViewFragment : Fragment() {
-
 
     var sliderView: SliderView? = null
     private var adapter: SliderAdapterDetailView? = null
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-
         }
-
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
@@ -44,7 +38,7 @@ class DetailViewFragment : Fragment() {
         adapter = SliderAdapterDetailView(requireContext())
 
         sliderView?.setSliderAdapter(adapter!!)
-        sliderView?.setIndicatorAnimation(IndicatorAnimationType.WORM) //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
+        sliderView?.setIndicatorAnimation(IndicatorAnimationType.WORM) // set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
         sliderView?.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION)
         sliderView?.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH)
         sliderView?.setIndicatorSelectedColor(Color.WHITE)
@@ -57,8 +51,8 @@ class DetailViewFragment : Fragment() {
         return view
     }
 
-    fun renewItems () {
-        var items : MutableList<SliderItemDetailView> = mutableListOf(SliderItemDetailView(),
+    fun renewItems() {
+        var items: MutableList<SliderItemDetailView> = mutableListOf(SliderItemDetailView(),
             SliderItemDetailView()
         )
 

@@ -4,8 +4,9 @@ plugins {
     id 'kotlin-android-extensions'
 }
 
-apply plugin: 'androidx.navigation.safeargs'
+//apply plugin: 'androidx.navigation.safeargs'
 apply plugin: 'kotlin-kapt'
+apply from: '../ktlint.gradle'
 
 android {
     compileSdk 31
@@ -101,3 +102,5 @@ dependencies {
 
     kapt "androidx.room:room-compiler:2.3.0"
 }
+
+check.dependsOn ktlint

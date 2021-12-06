@@ -4,7 +4,7 @@ import androidx.room.Embedded
 import androidx.room.Relation
 import com.example.devops.database.devops.bet.Bet
 
-data class UserWithBets (
+data class UserWithBets(
     @Embedded val userArt: UserArt,
     @Relation(
         parentColumn = "userArtId",

@@ -3,7 +3,7 @@ package com.example.devops.database.devops.order
 import androidx.room.*
 
 @Entity(tableName = "order_table")
-data class Order (
+data class Order(
 
     @PrimaryKey(autoGenerate = true)
     var orderId: Long = 0L,
@@ -23,6 +23,6 @@ data class Order (
     @ColumnInfo(name = "order_destination_total_price")
     var orderTotalPrice: Double = 0.0,
 
-    val userBuyerId: Long,
+    val userBuyerId: Long
 
 )

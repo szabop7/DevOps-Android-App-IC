@@ -2,7 +2,7 @@ package com.example.devops.database.devops.userart
 import androidx.room.*
 
 @Entity(tableName = "user_art_table")
-data class UserArt (
+data class UserArt(
     @PrimaryKey(autoGenerate = true)
     var userArtId: Long = 0L,
 
@@ -28,9 +28,5 @@ data class UserArt (
     var UserArtCity: String = "",
 
     @ColumnInfo(name = "user_art_is_Authenticated")
-    var userArtIsAuthenticated: Boolean = false,
-
-
-
-
+    var userArtIsAuthenticated: Boolean = false
 )

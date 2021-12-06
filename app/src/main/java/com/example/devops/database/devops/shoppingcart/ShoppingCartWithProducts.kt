@@ -5,7 +5,7 @@ import androidx.room.Junction
 import androidx.room.Relation
 import com.example.devops.database.devops.product.Product
 
-data class ShoppingCartWithProducts (
+data class ShoppingCartWithProducts(
     @Embedded val shoppingCart: ShoppingCart,
     @Relation(
         parentColumn = "shoppingCartId",

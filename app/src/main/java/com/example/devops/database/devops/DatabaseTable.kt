@@ -14,7 +14,7 @@ import java.io.InputStreamReader
 
 private const val TAG = "DictionaryDatabase"
 
-//The columns we'll include in the dictionary table
+// The columns we'll include in the dictionary table
 const val COL_WORD = "WORD"
 const val COL_DEFINITION = "DEFINITION"
 
@@ -69,7 +69,6 @@ class DatabaseTable(context: Context) {
             mDatabase = db
             mDatabase.execSQL(FTS_TABLE_CREATE)
             loadDictionary()
-
         }
 
         override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
@@ -118,7 +117,5 @@ class DatabaseTable(context: Context) {
 
             return mDatabase.insert(FTS_VIRTUAL_TABLE, null, initialValues)
         }
-
-
     }
 }

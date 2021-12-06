@@ -31,5 +31,4 @@ interface OrderDao {
     @Transaction
     @Query("SELECT * FROM order_table")
     fun getOrdersWithProducts(): List<OrderWithProducts>
-
 }

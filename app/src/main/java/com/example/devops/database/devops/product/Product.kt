@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 import com.squareup.moshi.Json
 
 @Entity(tableName = "product_table")
-data class Product (
+data class Product(
 
     @PrimaryKey(autoGenerate = true)
     @Json(name = "id")
@@ -42,10 +42,7 @@ data class Product (
     @ColumnInfo(name = "product_height")
     @Json(name = "height")
     var productHeight: Double = 0.0,
-
     val userBuyerId: Long = 0L,
-
-    val buyOrderId : Long? = 0L,
-
-    val userOwnerId: Long = 0L,
-    )
+    val buyOrderId: Long? = 0L,
+    val userOwnerId: Long = 0L
+)

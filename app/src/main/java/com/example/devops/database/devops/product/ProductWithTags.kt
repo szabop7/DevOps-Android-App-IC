@@ -4,9 +4,8 @@ import androidx.room.Embedded
 import androidx.room.Junction
 import androidx.room.Relation
 import com.example.devops.database.devops.tag.Tag
-import com.example.devops.database.devops.product.ProductTagCrossRef
 
-class ProductWithTags (
+class ProductWithTags(
     @Embedded val product: Product,
     @Relation(
         parentColumn = "productId",

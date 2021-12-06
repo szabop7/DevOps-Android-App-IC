@@ -5,7 +5,6 @@ import android.app.SearchManager
 import android.content.Intent
 import android.os.Bundle
 
-
 class SearchResultsActivity : Activity() {
 
         override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,8 +21,7 @@ class SearchResultsActivity : Activity() {
 
             if (Intent.ACTION_SEARCH == intent.action) {
                 val query = intent.getStringExtra(SearchManager.QUERY)
-                //use the query to search your data somehow
+                // use the query to search your data somehow
             }
         }
-
     }

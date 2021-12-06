@@ -37,6 +37,7 @@
             app:layout_constraintTop_toBottomOf="@+id/search_bar"
             tools:context=".screens.marketplace.MarketPlaceFragment" />
 
+
        <!-- <TextView
             android:id="@+id/latestItemCart"
             android:layout_width="wrap_content"

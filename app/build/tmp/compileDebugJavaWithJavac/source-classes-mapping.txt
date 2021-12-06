@@ -31,8 +31,8 @@ com/example/devops/database/devops/userart/UserArtDao_Impl.java
  com.example.devops.database.devops.userart.UserArtDao_Impl$9
 androidx/databinding/DataBinderMapperImpl.java
  androidx.databinding.DataBinderMapperImpl
-com/example/devops/BR.java
- com.example.devops.BR
+com/example/devops/databinding/FragmentMarketPlaceBindingImpl.java
+ com.example.devops.databinding.FragmentMarketPlaceBindingImpl
 com/example/devops/database/devops/tag/TagDao_Impl.java
  com.example.devops.database.devops.tag.TagDao_Impl
  com.example.devops.database.devops.tag.TagDao_Impl$1
@@ -77,8 +77,8 @@ com/example/devops/database/devops/order/OrderDao_Impl.java
  com.example.devops.database.devops.order.OrderDao_Impl$7
  com.example.devops.database.devops.order.OrderDao_Impl$8
  com.example.devops.database.devops.order.OrderDao_Impl$9
-androidx/databinding/DataBindingComponent.java
- androidx.databinding.DataBindingComponent
+com/example/devops/databinding/FragmentMarketPlaceBinding.java
+ com.example.devops.databinding.FragmentMarketPlaceBinding
 com/example/devops/DataBindingTriggerClass.java
  com.example.devops.DataBindingTriggerClass
 com/example/devops/BuildConfig.java
@@ -99,10 +99,6 @@ com/example/devops/database/devops/bet/BetDao_Impl.java
  com.example.devops.database.devops.bet.BetDao_Impl$9
 com/example/devops/databinding/FragmentHomeScreenBinding.java
  com.example.devops.databinding.FragmentHomeScreenBinding
-com/example/devops/screens/home/HomeScreenDirections.java
- com.example.devops.screens.home.HomeScreenDirections
-com/example/devops/screens/marketplace/MarketPlaceFragmentDirections.java
- com.example.devops.screens.marketplace.MarketPlaceFragmentDirections
 com/example/devops/databinding/NavHeaderMainBinding.java
  com.example.devops.databinding.NavHeaderMainBinding
 com/example/devops/databinding/FragmentYoungArtBinding.java
@@ -147,7 +143,7 @@ com/example/devops/databinding/ListItemProductBinding.java
  com.example.devops.databinding.ListItemProductBinding
 com/example/devops/databinding/ActivityMainBinding.java
  com.example.devops.databinding.ActivityMainBinding
-com/example/devops/databinding/FragmentMarketPlaceBindingImpl.java
- com.example.devops.databinding.FragmentMarketPlaceBindingImpl
-com/example/devops/databinding/FragmentMarketPlaceBinding.java
- com.example.devops.databinding.FragmentMarketPlaceBinding
+androidx/databinding/DataBindingComponent.java
+ androidx.databinding.DataBindingComponent
+com/example/devops/BR.java
+ com.example.devops.BR

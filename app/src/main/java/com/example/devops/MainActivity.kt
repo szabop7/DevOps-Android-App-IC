@@ -1,23 +1,16 @@
 package com.example.devops
 
-
 import android.app.SearchManager
 import android.content.Intent
-import android.content.ClipData
-import android.content.Context
 import android.os.Bundle
-import android.util.Log
-import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
-import android.widget.SearchView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.drawerlayout.widget.DrawerLayout
-import androidx.navigation.Navigation
 
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -33,18 +26,9 @@ import com.auth0.android.management.ManagementException
 import com.auth0.android.management.UsersAPIClient
 import com.auth0.android.result.UserProfile
 import com.example.devops.database.devops.DatabaseTable
-import com.example.devops.database.devops.DevOpsDatabase
-import com.example.devops.database.devops.product.Product
 import com.example.devops.login.CredentialsManager
 
-
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
 import kotlinx.android.synthetic.main.activity_main.*
-
-
-
 
 class MainActivity : AppCompatActivity() {
 
@@ -54,27 +38,21 @@ class MainActivity : AppCompatActivity() {
     private lateinit var account: Auth0
     private val db = DatabaseTable(this)
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         val navController = this.findNavController(R.id.navHostFragment)
-        NavigationUI.setupActionBarWithNavController(this, navController,binding.drawerLayout)
+        NavigationUI.setupActionBarWithNavController(this, navController, binding.drawerLayout)
 
         appBarConfiguration = AppBarConfiguration(navController.graph, binding.drawerLayout)
-        NavigationUI.setupWithNavController(binding.navView,navController)
-        NavigationUI.setupWithNavController(binding.bottomNavigation,navController)
+        NavigationUI.setupWithNavController(binding.navView, navController)
+        NavigationUI.setupWithNavController(binding.bottomNavigation, navController)
 
+        binding.navView.getHeaderView(0).findViewById<Button>(R.id.ButtonLogIn).setOnClickListener() { loginWithBrowser() }
 
-
-        binding.navView.getHeaderView(0).findViewById<Button>(R.id.ButtonLogIn).setOnClickListener(){ loginWithBrowser()}
-
-
-
-
-        binding.navView.menu.findItem(R.id.ButtonLogOut).setOnMenuItemClickListener{ logout();
-             true}
+        binding.navView.menu.findItem(R.id.ButtonLogOut).setOnMenuItemClickListener { logout()
+                    true }
 
         account = Auth0(
             "fFPxEdQJbyPirdQcuzrSNuYiz7tp8nLL",
@@ -86,19 +64,14 @@ class MainActivity : AppCompatActivity() {
                 doMySearch(query)
             }
         }
-
     }
 
     private fun doMySearch(query: String) {
-
-
     }
 
-
-
-   override fun onSupportNavigateUp(): Boolean {
+    override fun onSupportNavigateUp(): Boolean {
         val navController = this.findNavController(R.id.navHostFragment)
-        return NavigationUI.navigateUp(navController,binding.drawerLayout)
+        return NavigationUI.navigateUp(navController, binding.drawerLayout)
     }
 
     private fun loginWithBrowser() {
@@ -129,11 +102,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun checkIfToken() {
         val token = CredentialsManager.getAccessToken(applicationContext)
-        if(token != null){
+        if (token != null) {
             // checking if the token works...
             showUserProfile(token)
-        }
-        else {
+        } else {
             Toast.makeText(applicationContext, "Token doesn't exist", Toast.LENGTH_SHORT).show()
         }
     }
@@ -141,13 +113,12 @@ class MainActivity : AppCompatActivity() {
     private fun logout() {
         WebAuthProvider.logout(account)
             .withScheme("demo")
-            .start(this, object: Callback<Void?, AuthenticationException> {
+            .start(this, object : Callback<Void?, AuthenticationException> {
                 override fun onSuccess(payload: Void?) {
                     // The user has been logged out!
                     binding.navView.getHeaderView(0).findViewById<TextView>(R.id.greetings_text).text = getString(
                                             R.string.hello_text)
                     binding.navView.getHeaderView(0).findViewById<Button>(R.id.ButtonLogIn).visibility = View.VISIBLE
-
                 }
 
                 override fun onFailure(error: AuthenticationException) {
@@ -170,8 +141,7 @@ class MainActivity : AppCompatActivity() {
                     // We have the user's profile!
                     val email = profile.email
                     val name = profile.name
-                    binding.navView.getHeaderView(0).findViewById<TextView>(R.id.greetings_text).text = "Hello, ${name}"
-
+                    binding.navView.getHeaderView(0).findViewById<TextView>(R.id.greetings_text).text = "Hello, $name"
                 }
             })
     }
@@ -184,7 +154,7 @@ class MainActivity : AppCompatActivity() {
         // Get the full user profile
         usersClient
             .getProfile(userId)
-            .start(object: Callback<UserProfile, ManagementException> {
+            .start(object : Callback<UserProfile, ManagementException> {
                 override fun onFailure(exception: ManagementException) {
                     // Something went wrong!
                 }
@@ -207,7 +177,7 @@ class MainActivity : AppCompatActivity() {
 
         // Call updateMetadata with the id of the user to update, and the map of data
         usersClient.updateMetadata(userId, metadata)
-            .start(object: Callback<UserProfile, ManagementException> {
+            .start(object : Callback<UserProfile, ManagementException> {
                 override fun onFailure(exception: ManagementException) {
                     // Something went wrong!
                 }
@@ -221,9 +191,5 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun trendsOnClick(item: android.view.MenuItem) {
-
     }
-
-
-
 }

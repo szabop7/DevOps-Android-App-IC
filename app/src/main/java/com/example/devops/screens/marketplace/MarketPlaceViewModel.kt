@@ -6,14 +6,13 @@ import com.example.devops.database.devops.product.Product
 import com.example.devops.database.devops.product.ProductDao
 import com.example.devops.network.ApiProduct
 import com.example.devops.network.DevOpsApi
-import com.example.devops.network.DevOpsApiService
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 import retrofit2.await
 
 enum class DevOpsApiStatus { LOADING, ERROR, DONE }
 
-class MarketPlaceViewModel(val database: ProductDao, application: Application): AndroidViewModel(application) {
+class MarketPlaceViewModel(val database: ProductDao, application: Application) : AndroidViewModel(application) {
 
     private var _apiResponse = MutableLiveData<ApiProduct>()
     val apiResponse: LiveData<ApiProduct>
@@ -36,20 +35,20 @@ class MarketPlaceViewModel(val database: ProductDao, application: Application): 
         }
     }
 
-    private fun initializeLiveData(){
-        viewModelScope.launch{
+    private fun initializeLiveData() {
+        viewModelScope.launch {
             deleteAllProducts()
             createProducts()
         }
     }
 
-    private suspend fun createProducts(){
+    private suspend fun createProducts() {
         database.insert(Product(1, "Winter", 3.0, "", "A cold winter morning"))
         database.insert(Product(2, "Fall", 3.0, "", "Brown leaves"))
         database.insert(Product(3, "Summer", 5.0, "", "Sunny days"))
     }
 
-    private suspend fun deleteAllProducts(){
+    private suspend fun deleteAllProducts() {
         database.clear()
     }
 
@@ -71,7 +70,7 @@ class MarketPlaceViewModel(val database: ProductDao, application: Application): 
             var res = getProductsDeferred.await()
             _status.value = DevOpsApiStatus.DONE
             _apiResponse.value = res
-        } catch (e: Exception){
+        } catch (e: Exception) {
             _status.value = DevOpsApiStatus.ERROR
         }
     }
@@ -80,5 +79,4 @@ class MarketPlaceViewModel(val database: ProductDao, application: Application): 
         super.onCleared()
         viewModelScope.cancel()
     }
-
 }

@@ -1,12 +1,11 @@
 package com.example.devops.database.devops.review
 
 import androidx.room.ColumnInfo
-import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "review_table")
-data class Review (
+data class Review(
     @PrimaryKey(autoGenerate = true)
     var reviewId: Long = 0L,
 
@@ -24,4 +23,4 @@ data class Review (
     val productReviewId: Long,
 
     val artistReviewId: Long
-    )
+)

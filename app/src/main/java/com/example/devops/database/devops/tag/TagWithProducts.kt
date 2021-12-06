@@ -5,8 +5,7 @@ import androidx.room.Junction
 import androidx.room.Relation
 import com.example.devops.database.devops.product.Product
 
-
-data class TagWithProducts (
+data class TagWithProducts(
     @Embedded val tag: Tag,
     @Relation(
         parentColumn = "tagId",
@@ -14,4 +13,4 @@ data class TagWithProducts (
         associateBy = Junction(TagProductCrossRef::class)
     )
     val products: List<Product>
-        )
+)

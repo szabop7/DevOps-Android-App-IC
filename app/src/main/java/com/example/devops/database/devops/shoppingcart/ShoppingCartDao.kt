@@ -1,7 +1,6 @@
 package com.example.devops.database.devops.shoppingcart
 
 import androidx.room.*
-import com.example.devops.database.devops.product.Product
 
 @Dao
 interface ShoppingCartDao {
@@ -18,8 +17,8 @@ interface ShoppingCartDao {
     @Query("DELETE FROM shopping_cart_table")
     suspend fun clear()
 
-    //@Query("SELECT * FROM shopping_cart_table ORDER BY shoppingCartId DESC")
-    //suspend fun getAllProducts(shoppingCart: ShoppingCart): List<Product>
+    // @Query("SELECT * FROM shopping_cart_table ORDER BY shoppingCartId DESC")
+    // suspend fun getAllProducts(shoppingCart: ShoppingCart): List<Product>
 
     @Query("SELECT * FROM shopping_cart_table ORDER BY shoppingCartId DESC LIMIT 1")
     suspend fun getLastShoppingCart(): ShoppingCart?

@@ -8,8 +8,6 @@ import android.widget.TextView
 
 import com.smarteist.autoimageslider.SliderViewAdapter
 
-import android.widget.Toast
-
 import android.view.LayoutInflater
 import android.view.View
 
@@ -52,7 +50,7 @@ class SliderAdapterDetailView(context: Context) :
     }
 
     override fun getCount(): Int {
-        //slider view count could be dynamic size
+        // slider view count could be dynamic size
         return mSliderItems.size
     }
 

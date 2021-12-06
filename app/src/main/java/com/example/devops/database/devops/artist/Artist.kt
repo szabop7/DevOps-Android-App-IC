@@ -5,7 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "artist_table")
-data class Artist (
+data class Artist(
 
     @PrimaryKey(autoGenerate = true)
     var artistId: Long = 0L,
@@ -32,6 +32,6 @@ data class Artist (
     var artisIsYoungArtist: Boolean = false,
 
     @ColumnInfo(name = "artist_is_conformed")
-    var artistIsConformed: Boolean = false,
+    var artistIsConformed: Boolean = false
 
 )
