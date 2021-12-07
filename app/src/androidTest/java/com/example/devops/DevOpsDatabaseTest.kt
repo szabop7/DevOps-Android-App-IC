@@ -6,7 +6,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 
 import com.example.devops.database.devops.DevOpsDatabase
-import com.example.devops.database.devops.product.Product
+import com.example.devops.database.devops.product.ProductDatabase
 import com.example.devops.database.devops.product.ProductDao
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals
@@ -50,10 +50,10 @@ class DevOpsDatabaseTest {
     @Test
     @Throws(Exception::class)
     fun insertAndGetProduct() = runBlocking {
-        val product = Product()
-        productDao.insert(product)
+        val productDatabase = ProductDatabase(productName = "alicia")
+        productDao.insert(productDatabase)
         val lastProduct = productDao.getLastProduct()
-        assertEquals(lastProduct?.productName, "")
+        assertEquals( "alicia",lastProduct?.productName)
     }
 
     /*@Test

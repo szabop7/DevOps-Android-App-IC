@@ -5,8 +5,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.devops.database.devops.product.Product
+import com.example.devops.database.devops.product.ProductDatabase
 import com.example.devops.databinding.ListItemProductBinding
+import com.example.devops.domain.Product
 import java.util.*
 
 class ProductAdapter(val clickListener: ProductListener) : ListAdapter<Product, ViewHolder>(ProductDiffCallback()) {
@@ -58,5 +59,5 @@ class ProductDiffCallback : DiffUtil.ItemCallback<Product>() {
 }
 
 class ProductListener(val clickListener: (productId: Long) -> Unit) {
-    fun onClick(product: Product) = clickListener(product.productId)
+    fun onClick(productDatabase: Product) = clickListener(productDatabase.productId)
 }

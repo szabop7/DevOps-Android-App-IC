@@ -1,11 +1,85 @@
 package com.example.devops.network
 
-import com.example.devops.database.devops.product.Product
+import androidx.room.ColumnInfo
+import androidx.room.PrimaryKey
+import com.example.devops.database.devops.product.ProductDatabase
+import com.example.devops.domain.Product
+import com.squareup.moshi.Json
 
+
+data class ApiProductContainer (
+    @Json(name = "body")
+    val apiProducts: List<ApiProduct>
+)
+
+/*ApiProduct, representing a product from the network*/
 data class ApiProduct(
+    @Json(name = "id")
+    var productId: Long,
 
-    val body: List<Product>
-) {
-    // Hardcoded image url to demo Glide
-    val smileyUri = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/grinning-face-with-big-eyes_1f603.png"
+    @Json(name = "name")
+    var productName: String,
+
+    @Json(name = "price")
+    var productPrice: Double,
+
+    @Json(name = "imgPath")
+    var productImgPath: String,
+
+    @Json(name = "desciption")
+    var productDescription: String,
+
+    @Json(name = "isAuction")
+    var productIsAuction: Boolean,
+
+    @Json(name = "width")
+    var productWidth: Double,
+
+    @Json(name = "height")
+    var productHeight: Double
+)
+
+/*
+* Convert network results into Domain jokes
+* */
+fun ApiProductContainer.asDomainModel(): List<Product>{
+    return apiProducts.map{
+        Product(
+            productId = it.productId,
+            productName = it.productName,
+            productPrice = it.productPrice,
+            productImgPath  = it.productImgPath,
+            productDescription = it.productDescription,
+            productIsAuction = it.productIsAuction,
+            productWidth = it.productWidth,
+            productHeight = it.productHeight
+        )
+    }
+}
+
+/*
+* Convert network result into Database jokes
+*
+* returns an array that can be used in the insert call as vararg
+* */
+fun ApiProductContainer.asDatabaseModel(): Array<ProductDatabase>{
+    return apiProducts.map{
+        it.asDatabaseJoke()
+    }.toTypedArray()
+}
+
+/*
+* Convert a single api joke to a database joke
+* */
+fun ApiProduct.asDatabaseJoke(): ProductDatabase {
+    return ProductDatabase(
+        productId = productId,
+        productName = productName,
+        productPrice = productPrice,
+        productImgPath = productImgPath,
+        productDescription = productDescription,
+        productIsAuction = productIsAuction,
+        productWidth = productWidth,
+        productHeight = productHeight
+    )
 }

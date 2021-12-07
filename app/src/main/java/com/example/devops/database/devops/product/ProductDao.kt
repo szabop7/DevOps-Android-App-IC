@@ -7,32 +7,37 @@ import androidx.room.*
 interface ProductDao {
 
     @Insert
-    suspend fun insert(product: Product)
+    suspend fun insert(productDatabase: ProductDatabase)
+
+    //adding insert all with vararg
+    //replace strategy: upsert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertAll(vararg jokes : ProductDatabase)
 
     @Update
-    suspend fun update(product: Product)
+    suspend fun update(productDatabase: ProductDatabase)
 
     @Query("SELECT * from product_table WHERE productId = :key")
-    suspend fun get(key: Long): Product?
+    suspend fun get(key: Long): ProductDatabase?
 
     @Query("DELETE FROM product_table")
     suspend fun clear()
 
     @Query("SELECT * FROM product_table ORDER BY productId DESC")
-    suspend fun getAllProducts(): List<Product>
+    suspend fun getAllProducts(): List<ProductDatabase>
 
     @Query("SELECT * FROM product_table ORDER BY productId DESC")
-    fun getAllProductsLive(): LiveData<List<Product>>
+    fun getAllProductsLive(): LiveData<List<ProductDatabase>>
 
     @Query("SELECT * FROM product_table ORDER BY productId DESC LIMIT 1")
-    suspend fun getLastProduct(): Product?
+    suspend fun getLastProduct(): ProductDatabase?
 
     @Query("SELECT COUNT(*) FROM product_table")
     suspend fun numberOfProducts(): Int
 
     // Dao query with filter
     @Query("SELECT * from product_table WHERE product_name LIKE :filter OR product_description LIKE :filter ORDER BY productId")
-    fun getProductsFiltered(filter: String): LiveData<List<Product>>
+    fun getProductsFiltered(filter: String): LiveData<List<ProductDatabase>>
 
     @Transaction
     @Query("SELECT * FROM product_table")

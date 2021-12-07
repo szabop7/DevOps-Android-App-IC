@@ -2,6 +2,7 @@ package com.example.devops.screens.marketplace
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -18,8 +19,13 @@ import com.example.devops.databinding.FragmentMarketPlaceBinding
 
 class MarketPlaceFragment : Fragment() {
 
+    private val viewModel: MarketPlaceViewModel by lazy {
+        val activity = requireNotNull(this.activity)
+        ViewModelProvider(this, MarketPlaceViewModelFactory(activity.application))
+            .get(MarketPlaceViewModel::class.java)
+    }
+
     private lateinit var binding: FragmentMarketPlaceBinding
-    private lateinit var viewModel: MarketPlaceViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,15 +39,6 @@ class MarketPlaceFragment : Fragment() {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_market_place, container, false)
 
-        // binding.pictureMarketPlace.setOnClickListener(this::onClickListener)
-        // Get an instance of the appContext to setup the database
-        val appContext = requireNotNull(this.activity).application
-        val dataSource = DevOpsDatabase.getInstance(appContext).productDao
-
-        // use a factory to pass the database reference to the viewModel
-        val viewModelFactory = MarketPlaceViewModelFactory(dataSource, appContext)
-        viewModel = ViewModelProvider(this, viewModelFactory).get(MarketPlaceViewModel::class.java)
-
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
@@ -53,8 +50,10 @@ class MarketPlaceFragment : Fragment() {
         binding.productList.adapter = adapter
 
         viewModel.products.observe(viewLifecycleOwner, Observer {
-                    adapter.submitList(it)
+            Log.i("Test", it.toString())
+            adapter.submitList(it)
         })
+
         binding.searchBar.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextChange(qString: String): Boolean {
                 viewModel.setFilter(qString)

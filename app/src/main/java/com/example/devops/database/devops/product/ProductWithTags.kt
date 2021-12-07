@@ -6,7 +6,7 @@ import androidx.room.Relation
 import com.example.devops.database.devops.tag.Tag
 
 class ProductWithTags(
-    @Embedded val product: Product,
+    @Embedded val productDatabase: ProductDatabase,
     @Relation(
         parentColumn = "productId",
         entity = Tag::class,

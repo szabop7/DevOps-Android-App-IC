@@ -13,7 +13,7 @@ import android.view.View
 
 import android.view.ViewGroup
 import android.widget.ImageView
-import com.example.devops.models.SliderItemDetailView
+import com.example.devops.screens.detailview.SliderItemDetailView
 
 class SliderAdapterDetailView(context: Context) :
     SliderViewAdapter<SliderAdapterDetailView.SliderAdapterVH>() {

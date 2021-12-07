@@ -9,15 +9,18 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
+import java.security.cert.X509Certificate
+import javax.net.ssl.TrustManager
+import javax.net.ssl.X509TrustManager
 
-private const val BASE_URL = "https://localhost:5001/api/"
+private const val BASE_URL = "http://10.0.2.2:5000/api/"
 
 // create moshi object
 private val moshi = Moshi.Builder()
     .add(KotlinJsonAdapterFactory())
     .build()
 
-private val logger = HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BASIC }
+private val logger = HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BODY }
 
 private val client = OkHttpClient.Builder()
     .addInterceptor(logger)
@@ -34,7 +37,7 @@ private val retrofit = Retrofit.Builder()
 interface DevOpsApiService {
 
     @GET("product")
-    fun getProducts(): Deferred<ApiProduct>
+    fun getProducts(): Deferred<ApiProductContainer>
 }
 
 object DevOpsApi {

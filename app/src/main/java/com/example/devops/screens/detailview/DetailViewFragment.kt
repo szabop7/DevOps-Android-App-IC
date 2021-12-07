@@ -10,7 +10,6 @@ import android.view.ViewGroup
 import android.widget.Button
 import com.example.devops.R
 import com.example.devops.adapters.SliderAdapterDetailView
-import com.example.devops.models.SliderItemDetailView
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType
 import com.smarteist.autoimageslider.SliderAnimations
 import com.smarteist.autoimageslider.SliderView
@@ -52,7 +51,8 @@ class DetailViewFragment : Fragment() {
     }
 
     fun renewItems() {
-        var items: MutableList<SliderItemDetailView> = mutableListOf(SliderItemDetailView(),
+        var items: MutableList<SliderItemDetailView> = mutableListOf(
+            SliderItemDetailView(),
             SliderItemDetailView()
         )
 

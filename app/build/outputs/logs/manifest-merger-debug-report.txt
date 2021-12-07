@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:2:1-34:12
+ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:2:1-35:12
 MERGED from [androidx.databinding:databinding-adapters:7.0.1] C:\Users\alici\.gradle\caches\transforms-3\f8ed7d0139c152950bc0658c9895e910\transformed\databinding-adapters-7.0.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.databinding:databinding-ktx:7.0.1] C:\Users\alici\.gradle\caches\transforms-3\04d141d85acce092c9fd4807dd762633\transformed\jetified-databinding-ktx-7.0.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.databinding:databinding-runtime:7.0.3] C:\Users\alici\.gradle\caches\transforms-3\d83fb2acc842ec8f6d75badea948f9a1\transformed\databinding-runtime-7.0.3\AndroidManifest.xml:17:1-22:12
@@ -78,20 +78,20 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\alici\.gradle\ca
 MERGED from [androidx.sqlite:sqlite-framework:2.1.0] C:\Users\alici\.gradle\caches\transforms-3\6063d5781bc7f5795c9cdc50b6d51451\transformed\sqlite-framework-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.sqlite:sqlite:2.1.0] C:\Users\alici\.gradle\caches\transforms-3\a38f96c32cd4b2b14e75f1aa999d9f84\transformed\sqlite-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\alici\.gradle\caches\transforms-3\6f198e2a0546c561b5c2ade8362decb7\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:2:1-35:12
 	package
 		ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:3:5-33
 		INJECTED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:2:1-34:12
+		ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:2:1-35:12
 		INJECTED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:2:1-34:12
+		ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:2:1-35:12
 		INJECTED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:2:11-69
@@ -102,7 +102,7 @@ MERGED from [com.auth0.android:auth0:2.5.1] C:\Users\alici\.gradle\caches\transf
 	android:name
 		ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:4:22-64
 application
-ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:5:5-32:19
+ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:5:5-33:19
 MERGED from [com.auth0.android:auth0:2.5.1] C:\Users\alici\.gradle\caches\transforms-3\7a994c217e98f3be59341bda0ec3e322\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:24:5-47:19
 MERGED from [com.auth0.android:auth0:2.5.1] C:\Users\alici\.gradle\caches\transforms-3\7a994c217e98f3be59341bda0ec3e322\transformed\jetified-auth0-2.5.1\AndroidManifest.xml:24:5-47:19
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\alici\.gradle\caches\transforms-3\05b759ac6def3b95ee73148b51e20a6f\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
@@ -139,40 +139,42 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\al
 		ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
 		ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:11:9-44
+	android:usesCleartextTraffic
+		ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:12:9-44
 activity#com.example.devops.MainActivity
-ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:12:9-22:20
+ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:13:9-23:20
 	android:exported
-		ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:14:13-36
+		ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:15:13-36
 	android:name
-		ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:13:13-41
+		ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:14:13-41
 intent-filter#action:name:android.intent.action.MAIN+action:name:android.intent.action.SEARCH+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:15:13-19:29
+ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:16:13-20:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:16:17-69
+ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:17:17-69
 	android:name
-		ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:16:25-66
+		ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:17:25-66
 action#android.intent.action.SEARCH
-ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:17:17-71
+ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:18:17-71
 	android:name
-		ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:17:25-68
+		ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:18:25-68
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:18:17-77
+ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:19:17-77
 	android:name
-		ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:18:27-74
+		ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:19:27-74
 meta-data#android.app.searchable
-ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:20:13-21:53
+ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:21:13-22:53
 	android:resource
-		ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:21:17-51
+		ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:22:17-51
 	android:name
-		ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:20:24-61
+		ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:21:24-61
 activity#com.example.devops.SearchResultsActivity
-ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:24:9-30:16
+ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:25:9-31:16
 	android:exported
-		ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:25:13-36
+		ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:26:13-36
 	android:name
-		ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:24:19-56
+		ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:25:19-56
 intent-filter#action:name:android.intent.action.SEARCH
-ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:26:9-28:25
+ADDED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml:27:9-29:25
 uses-sdk
 INJECTED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\alici\Documents\Kotlin\DevOps\app\src\main\AndroidManifest.xml

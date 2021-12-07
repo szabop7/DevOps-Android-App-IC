@@ -7,7 +7,7 @@
     <data>
         <variable
             name="product"
-            type="com.example.devops.database.devops.product.Product" />
+            type="com.example.devops.domain.Product" />
         <variable
             name="clickListener"
             type="com.example.devops.screens.marketplace.ProductListener" />

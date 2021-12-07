@@ -5,7 +5,7 @@ import androidx.room.Relation
 import com.example.devops.database.devops.bet.Bet
 
 data class ProductWithBets(
-    @Embedded val product: Product,
+    @Embedded val productDatabase: ProductDatabase,
     @Relation(
         parentColumn = "productId",
         entityColumn = "userBidderId"
