@@ -32,7 +32,7 @@ class ViewHolder(val binding: ListItemProductBinding) : RecyclerView.ViewHolder(
         binding.product = item
         binding.clickListener = clickListener
         binding.executePendingBindings()
-        item.productImgPath = BASE_URL + item.productImgPath
+        item.productImgPath =  item.productImgPath
     }
 
     // this way the viewHolder knows how to inflate.

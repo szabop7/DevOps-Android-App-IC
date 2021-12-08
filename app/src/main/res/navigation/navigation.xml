@@ -43,7 +43,11 @@
         android:id="@+id/detailViewFragment"
         android:name="com.example.devops.screens.detailview.DetailViewFragment"
         android:label="Detail View"
-        tools:layout="@layout/fragment_detail_view" />
+        tools:layout="@layout/fragment_detail_view" >
+        <argument
+            android:name="productId"
+            app:argType="long" />
+    </fragment>
     <fragment
         android:id="@+id/ShoppingCartFragment"
         android:name="com.example.devops.screens.shoppingcart.ShoppingCartFragment"

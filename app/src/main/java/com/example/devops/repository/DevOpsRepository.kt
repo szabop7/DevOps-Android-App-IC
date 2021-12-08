@@ -10,6 +10,7 @@ import com.example.devops.network.ApiProduct
 import com.example.devops.network.DevOpsApi
 import com.example.devops.network.DevOpsApi.retrofitService
 import com.example.devops.network.asDatabaseModel
+import com.example.devops.network.asDatabaseProduct
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
@@ -22,15 +23,15 @@ import kotlinx.coroutines.withContext
 class DevOpsRepository (private val database: DevOpsDatabase) {
 
 
-        //Network call
-        //get products from the database, but transform them with map
+        // Network call
+        // get products from the database, but transform them with map
         val products: LiveData<List<Product>> = Transformations.map(database.productDao.getAllProductsLive()){
             it.asDomainModel()
         }
 
-        //Database call
+        // Database call
         suspend fun refreshProducts(){
-            //switch context to IO thread
+            // switch context to IO thread
             withContext(Dispatchers.IO){
                 val products = DevOpsApi.retrofitService.getProducts().await()
                 Log.i("Hola",products.toString())
@@ -38,6 +39,19 @@ class DevOpsRepository (private val database: DevOpsDatabase) {
                 //Used for functions that expect a vararg param
                 //just spreads the array into separate fields
                 database.productDao.insertAll(*products.asDatabaseModel())
+            }
+        }
+
+        // Database call
+        suspend fun getProduct(productId: Long){
+            // switch context to IO thread
+            withContext(Dispatchers.IO){
+                val product = DevOpsApi.retrofitService.getProduct(productId).await()
+                Log.i("UN SOLO PRODUCTO", product.toString())
+                //'*': kotlin spread operator.
+                //Used for functions that expect a vararg param
+                //just spreads the array into separate fields
+                database.productDao.insertAll(product.asDatabaseProduct())
             }
         }
 }

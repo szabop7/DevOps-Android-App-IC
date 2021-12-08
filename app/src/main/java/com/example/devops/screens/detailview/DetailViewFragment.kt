@@ -3,13 +3,21 @@ package com.example.devops.screens.detailview
 import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
+import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.navArgs
 import com.example.devops.R
 import com.example.devops.adapters.SliderAdapterDetailView
+import com.example.devops.databinding.FragmentDetailViewBinding
+import com.example.devops.domain.Product
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType
 import com.smarteist.autoimageslider.SliderAnimations
 import com.smarteist.autoimageslider.SliderView
@@ -18,6 +26,14 @@ class DetailViewFragment : Fragment() {
 
     var sliderView: SliderView? = null
     private var adapter: SliderAdapterDetailView? = null
+    private lateinit var binding: FragmentDetailViewBinding
+    val args: DetailViewFragmentArgs by navArgs()
+
+    private val viewModel: DetailViewViewModel by lazy {
+        val activity = requireNotNull(this.activity)
+        ViewModelProvider(this, DetailViewViewModelFactory(args.productId,activity.application))
+            .get(DetailViewViewModel::class.java)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,9 +47,15 @@ class DetailViewFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        var view = inflater.inflate(R.layout.fragment_detail_view, container, false)
-        sliderView = view.findViewById(R.id.imageSlider)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_detail_view, container, false)
 
+        binding.viewModel = viewModel
+        binding.lifecycleOwner = viewLifecycleOwner
+
+
+
+        sliderView = binding.imageSlider
+        Toast.makeText(context, args.productId.toString(), Toast.LENGTH_LONG).show()
         adapter = SliderAdapterDetailView(requireContext())
 
         sliderView?.setSliderAdapter(adapter!!)
@@ -45,24 +67,33 @@ class DetailViewFragment : Fragment() {
         sliderView?.setScrollTimeInSec(3)
         sliderView?.setAutoCycle(true)
         sliderView?.startAutoCycle()
-        renewItems()
 
-        return view
+        viewModel.products.observe(viewLifecycleOwner, Observer {
+            val product = it.find { product -> product.productId == args.productId }
+            if (product != null) {
+                setProductDetails(product)
+            }
+        })
+
+        return binding.root
     }
 
-    fun renewItems() {
-        var items: MutableList<SliderItemDetailView> = mutableListOf(
-            SliderItemDetailView(),
-            SliderItemDetailView()
+    fun setProductDetails(product: Product) {
+        binding.detailViewTitleText.text = product.productName
+        binding.detailViewDescriptionText.text = product.productDescription
+        binding.detailViewPriceText.text = product.productPrice.toString()
+        val sliderItemDetailView = SliderItemDetailView(
+            product.productDescription,
+            product.productImgPath
         )
-
-        adapter?.renewItems(items)
+        adapter!!.renewItems(mutableListOf(sliderItemDetailView))
     }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        view.findViewById<Button>(R.id.addToCartButton).setOnClickListener {
+        binding.addToCartButton.setOnClickListener {
             requireActivity().getSharedPreferences("shopping_cart", Context.MODE_PRIVATE).edit()
                 .apply {
                     putString("cart_amount", "twenty dollars")

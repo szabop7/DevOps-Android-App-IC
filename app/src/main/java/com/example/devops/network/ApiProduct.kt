@@ -40,7 +40,7 @@ data class ApiProduct(
 )
 
 /*
-* Convert network results into Domain jokes
+* Convert network results into Domain produtcs
 * */
 fun ApiProductContainer.asDomainModel(): List<Product>{
     return apiProducts.map{
@@ -58,7 +58,7 @@ fun ApiProductContainer.asDomainModel(): List<Product>{
 }
 
 /*
-* Convert network result into Database jokes
+* Convert network result into Database products
 *
 * returns an array that can be used in the insert call as vararg
 * */
@@ -78,9 +78,9 @@ fun ApiProductContainer.asDatabaseModel(): Array<ProductDatabase>{
 }
 
 /*
-* Convert a single api joke to a database joke
+* Convert a single api product to a database product
 * */
-fun ApiProduct.asDatabaseJoke(): ProductDatabase {
+fun ApiProduct.asDatabaseProduct(): ProductDatabase {
     return ProductDatabase(
         productId = productId,
         productName = productName,

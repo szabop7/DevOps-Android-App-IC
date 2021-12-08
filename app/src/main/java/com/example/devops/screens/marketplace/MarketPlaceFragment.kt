@@ -66,8 +66,8 @@ class MarketPlaceFragment : Fragment() {
     }
 
     fun onClickListener(productId: Long) {
-
-        view?.findNavController()?.navigate(R.id.action_MarketPlaceFragment_to_detailViewFragment)
+        val action = MarketPlaceFragmentDirections.actionMarketPlaceFragmentToDetailViewFragment(productId)
+        view?.findNavController()?.navigate(action)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

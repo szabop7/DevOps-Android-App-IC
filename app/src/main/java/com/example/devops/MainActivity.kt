@@ -26,6 +26,7 @@ import com.auth0.android.management.ManagementException
 import com.auth0.android.management.UsersAPIClient
 import com.auth0.android.result.UserProfile
 import com.example.devops.database.devops.DatabaseTable
+import com.example.devops.database.devops.DevOpsDatabase
 import com.example.devops.login.CredentialsManager
 
 import kotlinx.android.synthetic.main.activity_main.*

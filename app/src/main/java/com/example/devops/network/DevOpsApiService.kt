@@ -9,9 +9,8 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
-import java.security.cert.X509Certificate
-import javax.net.ssl.TrustManager
-import javax.net.ssl.X509TrustManager
+import retrofit2.http.Path
+
 
 private const val BASE_API = "http://10.0.2.2:5000/api/"
 public const val BASE_URL = "http://10.0.2.2:5000"
@@ -39,6 +38,11 @@ interface DevOpsApiService {
 
     @GET("product")
     fun getProducts(): Deferred<ApiProductContainer>
+
+    @GET("product/{id}")
+    fun getProduct(
+        @Path("id") productId: Long
+    ): Deferred<ApiProduct>
 }
 
 object DevOpsApi {
