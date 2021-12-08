@@ -82,7 +82,15 @@ class DetailViewFragment : Fragment() {
             p.productDescription,
             p.productImgPath
         )
+        if (viewModel.checkIfInCart(product!!)) {
+            disableCartButton()
+        }
         adapter!!.renewItems(mutableListOf(sliderItemDetailView))
+    }
+
+    fun disableCartButton() {
+        binding.addToCartButton.isEnabled = false
+        binding.addToCartButton.text = "Already in Cart"
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -90,6 +98,7 @@ class DetailViewFragment : Fragment() {
 
         binding.addToCartButton.setOnClickListener {
             if (product != null) {
+                disableCartButton()
                 viewModel.addToCart(product!!)
             }
 

@@ -36,6 +36,13 @@ class DetailViewViewModel(id: Long, application: Application) : AndroidViewModel
         }
     }
 
+    fun checkIfInCart(product: Product): Boolean {
+        viewModelScope.launch {
+            // devOpsRepository.isProductInShopplingList(product.productId)
+        }
+        return false;
+    }
+
     override fun onCleared() {
         super.onCleared()
         viewModelScope.cancel()
