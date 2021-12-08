@@ -9,9 +9,10 @@ import com.example.devops.database.devops.DevOpsDatabase
 import com.example.devops.domain.Product
 import com.example.devops.repository.DevOpsRepository
 import com.example.devops.screens.marketplace.DevOpsApiStatus
+import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 
-class DetailViewViewModel(id:Long, application: Application) : AndroidViewModel(application) {
+class DetailViewViewModel(id: Long, application: Application) : AndroidViewModel(application) {
     private val _status = MutableLiveData<DevOpsApiStatus>()
     val status: LiveData<DevOpsApiStatus>
         get() = _status
@@ -27,5 +28,16 @@ class DetailViewViewModel(id:Long, application: Application) : AndroidViewModel(
             devOpsRepository.getProduct(id)
             _status.value = DevOpsApiStatus.DONE
         }
+    }
+
+    fun addToCart(product: Product) {
+        viewModelScope.launch {
+            devOpsRepository.addShoppingItem(product.productId)
+        }
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        viewModelScope.cancel()
     }
 }

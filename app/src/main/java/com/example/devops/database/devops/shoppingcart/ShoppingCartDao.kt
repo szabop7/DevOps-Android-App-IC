@@ -1,5 +1,6 @@
 package com.example.devops.database.devops.shoppingcart
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 
 @Dao
@@ -29,4 +30,18 @@ interface ShoppingCartDao {
     @Transaction
     @Query("SELECT * FROM shopping_cart_table")
     fun getShoppingCartsWithProducts(): List<ShoppingCartWithProducts>
+
+    @Transaction
+    @Query("SELECT * FROM shopping_cart_table")
+    fun getShoppingCartsWithProductsLive(): LiveData<List<ShoppingCartWithProducts>>
+
+    @Query(
+        "INSERT INTO shopping_cart_product_id_table (shoppingCartId, productId) VALUES (:shoppingCartId, :productId)")
+    suspend fun insertProductShoppingCart(shoppingCartId: Long, productId: Long)
+
+    @Query("SELECT COUNT(*) FROM shopping_cart_product_id_table WHERE shoppingCartId = :shoppingCartId AND productId = :productId")
+    suspend fun getShoppingCartExists(shoppingCartId: Long, productId: Long): Long
+
+    @Query("DELETE FROM shopping_cart_product_id_table WHERE shoppingCartId = :shoppingCartId AND productId = :productId")
+    suspend fun removeShoppingCartItem(shoppingCartId: Long, productId: Long)
 }

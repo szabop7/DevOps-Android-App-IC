@@ -4,8 +4,6 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.example.devops.domain.Product
-import com.squareup.moshi.Json
-import kotlinx.coroutines.channels.ProducerScope
 
 @Entity(tableName = "product_table")
 data class ProductDatabase(
@@ -41,15 +39,14 @@ data class ProductDatabase(
     val userOwnerId: Long = 0L
 )
 
-
-//convert Joke to ApiJoke
-fun List<ProductDatabase>.asDomainModel() : List<Product>{
+// convert Joke to ApiJoke
+fun List<ProductDatabase>.asDomainModel(): List<Product> {
     return map {
         Product(
             productId = it.productId,
             productName = it.productName,
             productPrice = it.productPrice,
-            productImgPath  = it.productImgPath,
+            productImgPath = it.productImgPath,
             productDescription = it.productDescription,
             productDeadline = it.productDeadline,
             productIsAuction = it.productIsAuction,
@@ -58,4 +55,3 @@ fun List<ProductDatabase>.asDomainModel() : List<Product>{
         )
     }
 }
-

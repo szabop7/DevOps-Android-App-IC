@@ -1,13 +1,10 @@
 package com.example.devops.network
 
-import androidx.room.ColumnInfo
-import androidx.room.PrimaryKey
 import com.example.devops.database.devops.product.ProductDatabase
 import com.example.devops.domain.Product
 import com.squareup.moshi.Json
 
-
-data class ApiProductContainer (
+data class ApiProductContainer(
     @Json(name = "body")
     val apiProducts: List<ApiProduct>
 )
@@ -42,13 +39,13 @@ data class ApiProduct(
 /*
 * Convert network results into Domain produtcs
 * */
-fun ApiProductContainer.asDomainModel(): List<Product>{
-    return apiProducts.map{
+fun ApiProductContainer.asDomainModel(): List<Product> {
+    return apiProducts.map {
         Product(
             productId = it.productId,
             productName = it.productName,
             productPrice = it.productPrice,
-            productImgPath  = it.productImgPath,
+            productImgPath = it.productImgPath,
             productDescription = it.productDescription,
             productIsAuction = it.productIsAuction,
             productWidth = it.productWidth,
@@ -62,8 +59,8 @@ fun ApiProductContainer.asDomainModel(): List<Product>{
 *
 * returns an array that can be used in the insert call as vararg
 * */
-fun ApiProductContainer.asDatabaseModel(): Array<ProductDatabase>{
-    return apiProducts.map{
+fun ApiProductContainer.asDatabaseModel(): Array<ProductDatabase> {
+    return apiProducts.map {
         ProductDatabase(
             productId = it.productId,
             productName = it.productName,

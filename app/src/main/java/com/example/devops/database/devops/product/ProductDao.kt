@@ -9,10 +9,10 @@ interface ProductDao {
     @Insert
     suspend fun insert(productDatabase: ProductDatabase)
 
-    //adding insert all with vararg
-    //replace strategy: upsert
+    // adding insert all with vararg
+    // replace strategy: upsert
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertAll(vararg jokes : ProductDatabase)
+    suspend fun insertAll(vararg jokes: ProductDatabase)
 
     @Update
     suspend fun update(productDatabase: ProductDatabase)

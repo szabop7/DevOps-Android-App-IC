@@ -1,254 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_gravity="left"
-    android:orientation="vertical"
-    tools:context=".screens.shoppingcart.ShoppingCartFragment"
-    tools:layout_editor_absoluteX="0dp"
-    tools:layout_editor_absoluteY="19dp">
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.devops.screens.shoppingcart.ShoppingCartViewModel" />
+    </data>
 
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="409dp"
-        android:layout_height="643dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/product_list"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:foregroundGravity="center"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:context=".screens.shoppingcart.ShoppingCartFragment" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="10dp">
-
-                <ImageView
-                    android:id="@+id/imageView1"
-                    android:layout_width="182dp"
-                    android:layout_height="147dp"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginEnd="30dp"
-                    android:contentDescription="@string/content_desciption_frame"
-                    android:src="@drawable/foto3" />
-
-                <LinearLayout
-                    android:layout_width="224dp"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/Title"
-                        android:layout_width="149dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginBottom="10dp"
-                        android:text="@string/wooden_apple" />
-
-                    <TextView
-                        android:id="@+id/textView6"
-                        style="@style/Normal_text"
-                        android:layout_width="138dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginBottom="10dp"
-                        android:text="@string/rosemary_kain" />
-
-                    <TextView
-                        android:id="@+id/textView7"
-                        style="@style/Normal_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="0dp"
-                        android:text="100 €" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton5"
-                        android:layout_width="135dp"
-                        android:layout_height="45dp"
-                        android:layout_gravity="bottom|end"
-                        android:background="@android:color/transparent"
-                        android:contentDescription="@string/bin"
-                        android:padding="1dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/bin"
-                        tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
-
-                </LinearLayout>
-
-            </TableRow>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginBottom="10dp"
-                android:background="#636363" />
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="20dp">
-
-                <ImageView
-                    android:id="@+id/imageView11"
-                    android:layout_width="184dp"
-                    android:layout_height="141dp"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginEnd="15dp"
-                    android:src="@drawable/foto2" />
-
-                <LinearLayout
-                    android:layout_width="138dp"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/textView9"
-                        style="@style/Title"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginBottom="10dp"
-                        android:text="@string/wooden_candle_holders"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:id="@+id/textView10"
-                        style="@style/Normal_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginBottom="10dp"
-                        android:text="@string/theobold_miller" />
-
-                    <TextView
-                        android:id="@+id/textView11"
-                        style="@style/Normal_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="0dp"
-                        android:text="350 €" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton3"
-                        android:layout_width="133dp"
-                        android:layout_height="45dp"
-                        android:layout_gravity="bottom|end"
-                        android:background="@android:color/transparent"
-                        android:contentDescription="@string/bin"
-                        android:padding="1dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/bin"
-                        tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
-
-                </LinearLayout>
-
-            </TableRow>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginBottom="10dp"
-                android:background="#636363" />
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="20dp">
-
-                <ImageView
-                    android:id="@+id/imageView12"
-                    android:layout_width="161dp"
-                    android:layout_height="170dp"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginEnd="15dp"
-                    android:src="@drawable/foto1" />
-
-                <LinearLayout
-                    android:layout_width="138dp"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/textView14"
-                        style="@style/Title"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginBottom="10dp"
-                        android:text="@string/wooden_clown" />
-
-                    <TextView
-                        android:id="@+id/textView15"
-                        style="@style/Normal_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginBottom="10dp"
-                        android:text="@string/tabitha_gilbert" />
-
-                    <TextView
-                        android:id="@+id/textView16"
-                        style="@style/Normal_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="0dp"
-                        android:text="700 €" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton4"
-                        android:layout_width="133dp"
-                        android:layout_height="45dp"
-                        android:layout_gravity="bottom|end"
-                        android:background="@android:color/transparent"
-                        android:contentDescription="@string/bin"
-                        android:padding="1dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/bin"
-                        tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
-
-                </LinearLayout>
-
-            </TableRow>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginBottom="10dp"
-                android:background="#636363" />
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/textView12"
-                    style="@style/Title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="28dp"
-                    android:text="Total: 1350 €" />
-
-                <Button
-                    android:id="@+id/button3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="42dp"
-                    android:layout_marginEnd="100dp"
-                    android:gravity="right"
-                    android:text="@string/checkout_text"
-                    android:textColor="@color/white" />
-
-            </TableRow>
-
-
-        </TableLayout>
-    </ScrollView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

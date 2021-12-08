@@ -11,7 +11,6 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Path
 
-
 private const val BASE_API = "http://10.0.2.2:5000/api/"
 public const val BASE_URL = "http://10.0.2.2:5000"
 

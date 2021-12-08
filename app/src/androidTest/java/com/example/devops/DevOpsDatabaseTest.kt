@@ -53,7 +53,7 @@ class DevOpsDatabaseTest {
         val productDatabase = ProductDatabase(productName = "alicia")
         productDao.insert(productDatabase)
         val lastProduct = productDao.getLastProduct()
-        assertEquals( "alicia",lastProduct?.productName)
+        assertEquals("alicia", lastProduct?.productName)
     }
 
     /*@Test

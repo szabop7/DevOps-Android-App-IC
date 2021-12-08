@@ -1,14 +1,11 @@
 package com.example.devops.screens.detailview
 
-import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
@@ -28,10 +25,10 @@ class DetailViewFragment : Fragment() {
     private var adapter: SliderAdapterDetailView? = null
     private lateinit var binding: FragmentDetailViewBinding
     val args: DetailViewFragmentArgs by navArgs()
-
+    private var product: Product? = null
     private val viewModel: DetailViewViewModel by lazy {
         val activity = requireNotNull(this.activity)
-        ViewModelProvider(this, DetailViewViewModelFactory(args.productId,activity.application))
+        ViewModelProvider(this, DetailViewViewModelFactory(args.productId, activity.application))
             .get(DetailViewViewModel::class.java)
     }
 
@@ -52,10 +49,8 @@ class DetailViewFragment : Fragment() {
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
-
-
         sliderView = binding.imageSlider
-        Toast.makeText(context, args.productId.toString(), Toast.LENGTH_LONG).show()
+
         adapter = SliderAdapterDetailView(requireContext())
 
         sliderView?.setSliderAdapter(adapter!!)
@@ -78,29 +73,34 @@ class DetailViewFragment : Fragment() {
         return binding.root
     }
 
-    fun setProductDetails(product: Product) {
-        binding.detailViewTitleText.text = product.productName
-        binding.detailViewDescriptionText.text = product.productDescription
-        binding.detailViewPriceText.text = product.productPrice.toString()
+    fun setProductDetails(p: Product) {
+        product = p
+        binding.detailViewTitleText.text = p.productName
+        binding.detailViewDescriptionText.text = p.productDescription
+        binding.detailViewPriceText.text = p.productPrice.toString()
         val sliderItemDetailView = SliderItemDetailView(
-            product.productDescription,
-            product.productImgPath
+            p.productDescription,
+            p.productImgPath
         )
         adapter!!.renewItems(mutableListOf(sliderItemDetailView))
     }
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         binding.addToCartButton.setOnClickListener {
-            requireActivity().getSharedPreferences("shopping_cart", Context.MODE_PRIVATE).edit()
+            if (product != null) {
+                viewModel.addToCart(product!!)
+            }
+
+            /*requireActivity().getSharedPreferences("shopping_cart", Context.MODE_PRIVATE).edit()
                 .apply {
                     putString("cart_amount", "twenty dollars")
                     putString("cart_tax", "twenty dollars")
                     putString("cart_quantity", "twenty dollars")
                     putString("cart_latest_item", "la mona lisa")
-                }.apply()
+
+                }.apply()*/
         }
     }
 }

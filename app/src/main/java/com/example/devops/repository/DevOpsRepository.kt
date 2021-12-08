@@ -3,12 +3,11 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Transformations
 import com.example.devops.database.devops.DevOpsDatabase
-import com.example.devops.database.devops.product.ProductDatabase
 import com.example.devops.database.devops.product.asDomainModel
+import com.example.devops.database.devops.shoppingcart.ShoppingCart
+import com.example.devops.database.devops.shoppingcart.ShoppingCartWithProducts
 import com.example.devops.domain.Product
-import com.example.devops.network.ApiProduct
 import com.example.devops.network.DevOpsApi
-import com.example.devops.network.DevOpsApi.retrofitService
 import com.example.devops.network.asDatabaseModel
 import com.example.devops.network.asDatabaseProduct
 import kotlinx.coroutines.Dispatchers
@@ -20,38 +19,64 @@ import kotlinx.coroutines.withContext
    * Can refresh products
    * */
 
-class DevOpsRepository (private val database: DevOpsDatabase) {
-
+class DevOpsRepository(private val database: DevOpsDatabase) {
 
         // Network call
         // get products from the database, but transform them with map
-        val products: LiveData<List<Product>> = Transformations.map(database.productDao.getAllProductsLive()){
+        val products: LiveData<List<Product>> = Transformations.map(database.productDao.getAllProductsLive()) {
             it.asDomainModel()
         }
 
+        val shoppingCart: LiveData<List<Product>> = Transformations.map(database.shoppingCartDao.getShoppingCartsWithProductsLive()) {
+            if (it.isNotEmpty()) {
+                it[0].productDatabases.asDomainModel()
+            } else {
+                emptyList<Product>()
+            }
+        }
+
         // Database call
-        suspend fun refreshProducts(){
+        suspend fun refreshProducts() {
             // switch context to IO thread
-            withContext(Dispatchers.IO){
+            withContext(Dispatchers.IO) {
                 val products = DevOpsApi.retrofitService.getProducts().await()
-                Log.i("Hola",products.toString())
-                //'*': kotlin spread operator.
-                //Used for functions that expect a vararg param
-                //just spreads the array into separate fields
+                // '*': kotlin spread operator.
+                // Used for functions that expect a vararg param
+                // just spreads the array into separate fields
                 database.productDao.insertAll(*products.asDatabaseModel())
             }
         }
 
         // Database call
-        suspend fun getProduct(productId: Long){
+        suspend fun getProduct(productId: Long) {
             // switch context to IO thread
-            withContext(Dispatchers.IO){
+            withContext(Dispatchers.IO) {
                 val product = DevOpsApi.retrofitService.getProduct(productId).await()
-                Log.i("UN SOLO PRODUCTO", product.toString())
-                //'*': kotlin spread operator.
-                //Used for functions that expect a vararg param
-                //just spreads the array into separate fields
+                // '*': kotlin spread operator.
+                // Used for functions that expect a vararg param
+                // just spreads the array into separate fields
                 database.productDao.insertAll(product.asDatabaseProduct())
             }
+        }
+
+        suspend fun addShoppingItem(productId: Long) {
+            // Añadir al shopping
+            var shoppingCart = database.shoppingCartDao.get(1)
+            if (shoppingCart == null) {
+                shoppingCart = ShoppingCart(1, 0.0, 1)
+                database.shoppingCartDao.insert(shoppingCart)
+            }
+            if (database.shoppingCartDao.getShoppingCartExists(1, productId) == 0L) {
+                database.shoppingCartDao.insertProductShoppingCart(1, productId)
+            }
+        }
+
+        suspend fun removeShoppingItem(productId: Long) {
+            // Añadir al shopping
+            var shoppingCart = database.shoppingCartDao.get(1)
+            if (shoppingCart != null) {
+                database.shoppingCartDao.removeShoppingCartItem(1, productId)
+            }
+
         }
 }

@@ -16,7 +16,6 @@ import android.widget.ImageView
 import androidx.core.net.toUri
 import com.bumptech.glide.Glide
 import com.example.devops.network.BASE_URL
-import com.example.devops.screens.bindingutils.setImage
 import com.example.devops.screens.detailview.SliderItemDetailView
 
 class SliderAdapterDetailView(context: Context) :

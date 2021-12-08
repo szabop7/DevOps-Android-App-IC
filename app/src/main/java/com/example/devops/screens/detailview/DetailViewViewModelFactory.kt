@@ -3,7 +3,6 @@ package com.example.devops.screens.detailview
 import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.devops.database.devops.product.ProductDao
 
 class DetailViewViewModelFactory(private val id: Long, private val application: Application) : ViewModelProvider.Factory {
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {

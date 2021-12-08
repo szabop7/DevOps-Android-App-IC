@@ -1152,6 +1152,7 @@ color background_floating_material_light
 color background_material_dark
 color background_material_light
 color black
+color blue
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -2052,7 +2053,6 @@ id browser_actions_menu_items
 id browser_actions_menu_view
 id button
 id button2
-id button3
 id buttonPanel
 id cache_measures
 id cancel_action
@@ -2184,9 +2184,6 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
-id imageButton3
-id imageButton4
-id imageButton5
 id imageSlider
 id imageView
 id imageView1
@@ -2328,8 +2325,12 @@ id pin
 id position
 id postLayout
 id previous
+id product_artist
+id product_delete
 id product_description_textview
 id product_list
+id product_price
+id product_title
 id product_title_textview
 id progress_circular
 id progress_horizontal
@@ -2353,7 +2354,6 @@ id scroll
 id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
-id scrollView2
 id scrollable
 id search_badge
 id search_bar
@@ -2435,8 +2435,6 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textView10
-id textView11
-id textView12
 id textView13
 id textView14
 id textView15
@@ -2449,7 +2447,6 @@ id textView24
 id textView3
 id textView4
 id textView5
-id textView6
 id textView7
 id textView8
 id textView9
@@ -2603,7 +2600,8 @@ layout fragment_profile
 layout fragment_shopping_cart
 layout fragment_young_art
 layout image_slider_layout_item
-layout list_item_product
+layout list_item_product_market_place
+layout list_item_product_shopping_cart
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider
