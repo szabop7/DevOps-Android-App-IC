@@ -64,7 +64,16 @@ fun ApiProductContainer.asDomainModel(): List<Product>{
 * */
 fun ApiProductContainer.asDatabaseModel(): Array<ProductDatabase>{
     return apiProducts.map{
-        it.asDatabaseJoke()
+        ProductDatabase(
+            productId = it.productId,
+            productName = it.productName,
+            productPrice = it.productPrice,
+            productImgPath = it.productImgPath,
+            productDescription = it.productDescription,
+            productIsAuction = it.productIsAuction,
+            productWidth = it.productWidth,
+            productHeight = it.productHeight
+        )
     }.toTypedArray()
 }
 

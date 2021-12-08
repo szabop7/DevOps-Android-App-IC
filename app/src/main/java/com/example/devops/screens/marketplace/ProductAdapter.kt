@@ -5,10 +5,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.devops.database.devops.product.ProductDatabase
 import com.example.devops.databinding.ListItemProductBinding
 import com.example.devops.domain.Product
-import java.util.*
+import com.example.devops.network.BASE_URL
+
 
 class ProductAdapter(val clickListener: ProductListener) : ListAdapter<Product, ViewHolder>(ProductDiffCallback()) {
 
@@ -23,8 +23,6 @@ class ProductAdapter(val clickListener: ProductListener) : ListAdapter<Product, 
     }
 }
 
-// class TextItemViewHolder(val textView: TextView): RecyclerView.ViewHolder(textView)
-
 class ViewHolder(val binding: ListItemProductBinding) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(clickListener: ProductListener, item: Product) {
@@ -34,6 +32,7 @@ class ViewHolder(val binding: ListItemProductBinding) : RecyclerView.ViewHolder(
         binding.product = item
         binding.clickListener = clickListener
         binding.executePendingBindings()
+        item.productImgPath = BASE_URL + item.productImgPath
     }
 
     // this way the viewHolder knows how to inflate.

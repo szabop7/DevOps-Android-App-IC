@@ -43,8 +43,7 @@ class MarketPlaceFragment : Fragment() {
         binding.lifecycleOwner = viewLifecycleOwner
 
         val adapter = ProductAdapter(ProductListener { productId: Long ->
-            Toast.makeText(context, productId.toString(), Toast.LENGTH_SHORT).show()
-            onClickListener()
+            onClickListener(productId)
         })
 
         binding.productList.adapter = adapter
@@ -66,7 +65,8 @@ class MarketPlaceFragment : Fragment() {
         return binding.root
     }
 
-    fun onClickListener() {
+    fun onClickListener(productId: Long) {
+
         view?.findNavController()?.navigate(R.id.action_MarketPlaceFragment_to_detailViewFragment)
     }
 

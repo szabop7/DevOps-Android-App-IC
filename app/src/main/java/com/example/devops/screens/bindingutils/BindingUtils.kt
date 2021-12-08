@@ -9,7 +9,7 @@ import com.bumptech.glide.Glide
 @BindingAdapter("imageUrl")
 fun ImageView.setImage(imgUrl: String?) {
     imgUrl?.let {
-        val imgUri = it.toUri().buildUpon().scheme("https").build()
+        val imgUri = it.toUri().buildUpon().scheme("http").build()
         Glide.with(context)
             .load(imgUri)
             .into(this)

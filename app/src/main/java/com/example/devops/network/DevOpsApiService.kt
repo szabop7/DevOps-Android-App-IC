@@ -13,7 +13,8 @@ import java.security.cert.X509Certificate
 import javax.net.ssl.TrustManager
 import javax.net.ssl.X509TrustManager
 
-private const val BASE_URL = "http://10.0.2.2:5000/api/"
+private const val BASE_API = "http://10.0.2.2:5000/api/"
+public const val BASE_URL = "http://10.0.2.2:5000"
 
 // create moshi object
 private val moshi = Moshi.Builder()
@@ -30,7 +31,7 @@ private val client = OkHttpClient.Builder()
 private val retrofit = Retrofit.Builder()
     .addConverterFactory(MoshiConverterFactory.create(moshi))
     .addCallAdapterFactory(CoroutineCallAdapterFactory())
-    .baseUrl(BASE_URL)
+    .baseUrl(BASE_API)
     .client(client)
     .build()
 
