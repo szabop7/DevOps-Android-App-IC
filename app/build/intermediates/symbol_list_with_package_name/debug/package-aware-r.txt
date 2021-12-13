@@ -1488,6 +1488,8 @@ dimen disabled_alpha_material_light
 dimen fastscroll_default_thickness
 dimen fastscroll_margin
 dimen fastscroll_minimum_range
+dimen fragment_horizontal_margin
+dimen fragment_vertical_margin
 dimen highlight_alpha_material_colored
 dimen highlight_alpha_material_dark
 dimen highlight_alpha_material_light
@@ -1943,6 +1945,7 @@ id META
 id MarketPlaceFragment
 id NO_DEBUG
 id ProfileFragment
+id ProfileLogInFragment
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -1989,7 +1992,10 @@ id action0
 id actionDown
 id actionDownUp
 id actionUp
+id action_MarketPlaceFragment_to_ProfileFragment
+id action_MarketPlaceFragment_to_ShoppingCartFragment
 id action_MarketPlaceFragment_to_detailViewFragment
+id action_MarketPlaceFragment_to_youngArtFragment
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -2000,10 +2006,6 @@ id action_bar_title
 id action_container
 id action_context_bar
 id action_divider
-id action_homeScreen_to_MarketPlaceFragment
-id action_homeScreen_to_ProfileFragment
-id action_homeScreen_to_YoungArtFragment
-id action_homeScreen_to_shoppingCartFragment
 id action_image
 id action_menu_divider
 id action_menu_presenter
@@ -2051,7 +2053,6 @@ id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
 id button
-id button2
 id buttonPanel
 id cache_measures
 id cancel_action
@@ -2172,7 +2173,6 @@ id header_title
 id hideable
 id home
 id homeAsUp
-id homeScreen
 id honorRequest
 id horizontal
 id horizontal_only
@@ -2192,10 +2192,7 @@ id imageView15
 id imageView2
 id imageView3
 id imageView4
-id imageView5
 id imageView7
-id imageView8
-id imageView9
 id immediateStop
 id included
 id info
@@ -2424,12 +2421,11 @@ id test_radiobutton_app_button_tint
 id text
 id text2
 id textEnd
-id textInputEditText
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id textView10
+id textView
 id textView13
 id textView14
 id textView15
@@ -2444,7 +2440,6 @@ id textView4
 id textView5
 id textView7
 id textView8
-id textView9
 id textWatcher
 id text_home
 id text_input_end_icon
@@ -2588,9 +2583,9 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_detail_view
-layout fragment_home_screen
 layout fragment_market_place
 layout fragment_profile
+layout fragment_profile_log_in
 layout fragment_shopping_cart
 layout fragment_young_art
 layout image_slider_layout_item
@@ -2655,7 +2650,6 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
-layout searching_activity
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -2709,6 +2703,8 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string action_sign_in
+string action_sign_in_short
 string add_to_cart_text
 string app_name
 string appbar_scrolling_view_behavior
@@ -2743,9 +2739,12 @@ string hello_blank_fragment
 string hello_text
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
+string invalid_password
+string invalid_username
 string item_view_role_description
 string log_in_sign_in
 string login
+string login_failed
 string logout
 string market_place_text
 string material_clock_display_divider
@@ -2816,6 +2815,8 @@ string popular_text
 string presentation_text
 string price_text
 string profile
+string prompt_email
+string prompt_password
 string rosemary_kain
 string search_menu_title
 string shopping_cart_text
@@ -2827,9 +2828,11 @@ string time_text
 string title_text
 string trends_text
 string upload_text
+string welcome
 string wooden_apple
 string wooden_candle_holders
 string wooden_clown
+string you_need_to_sign_in_log_in
 string young_art_text
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light

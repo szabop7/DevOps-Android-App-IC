@@ -23,13 +23,6 @@
                 android:resource="@xml/searchable"/>
         </activity>
 
-        <activity android:name=".SearchResultsActivity"
-            android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.SEARCH" />
-        </intent-filter>
-
-    </activity>
 
     </application>
 

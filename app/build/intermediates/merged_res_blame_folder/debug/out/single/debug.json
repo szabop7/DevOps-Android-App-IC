@@ -36,12 +36,12 @@
         "source": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\build\\intermediates\\merged_res\\debug\\drawable_human.jpeg.flat",
-        "source": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\src\\main\\res\\drawable\\human.jpeg"
-    },
-    {
         "merged": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_young_art.xml.flat",
         "source": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\src\\main\\res\\layout\\fragment_young_art.xml"
+    },
+    {
+        "merged": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\build\\intermediates\\merged_res\\debug\\drawable_human.jpeg.flat",
+        "source": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\src\\main\\res\\drawable\\human.jpeg"
     },
     {
         "merged": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
@@ -80,6 +80,10 @@
         "source": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_profile_log_in.xml.flat",
+        "source": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\src\\main\\res\\layout\\fragment_profile_log_in.xml"
+    },
+    {
         "merged": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
     },
@@ -110,10 +114,6 @@
     {
         "merged": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\build\\intermediates\\merged_res\\debug\\drawable_log_out.png.flat",
         "source": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\src\\main\\res\\drawable\\log_out.png"
-    },
-    {
-        "merged": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_home_screen.xml.flat",
-        "source": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\src\\main\\res\\layout\\fragment_home_screen.xml"
     },
     {
         "merged": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
@@ -186,10 +186,6 @@
     {
         "merged": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\build\\intermediates\\merged_res\\debug\\drawable_outline_star_black_24dp.png.flat",
         "source": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\src\\main\\res\\drawable\\outline_star_black_24dp.png"
-    },
-    {
-        "merged": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\build\\intermediates\\merged_res\\debug\\layout_searching_activity.xml.flat",
-        "source": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\src\\main\\res\\layout\\searching_activity.xml"
     },
     {
         "merged": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\build\\intermediates\\merged_res\\debug\\xml_searchable.xml.flat",

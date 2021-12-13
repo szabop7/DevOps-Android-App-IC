@@ -26,12 +26,12 @@ import com.auth0.android.result.UserProfile
 import com.example.devops.database.devops.DatabaseTable
 import com.example.devops.login.CredentialsManager
 
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
     private lateinit var account: Auth0
-    private val db = DatabaseTable(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -115,7 +115,7 @@ class MainActivity : AppCompatActivity() {
                 override fun onSuccess(payload: Void?) {
                     // The user has been logged out!
                     binding.navView.getHeaderView(0).findViewById<TextView>(R.id.greetings_text).text = getString(
-                                            R.string.hello_text)
+                        R.string.hello_text)
                     logButtonsVisibilityToggle(true)
                 }
 
@@ -188,7 +188,6 @@ class MainActivity : AppCompatActivity() {
                 }
             })
     }
-
 
     fun logButtonsVisibilityToggle(bool: Boolean) {
         var buttonVisLogIn: Int = View.VISIBLE

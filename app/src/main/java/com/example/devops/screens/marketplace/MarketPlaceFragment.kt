@@ -44,7 +44,7 @@ class MarketPlaceFragment : Fragment() {
 
         binding.productList.adapter = adapter
 
-        viewModel.products.observe(viewLifecycleOwner, Observer {
+        viewModel.productsAndFilter.observe(viewLifecycleOwner, Observer {
             adapter.submitList(it)
         })
 
