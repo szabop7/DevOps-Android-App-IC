@@ -37,7 +37,7 @@ data class ApiProduct(
 )
 
 /*
-* Convert network results into Domain produtcs
+* Convert network results into Domain products
 * */
 fun ApiProductContainer.asDomainModel(): List<Product> {
     return apiProducts.map {

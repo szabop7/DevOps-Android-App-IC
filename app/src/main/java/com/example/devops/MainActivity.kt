@@ -10,8 +10,6 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.drawerlayout.widget.DrawerLayout
-
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
@@ -28,11 +26,8 @@ import com.auth0.android.result.UserProfile
 import com.example.devops.database.devops.DatabaseTable
 import com.example.devops.login.CredentialsManager
 
-import kotlinx.android.synthetic.main.activity_main.*
-
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var drawerLayout: DrawerLayout
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
     private lateinit var account: Auth0
@@ -51,7 +46,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.navView.getHeaderView(0).findViewById<Button>(R.id.ButtonLogIn).setOnClickListener() { loginWithBrowser() }
 
-        var logOutButton: MenuItem = binding.navView.menu.findItem(R.id.ButtonLogOut)
+        val logOutButton: MenuItem = binding.navView.menu.findItem(R.id.ButtonLogOut)
         logOutButton.setOnMenuItemClickListener { logout()
                     true }
 
@@ -88,16 +83,16 @@ class MainActivity : AppCompatActivity() {
             // Launch the authentication passing the callback where the results will be received
             .start(this, object : Callback<Credentials, AuthenticationException> {
                 // Called when there is an authentication failure
-                override fun onFailure(exception: AuthenticationException) {
+                override fun onFailure(error: AuthenticationException) {
                     // Something went wrong!
                 }
 
                 // Called when authentication completed successfully
-                override fun onSuccess(credentials: Credentials) {
+                override fun onSuccess(result: Credentials) {
                     // Get the access token from the credentials object.
                     // This can be used to call APIs
 
-                    CredentialsManager.saveCredentials(applicationContext, credentials)
+                    CredentialsManager.saveCredentials(applicationContext, result)
                     checkIfToken()
                 }
             })

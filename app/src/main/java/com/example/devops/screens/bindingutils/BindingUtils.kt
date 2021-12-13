@@ -14,7 +14,7 @@ fun ImageView.setImage(imgUrl: String?) {
         val full = BASE_URL + imgUrl
         full.let {
             val imgUri = it.toUri().buildUpon().scheme("http").build()
-            Log.i("IMAGEN", imgUri.toString())
+            Log.i("image", imgUri.toString())
             Glide.with(context)
                 .load(imgUri)
                 .dontAnimate()

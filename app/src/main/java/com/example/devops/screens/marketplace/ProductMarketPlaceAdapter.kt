@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.devops.databinding.ListItemProductMarketPlaceBinding
 import com.example.devops.domain.Product
 
-class ProductMarketPlaceAdapter(val clickListener: ProductListener) : ListAdapter<Product, ViewHolder>(ProductDiffCallback()) {
+class ProductMarketPlaceAdapter(private val clickListener: ProductListener) : ListAdapter<Product, ViewHolder>(ProductDiffCallback()) {
 
     // fill up the item you need (e.g. set texts and images)
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {

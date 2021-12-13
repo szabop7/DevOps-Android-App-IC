@@ -1,11 +1,9 @@
 package com.example.devops.repository
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Transformations
 import com.example.devops.database.devops.DevOpsDatabase
 import com.example.devops.database.devops.product.asDomainModel
 import com.example.devops.database.devops.shoppingcart.ShoppingCart
-import com.example.devops.database.devops.shoppingcart.ShoppingCartWithProducts
 import com.example.devops.domain.Product
 import com.example.devops.network.DevOpsApi
 import com.example.devops.network.asDatabaseModel
@@ -60,7 +58,6 @@ class DevOpsRepository(private val database: DevOpsDatabase) {
         }
 
         suspend fun addShoppingItem(productId: Long) {
-            // Añadir al shopping
             var shoppingCart = database.shoppingCartDao.get(1)
             if (shoppingCart == null) {
                 shoppingCart = ShoppingCart(1, 0.0, 1)
@@ -72,11 +69,9 @@ class DevOpsRepository(private val database: DevOpsDatabase) {
         }
 
         suspend fun removeShoppingItem(productId: Long) {
-            // Añadir al shopping
             var shoppingCart = database.shoppingCartDao.get(1)
             if (shoppingCart != null) {
                 database.shoppingCartDao.removeShoppingCartItem(1, productId)
             }
-
         }
 }

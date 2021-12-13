@@ -14,8 +14,6 @@ import kotlinx.coroutines.launch
 
 class ShoppingCartViewModel(application: Application) : AndroidViewModel(application) {
     private val _status = MutableLiveData<DevOpsApiStatus>()
-    val status: LiveData<DevOpsApiStatus>
-        get() = _status
 
     private val devOpsDatabase = DevOpsDatabase.getInstance(application.applicationContext)
     private val devOpsRepository = DevOpsRepository(devOpsDatabase)

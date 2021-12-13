@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.devops.databinding.ListItemProductShoppingCartBinding
 import com.example.devops.domain.Product
 
-class ProductShoppingCartAdapter(val clickListener: ProductListener) : ListAdapter<Product, ViewHolder>(ProductDiffCallback()) {
+class ProductShoppingCartAdapter(private val clickListener: ProductListener) : ListAdapter<Product, ViewHolder>(ProductDiffCallback()) {
 
     // fill up the item you need (e.g. set texts and images)
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
