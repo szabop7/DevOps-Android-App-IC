@@ -11,7 +11,9 @@
         tools:layout="@layout/fragment_market_place" >
         <action
             android:id="@+id/action_MarketPlaceFragment_to_detailViewFragment"
-            app:destination="@id/detailViewFragment" />
+            app:destination="@id/detailViewFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/youngArtFragment"
@@ -34,9 +36,6 @@
         <action
             android:id="@+id/action_homeScreen_to_ProfileFragment"
             app:destination="@id/ProfileFragment" />
-        <action
-            android:id="@+id/action_homeScreen_to_galleryFragment"
-            app:destination="@id/galleryFragment" />
 
     </fragment>
     <fragment
@@ -58,9 +57,4 @@
         android:name="com.example.devops.screens.profile.ProfileFragment"
         android:label="Profile"
         tools:layout="@layout/fragment_profile" />
-    <fragment
-        android:id="@+id/galleryFragment"
-        android:name="com.example.devops.screens.gallery.GalleryFragment"
-        android:label="fragment_gallery"
-        tools:layout="@layout/fragment_gallery" />
 </navigation>

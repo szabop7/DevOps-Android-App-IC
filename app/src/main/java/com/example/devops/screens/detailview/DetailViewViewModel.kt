@@ -12,6 +12,9 @@ import com.example.devops.screens.marketplace.DevOpsApiStatus
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 
+/**
+ * View Model of Detail View
+ */
 class DetailViewViewModel(id: Long, application: Application) : AndroidViewModel(application) {
     private val _status = MutableLiveData<DevOpsApiStatus>()
     val status: LiveData<DevOpsApiStatus>
@@ -30,16 +33,22 @@ class DetailViewViewModel(id: Long, application: Application) : AndroidViewModel
         }
     }
 
+    /**
+     * Adds a [Product] to the cart through the repository
+     */
     fun addToCart(product: Product) {
         viewModelScope.launch {
             devOpsRepository.addShoppingItem(product.productId)
         }
     }
 
+    /**
+     * Checks if a [Product] is in the cart and
+     * @return boolean
+     */
     fun checkIfInCart(product: Product): Boolean {
-        viewModelScope.launch {
-            // devOpsRepository.isProductInShoppingList(product.productId)
-        }
+        if(devOpsRepository.shoppingCart.value!=null)
+            return devOpsRepository.shoppingCart.value!!.contains(product)
         return false
     }
 

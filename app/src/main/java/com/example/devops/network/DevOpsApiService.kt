@@ -36,10 +36,10 @@ private val retrofit = Retrofit.Builder()
 interface DevOpsApiService {
 
     @GET("product")
-    fun getProducts(): Deferred<ApiProductContainer>
+    fun getProductsAsync(): Deferred<ApiProductContainer>
 
     @GET("product/{id}")
-    fun getProduct(
+    fun getProductAsync(
         @Path("id") productId: Long
     ): Deferred<ApiProduct>
 }

@@ -189,8 +189,6 @@ class MainActivity : AppCompatActivity() {
             })
     }
 
-    fun trendsOnClick(item: android.view.MenuItem) {
-    }
 
     fun logButtonsVisibilityToggle(bool: Boolean) {
         var buttonVisLogIn: Int = View.VISIBLE
@@ -200,5 +198,25 @@ class MainActivity : AppCompatActivity() {
         }
         binding.navView.getHeaderView(0).findViewById<Button>(R.id.ButtonLogIn).visibility = buttonVisLogIn
         binding.navView.menu.findItem(R.id.ButtonLogOut).setVisible(!bool)
+    }
+
+    override fun onStart() {
+        super.onStart()
+    }
+
+    override fun onResume() {
+        super.onResume()
+    }
+
+    override fun onPause() {
+        super.onPause()
+    }
+
+    override fun onStop() {
+        super.onStop()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
     }
 }

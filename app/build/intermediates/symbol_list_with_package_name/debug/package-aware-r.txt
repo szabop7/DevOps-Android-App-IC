@@ -2003,7 +2003,6 @@ id action_divider
 id action_homeScreen_to_MarketPlaceFragment
 id action_homeScreen_to_ProfileFragment
 id action_homeScreen_to_YoungArtFragment
-id action_homeScreen_to_galleryFragment
 id action_homeScreen_to_shoppingCartFragment
 id action_image
 id action_menu_divider
@@ -2158,7 +2157,6 @@ id forever
 id forward
 id fragment_container_view_tag
 id frost
-id galleryFragment
 id ghost_view
 id ghost_view_holder
 id glide_custom_view_target_tag
@@ -2317,9 +2315,6 @@ id path
 id pathRelative
 id peekHeight
 id percent
-id photo1
-id photo2
-id photo3
 id picture_market_place
 id pin
 id position
@@ -2593,7 +2588,6 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_detail_view
-layout fragment_gallery
 layout fragment_home_screen
 layout fragment_market_place
 layout fragment_profile

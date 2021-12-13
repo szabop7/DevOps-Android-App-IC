@@ -37,11 +37,13 @@ class DevOpsRepository(private val database: DevOpsDatabase) {
         suspend fun refreshProducts() {
             // switch context to IO thread
             withContext(Dispatchers.IO) {
-                val products = DevOpsApi.retrofitService.getProducts().await()
-                // '*': kotlin spread operator.
-                // Used for functions that expect a vararg param
-                // just spreads the array into separate fields
-                database.productDao.insertAll(*products.asDatabaseModel())
+                try{
+                    val products = DevOpsApi.retrofitService.getProductsAsync().await()
+                    // '*': kotlin spread operator.
+                    // Used for functions that expect a vararg param
+                    // just spreads the array into separate fields
+                    database.productDao.insertAll(*products.asDatabaseModel())
+                }catch (e: Exception) {}
             }
         }
 
@@ -49,11 +51,13 @@ class DevOpsRepository(private val database: DevOpsDatabase) {
         suspend fun getProduct(productId: Long) {
             // switch context to IO thread
             withContext(Dispatchers.IO) {
-                val product = DevOpsApi.retrofitService.getProduct(productId).await()
-                // '*': kotlin spread operator.
-                // Used for functions that expect a vararg param
-                // just spreads the array into separate fields
-                database.productDao.insertAll(product.asDatabaseProduct())
+                try {
+                    val product = DevOpsApi.retrofitService.getProductAsync(productId).await()
+                    // '*': kotlin spread operator.
+                    // Used for functions that expect a vararg param
+                    // just spreads the array into separate fields
+                    database.productDao.insertAll(product.asDatabaseProduct())
+                }catch (e: Exception) {}
             }
         }
 

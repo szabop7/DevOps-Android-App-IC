@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ldrtl-v17\\values-ldrtl-v17.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\alici\\.gradle\\caches\\transforms-3\\41019637357459a745eef9452cfef899\\transformed\\material-1.4.0\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
+                    "source": "C:\\Users\\alici\\.gradle\\caches\\transforms-3\\58a176a578e8e15dfadce7bb71bf04ac\\transformed\\material-1.4.0\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

@@ -1,5 +1,5 @@
-com/example/devops/BR.java
- com.example.devops.BR
+com/example/devops/databinding/ListItemProductMarketPlaceBindingImpl.java
+ com.example.devops.databinding.ListItemProductMarketPlaceBindingImpl
 com/example/devops/databinding/ListItemProductMarketPlaceBinding.java
  com.example.devops.databinding.ListItemProductMarketPlaceBinding
 com/example/devops/databinding/ImageSliderLayoutItemBinding.java
@@ -19,8 +19,6 @@ com/example/devops/database/devops/review/ReviewDao_Impl.java
  com.example.devops.database.devops.review.ReviewDao_Impl$7
  com.example.devops.database.devops.review.ReviewDao_Impl$8
  com.example.devops.database.devops.review.ReviewDao_Impl$9
-com/example/devops/databinding/FragmentGalleryBinding.java
- com.example.devops.databinding.FragmentGalleryBinding
 com/example/devops/database/devops/userart/UserArtDao_Impl.java
  com.example.devops.database.devops.userart.UserArtDao_Impl
  com.example.devops.database.devops.userart.UserArtDao_Impl$1
@@ -35,23 +33,8 @@ com/example/devops/database/devops/userart/UserArtDao_Impl.java
  com.example.devops.database.devops.userart.UserArtDao_Impl$9
 androidx/databinding/DataBinderMapperImpl.java
  androidx.databinding.DataBinderMapperImpl
-com/example/devops/database/devops/shoppingcart/ShoppingCartDao_Impl.java
- com.example.devops.database.devops.shoppingcart.ShoppingCartDao_Impl
- com.example.devops.database.devops.shoppingcart.ShoppingCartDao_Impl$1
- com.example.devops.database.devops.shoppingcart.ShoppingCartDao_Impl$10
- com.example.devops.database.devops.shoppingcart.ShoppingCartDao_Impl$11
- com.example.devops.database.devops.shoppingcart.ShoppingCartDao_Impl$12
- com.example.devops.database.devops.shoppingcart.ShoppingCartDao_Impl$13
- com.example.devops.database.devops.shoppingcart.ShoppingCartDao_Impl$14
- com.example.devops.database.devops.shoppingcart.ShoppingCartDao_Impl$15
- com.example.devops.database.devops.shoppingcart.ShoppingCartDao_Impl$2
- com.example.devops.database.devops.shoppingcart.ShoppingCartDao_Impl$3
- com.example.devops.database.devops.shoppingcart.ShoppingCartDao_Impl$4
- com.example.devops.database.devops.shoppingcart.ShoppingCartDao_Impl$5
- com.example.devops.database.devops.shoppingcart.ShoppingCartDao_Impl$6
- com.example.devops.database.devops.shoppingcart.ShoppingCartDao_Impl$7
- com.example.devops.database.devops.shoppingcart.ShoppingCartDao_Impl$8
- com.example.devops.database.devops.shoppingcart.ShoppingCartDao_Impl$9
+com/example/devops/databinding/FragmentMarketPlaceBindingImpl.java
+ com.example.devops.databinding.FragmentMarketPlaceBindingImpl
 com/example/devops/database/devops/tag/TagDao_Impl.java
  com.example.devops.database.devops.tag.TagDao_Impl
  com.example.devops.database.devops.tag.TagDao_Impl$1
@@ -98,28 +81,18 @@ com/example/devops/database/devops/order/OrderDao_Impl.java
  com.example.devops.database.devops.order.OrderDao_Impl$7
  com.example.devops.database.devops.order.OrderDao_Impl$8
  com.example.devops.database.devops.order.OrderDao_Impl$9
-com/example/devops/databinding/SearchingActivityBinding.java
- com.example.devops.databinding.SearchingActivityBinding
+com/example/devops/databinding/FragmentMarketPlaceBinding.java
+ com.example.devops.databinding.FragmentMarketPlaceBinding
 com/example/devops/DataBindingTriggerClass.java
  com.example.devops.DataBindingTriggerClass
 com/example/devops/BuildConfig.java
  com.example.devops.BuildConfig
 com/example/devops/databinding/ListItemProductShoppingCartBinding.java
  com.example.devops.databinding.ListItemProductShoppingCartBinding
-androidx/databinding/DataBindingComponent.java
- androidx.databinding.DataBindingComponent
-com/example/devops/database/devops/artist/ArtistDao_Impl.java
- com.example.devops.database.devops.artist.ArtistDao_Impl
- com.example.devops.database.devops.artist.ArtistDao_Impl$1
- com.example.devops.database.devops.artist.ArtistDao_Impl$10
- com.example.devops.database.devops.artist.ArtistDao_Impl$2
- com.example.devops.database.devops.artist.ArtistDao_Impl$3
- com.example.devops.database.devops.artist.ArtistDao_Impl$4
- com.example.devops.database.devops.artist.ArtistDao_Impl$5
- com.example.devops.database.devops.artist.ArtistDao_Impl$6
- com.example.devops.database.devops.artist.ArtistDao_Impl$7
- com.example.devops.database.devops.artist.ArtistDao_Impl$8
- com.example.devops.database.devops.artist.ArtistDao_Impl$9
+com/example/devops/databinding/FragmentDetailViewBinding.java
+ com.example.devops.databinding.FragmentDetailViewBinding
+com/example/devops/databinding/FragmentShoppingCartBindingImpl.java
+ com.example.devops.databinding.FragmentShoppingCartBindingImpl
 com/example/devops/database/devops/bet/BetDao_Impl.java
  com.example.devops.database.devops.bet.BetDao_Impl
  com.example.devops.database.devops.bet.BetDao_Impl$1
@@ -134,8 +107,8 @@ com/example/devops/database/devops/bet/BetDao_Impl.java
  com.example.devops.database.devops.bet.BetDao_Impl$9
 com/example/devops/databinding/FragmentHomeScreenBinding.java
  com.example.devops.databinding.FragmentHomeScreenBinding
-com/example/devops/databinding/ActivityMainBindingImpl.java
- com.example.devops.databinding.ActivityMainBindingImpl
+com/example/devops/databinding/ListItemProductShoppingCartBindingImpl.java
+ com.example.devops.databinding.ListItemProductShoppingCartBindingImpl
 com/example/devops/databinding/NavHeaderMainBinding.java
  com.example.devops.databinding.NavHeaderMainBinding
 com/example/devops/databinding/FragmentYoungArtBinding.java
@@ -143,23 +116,48 @@ com/example/devops/databinding/FragmentYoungArtBinding.java
 com/example/devops/generated/callback/OnClickListener.java
  com.example.devops.generated.callback.OnClickListener
  com.example.devops.generated.callback.OnClickListener$Listener
-com/example/devops/databinding/ActivityMainBinding.java
- com.example.devops.databinding.ActivityMainBinding
-com/example/devops/databinding/FragmentProfileBinding.java
- com.example.devops.databinding.FragmentProfileBinding
-com/example/devops/databinding/ListItemProductMarketPlaceBindingImpl.java
- com.example.devops.databinding.ListItemProductMarketPlaceBindingImpl
-com/example/devops/databinding/FragmentDetailViewBinding.java
- com.example.devops.databinding.FragmentDetailViewBinding
-com/example/devops/databinding/ListItemProductShoppingCartBindingImpl.java
- com.example.devops.databinding.ListItemProductShoppingCartBindingImpl
 com/example/devops/databinding/FragmentShoppingCartBinding.java
  com.example.devops.databinding.FragmentShoppingCartBinding
-com/example/devops/databinding/FragmentShoppingCartBindingImpl.java
- com.example.devops.databinding.FragmentShoppingCartBindingImpl
-com/example/devops/databinding/FragmentMarketPlaceBindingImpl.java
- com.example.devops.databinding.FragmentMarketPlaceBindingImpl
+com/example/devops/databinding/FragmentProfileBinding.java
+ com.example.devops.databinding.FragmentProfileBinding
+com/example/devops/databinding/SearchingActivityBinding.java
+ com.example.devops.databinding.SearchingActivityBinding
+com/example/devops/databinding/ActivityMainBindingImpl.java
+ com.example.devops.databinding.ActivityMainBindingImpl
+com/example/devops/database/devops/shoppingcart/ShoppingCartDao_Impl.java
+ com.example.devops.database.devops.shoppingcart.ShoppingCartDao_Impl
+ com.example.devops.database.devops.shoppingcart.ShoppingCartDao_Impl$1
+ com.example.devops.database.devops.shoppingcart.ShoppingCartDao_Impl$10
+ com.example.devops.database.devops.shoppingcart.ShoppingCartDao_Impl$11
+ com.example.devops.database.devops.shoppingcart.ShoppingCartDao_Impl$12
+ com.example.devops.database.devops.shoppingcart.ShoppingCartDao_Impl$13
+ com.example.devops.database.devops.shoppingcart.ShoppingCartDao_Impl$14
+ com.example.devops.database.devops.shoppingcart.ShoppingCartDao_Impl$15
+ com.example.devops.database.devops.shoppingcart.ShoppingCartDao_Impl$2
+ com.example.devops.database.devops.shoppingcart.ShoppingCartDao_Impl$3
+ com.example.devops.database.devops.shoppingcart.ShoppingCartDao_Impl$4
+ com.example.devops.database.devops.shoppingcart.ShoppingCartDao_Impl$5
+ com.example.devops.database.devops.shoppingcart.ShoppingCartDao_Impl$6
+ com.example.devops.database.devops.shoppingcart.ShoppingCartDao_Impl$7
+ com.example.devops.database.devops.shoppingcart.ShoppingCartDao_Impl$8
+ com.example.devops.database.devops.shoppingcart.ShoppingCartDao_Impl$9
+com/example/devops/database/devops/artist/ArtistDao_Impl.java
+ com.example.devops.database.devops.artist.ArtistDao_Impl
+ com.example.devops.database.devops.artist.ArtistDao_Impl$1
+ com.example.devops.database.devops.artist.ArtistDao_Impl$10
+ com.example.devops.database.devops.artist.ArtistDao_Impl$2
+ com.example.devops.database.devops.artist.ArtistDao_Impl$3
+ com.example.devops.database.devops.artist.ArtistDao_Impl$4
+ com.example.devops.database.devops.artist.ArtistDao_Impl$5
+ com.example.devops.database.devops.artist.ArtistDao_Impl$6
+ com.example.devops.database.devops.artist.ArtistDao_Impl$7
+ com.example.devops.database.devops.artist.ArtistDao_Impl$8
+ com.example.devops.database.devops.artist.ArtistDao_Impl$9
+com/example/devops/databinding/ActivityMainBinding.java
+ com.example.devops.databinding.ActivityMainBinding
 com/example/devops/databinding/FragmentDetailViewBindingImpl.java
  com.example.devops.databinding.FragmentDetailViewBindingImpl
-com/example/devops/databinding/FragmentMarketPlaceBinding.java
- com.example.devops.databinding.FragmentMarketPlaceBinding
+androidx/databinding/DataBindingComponent.java
+ androidx.databinding.DataBindingComponent
+com/example/devops/BR.java
+ com.example.devops.BR

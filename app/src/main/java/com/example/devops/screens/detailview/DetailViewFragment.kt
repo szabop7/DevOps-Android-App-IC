@@ -18,13 +18,17 @@ import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnima
 import com.smarteist.autoimageslider.SliderAnimations
 import com.smarteist.autoimageslider.SliderView
 
+/**
+ * Fragment of the detail view
+ */
 class DetailViewFragment : Fragment() {
 
-    var sliderView: SliderView? = null
+    private var sliderView: SliderView? = null
     private var adapter: SliderAdapterDetailView? = null
     private lateinit var binding: FragmentDetailViewBinding
-    val args: DetailViewFragmentArgs by navArgs()
+    private val args: DetailViewFragmentArgs by navArgs()
     private var product: Product? = null
+
     private val viewModel: DetailViewViewModel by lazy {
         val activity = requireNotNull(this.activity)
         ViewModelProvider(this, DetailViewViewModelFactory(args.productId, activity.application))
@@ -72,7 +76,10 @@ class DetailViewFragment : Fragment() {
         return binding.root
     }
 
-    fun setProductDetails(p: Product) {
+    /**
+     * Sets a [Product] details into the detail slider view
+     */
+    private fun setProductDetails(p: Product) {
         product = p
         binding.detailViewTitleText.text = p.productName
         binding.detailViewDescriptionText.text = p.productDescription
@@ -87,7 +94,10 @@ class DetailViewFragment : Fragment() {
         adapter!!.renewItems(mutableListOf(sliderItemDetailView))
     }
 
-    fun disableCartButton() {
+    /**
+     * Disables the add to cart button once you have added the product to the shopping cart
+     */
+    private fun disableCartButton() {
         binding.addToCartButton.isEnabled = false
         binding.addToCartButton.text = "Already in Cart"
     }
@@ -100,15 +110,6 @@ class DetailViewFragment : Fragment() {
                 disableCartButton()
                 viewModel.addToCart(product!!)
             }
-
-            /*requireActivity().getSharedPreferences("shopping_cart", Context.MODE_PRIVATE).edit()
-                .apply {
-                    putString("cart_amount", "twenty dollars")
-                    putString("cart_tax", "twenty dollars")
-                    putString("cart_quantity", "twenty dollars")
-                    putString("cart_latest_item", "la mona lisa")
-
-                }.apply()*/
         }
     }
 }

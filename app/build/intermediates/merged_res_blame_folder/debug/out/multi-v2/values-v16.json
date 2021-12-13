@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\alici\\Documents\\Kotlin\\DevOps\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\alici\\.gradle\\caches\\transforms-3\\ddc32651925386b210f8399ee04bf02d\\transformed\\appcompat-1.3.1\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\alici\\.gradle\\caches\\transforms-3\\9332fbc48916c4f8e166ed5b028c72bc\\transformed\\appcompat-1.3.1\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\alici\\.gradle\\caches\\transforms-3\\b3931c2030f3ed878a2073d01b782ef1\\transformed\\core-1.6.0\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\alici\\.gradle\\caches\\transforms-3\\5ec1a488cab539ce289817b8600b0cf0\\transformed\\core-1.6.0\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

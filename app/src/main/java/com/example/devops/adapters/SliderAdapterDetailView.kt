@@ -18,11 +18,17 @@ import com.bumptech.glide.Glide
 import com.example.devops.network.BASE_URL
 import com.example.devops.screens.detailview.SliderItemDetailView
 
+/**
+ * Slider adapter
+ */
 class SliderAdapterDetailView(context: Context) :
     SliderViewAdapter<SliderAdapterDetailView.SliderAdapterVH>() {
-    private val context: Context
+    private val context: Context = context
     private var mSliderItems: MutableList<SliderItemDetailView> = ArrayList()
 
+    /**
+     * Renews products in the detail view
+     */
     fun renewItems(sliderItems: MutableList<SliderItemDetailView>) {
         mSliderItems = sliderItems
         notifyDataSetChanged()
@@ -75,7 +81,4 @@ class SliderAdapterDetailView(context: Context) :
         }
     }
 
-    init {
-        this.context = context
-    }
 }
