@@ -23,9 +23,7 @@ import com.auth0.android.callback.Callback
 import com.auth0.android.management.ManagementException
 import com.auth0.android.management.UsersAPIClient
 import com.auth0.android.result.UserProfile
-import com.example.devops.database.devops.DatabaseTable
 import com.example.devops.login.CredentialsManager
-
 
 class MainActivity : AppCompatActivity() {
 
@@ -55,7 +53,8 @@ class MainActivity : AppCompatActivity() {
             "dev-g6aj--a8.us.auth0.com"
         )
 
-        logOutButton.setVisible(false)
+        logOutButton.isVisible = false
+        binding.navView.menu.findItem(R.id.ProfileFragment).isVisible = false
 
         if (Intent.ACTION_SEARCH == intent.action) {
             intent.getStringExtra(SearchManager.QUERY)?.also { query ->
@@ -91,7 +90,6 @@ class MainActivity : AppCompatActivity() {
                 override fun onSuccess(result: Credentials) {
                     // Get the access token from the credentials object.
                     // This can be used to call APIs
-
                     CredentialsManager.saveCredentials(applicationContext, result)
                     checkIfToken()
                 }
@@ -117,6 +115,7 @@ class MainActivity : AppCompatActivity() {
                     binding.navView.getHeaderView(0).findViewById<TextView>(R.id.greetings_text).text = getString(
                         R.string.hello_text)
                     logButtonsVisibilityToggle(true)
+                    binding.navView.menu.findItem(R.id.ProfileFragment).isVisible = false
                 }
 
                 override fun onFailure(error: AuthenticationException) {
@@ -141,6 +140,7 @@ class MainActivity : AppCompatActivity() {
                     val name = profile.name
                     binding.navView.getHeaderView(0).findViewById<TextView>(R.id.greetings_text).text = "Hello, $name"
                     logButtonsVisibilityToggle(false)
+                    binding.navView.menu.findItem(R.id.ProfileFragment).isVisible = true
                 }
             })
     }
@@ -196,7 +196,7 @@ class MainActivity : AppCompatActivity() {
             buttonVisLogIn = View.INVISIBLE
         }
         binding.navView.getHeaderView(0).findViewById<Button>(R.id.ButtonLogIn).visibility = buttonVisLogIn
-        binding.navView.menu.findItem(R.id.ButtonLogOut).setVisible(!bool)
+        binding.navView.menu.findItem(R.id.ButtonLogOut).isVisible = !bool
     }
 
     override fun onStart() {

@@ -83,7 +83,7 @@ class DetailViewFragment : Fragment() {
         product = p
         binding.detailViewTitleText.text = p.productName
         binding.detailViewDescriptionText.text = p.productDescription
-        binding.detailViewPriceText.text = p.productPrice.toString()
+        binding.detailViewPriceText.text = p.productPrice.toString() + " €"
         val sliderItemDetailView = SliderItemDetailView(
             p.productDescription,
             p.productImgPath

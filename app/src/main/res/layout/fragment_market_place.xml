@@ -10,14 +10,16 @@
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
 
         <androidx.appcompat.widget.SearchView
             android:id="@+id/search_bar"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="408dp"
+            android:layout_height="34dp"
             android:layout_margin="0dp"
-            android:hint="Search for Art"
+            android:hint="@string/search_for_art"
+            android:iconifiedByDefault="false"
             app:defaultQueryHint="Search for Art"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -28,12 +30,16 @@
             android:id="@+id/product_list"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/light_grey"
             android:foregroundGravity="center"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:paddingBottom="30dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/search_bar"
+            app:spanCount="2"
             tools:context=".screens.marketplace.MarketPlaceFragment" />
 
 

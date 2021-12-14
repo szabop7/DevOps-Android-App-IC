@@ -1217,8 +1217,10 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color grey
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color light_grey
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -1859,6 +1861,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable cancel
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -2027,6 +2030,7 @@ id animateToStart
 id antiClockwise
 id anticipate
 id arc
+id artistName
 id asConfigured
 id async
 id auto
@@ -2187,7 +2191,6 @@ id imageView
 id imageView1
 id imageView11
 id imageView12
-id imageView14
 id imageView15
 id imageView2
 id imageView3
@@ -2426,7 +2429,6 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textView
-id textView13
 id textView14
 id textView15
 id textView16
@@ -2474,6 +2476,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id userPicture
 id vertical
 id vertical_only
 id view_offset_helper
@@ -2818,6 +2821,7 @@ string profile
 string prompt_email
 string prompt_password
 string rosemary_kain
+string search_for_art
 string search_menu_title
 string shopping_cart_text
 string sponsored_text
@@ -3065,6 +3069,7 @@ style Base_Widget_MaterialComponents_TextView
 style CardView
 style CardView_Dark
 style CardView_Light
+style Divider
 style EmptyTheme
 style MaterialAlertDialog_MaterialComponents
 style MaterialAlertDialog_MaterialComponents_Body_Text
@@ -3091,6 +3096,8 @@ style Platform_V21_AppCompat_Light
 style Platform_V25_AppCompat
 style Platform_V25_AppCompat_Light
 style Platform_Widget_AppCompat_Spinner
+style Product_text
+style Product_text_market_place
 style RtlOverlay_DialogWindowTitle_AppCompat
 style RtlOverlay_Widget_AppCompat_ActionBar_TitleItem
 style RtlOverlay_Widget_AppCompat_DialogTitle_Icon

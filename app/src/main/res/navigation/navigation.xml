@@ -18,11 +18,11 @@
             android:id="@+id/action_MarketPlaceFragment_to_youngArtFragment"
             app:destination="@id/youngArtFragment" />
         <action
-            android:id="@+id/action_MarketPlaceFragment_to_ProfileFragment"
-            app:destination="@id/ProfileFragment" />
-        <action
             android:id="@+id/action_MarketPlaceFragment_to_ShoppingCartFragment"
             app:destination="@id/ShoppingCartFragment" />
+        <action
+            android:id="@+id/action_MarketPlaceFragment_to_ProfileFragment"
+            app:destination="@id/ProfileFragment" />
     </fragment>
     <fragment
         android:id="@+id/youngArtFragment"

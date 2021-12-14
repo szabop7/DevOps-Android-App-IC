@@ -28,7 +28,6 @@ class MarketPlaceViewModel(application: Application) : AndroidViewModel(applicat
     // This LiveData triggers onChanges when both filter or products change
     val productsAndFilter = MediatorLiveData<List<Product>>()
 
-
     init {
         productsAndFilter.addSource(filter, this::onFilterChange)
         productsAndFilter.addSource(products, this::onProductChange)

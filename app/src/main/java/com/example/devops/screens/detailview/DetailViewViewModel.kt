@@ -47,7 +47,7 @@ class DetailViewViewModel(id: Long, application: Application) : AndroidViewModel
      * @return boolean
      */
     fun checkIfInCart(product: Product): Boolean {
-        if(devOpsRepository.shoppingCart.value!=null)
+        if (devOpsRepository.shoppingCart.value != null)
             return devOpsRepository.shoppingCart.value!!.contains(product)
         return false
     }

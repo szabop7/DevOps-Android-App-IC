@@ -27,7 +27,7 @@ class ViewHolder(val binding: ListItemProductShoppingCartBinding) : RecyclerView
         // binding.productDescriptionTextview.text = item.productDescription
         // binding.productTitleTextview.text = item.productName
 
-        binding.productPrice.text = item.productPrice.toString()
+        binding.productPrice.text = item.productPrice.toString() + " €"
         binding.productTitle.text = item.productName
         binding.product = item
         binding.clickListener = clickListener

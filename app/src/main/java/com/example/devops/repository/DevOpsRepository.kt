@@ -37,13 +37,13 @@ class DevOpsRepository(private val database: DevOpsDatabase) {
         suspend fun refreshProducts() {
             // switch context to IO thread
             withContext(Dispatchers.IO) {
-                try{
+                try {
                     val products = DevOpsApi.retrofitService.getProductsAsync().await()
                     // '*': kotlin spread operator.
                     // Used for functions that expect a vararg param
                     // just spreads the array into separate fields
                     database.productDao.insertAll(*products.asDatabaseModel())
-                }catch (e: Exception) {}
+                } catch (e: Exception) {}
             }
         }
 
@@ -57,7 +57,7 @@ class DevOpsRepository(private val database: DevOpsDatabase) {
                     // Used for functions that expect a vararg param
                     // just spreads the array into separate fields
                     database.productDao.insertAll(product.asDatabaseProduct())
-                }catch (e: Exception) {}
+                } catch (e: Exception) {}
             }
         }
 

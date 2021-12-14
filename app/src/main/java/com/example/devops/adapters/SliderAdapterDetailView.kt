@@ -80,5 +80,4 @@ class SliderAdapterDetailView(context: Context) :
             textViewDescription = itemView.findViewById(R.id.tv_auto_image_slider)
         }
     }
-
 }
