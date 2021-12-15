@@ -3,42 +3,61 @@ package com.example.devops.login
 import android.content.Context
 import com.auth0.android.result.Credentials
 import android.content.SharedPreferences
+import android.service.autofill.UserData
+import android.widget.TextView
 import androidx.security.crypto.EncryptedSharedPreferences
 import androidx.security.crypto.MasterKeys
+import com.auth0.android.Auth0
+import com.auth0.android.authentication.AuthenticationAPIClient
+import com.auth0.android.authentication.AuthenticationException
+import com.auth0.android.callback.Callback
+import com.auth0.android.result.UserProfile
+import com.example.devops.R
 
-object CredentialsManager {
-    private val ACCESS_TOKEN = "access_token"
+class CredentialsManager {
 
-    private lateinit var editor: SharedPreferences.Editor
 
-    fun saveCredentials(context: Context, credentials: Credentials) {
+    companion object {
+        private val ACCESS_TOKEN = "access_token"
+        public var account: Auth0? = null
 
-        val masterKeyAlias: String = MasterKeys.getOrCreate(MasterKeys.AES256_GCM_SPEC)
+        private fun getSharedPreferences(context: Context): SharedPreferences {
+            return context.getSharedPreferences("USER_LOGIN", Context.MODE_PRIVATE)
+        }
 
-        val sp: SharedPreferences = EncryptedSharedPreferences.create(
-            "secret_shared_prefs",
-            masterKeyAlias,
-            context,
-            EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
-            EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
-        )
+        fun saveCredentials(context: Context, credentials: Credentials) {
+            val editor = getSharedPreferences(context).edit()
+            editor.putString(ACCESS_TOKEN, credentials.accessToken).apply()
+        }
 
-        editor = sp.edit()
-        editor.putString(ACCESS_TOKEN, credentials.accessToken)
-            .apply()
-    }
+        fun deleteCredentials(context: Context) {
+            val editor = getSharedPreferences(context).edit()
+            editor.remove(ACCESS_TOKEN).apply()
+        }
 
-    fun getAccessToken(context: Context): String? {
-        val masterKeyAlias: String = MasterKeys.getOrCreate(MasterKeys.AES256_GCM_SPEC)
+        fun getAccessToken(context: Context): String? {
+            return getSharedPreferences(context).getString(ACCESS_TOKEN, null)
+        }
 
-        val sp: SharedPreferences = EncryptedSharedPreferences.create(
-            "secret_shared_prefs",
-            masterKeyAlias,
-            context,
-            EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
-            EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
-        )
+        public fun showUserProfile(accessToken: String, listener: (UserProfile?) -> Unit) {
+            if (account != null) {
+                var client = AuthenticationAPIClient(account!!)
 
-        return sp.getString(ACCESS_TOKEN, null)
+                // With the access token, call `userInfo` and get the profile from Auth0.
+                client.userInfo(accessToken)
+                    .start(object : Callback<UserProfile, AuthenticationException> {
+                        override fun onFailure(exception: AuthenticationException) {
+                            // Something went wrong!
+                            listener(null)
+                        }
+
+                        override fun onSuccess(profile: UserProfile) {
+                            listener(profile)
+                        }
+                    })
+            } else {
+                listener(null)
+            }
+        }
     }
 }

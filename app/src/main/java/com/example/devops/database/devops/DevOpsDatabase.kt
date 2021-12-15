@@ -4,8 +4,8 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.devops.database.devops.artist.Artist
 import com.example.devops.database.devops.artist.ArtistDao
+import com.example.devops.database.devops.artist.ArtistDatabase
 import com.example.devops.database.devops.bet.Bet
 import com.example.devops.database.devops.bet.BetDao
 import com.example.devops.database.devops.order.Order
@@ -21,7 +21,7 @@ import com.example.devops.database.devops.tag.TagDao
 import com.example.devops.database.devops.tag.TagProductCrossRef
 import com.example.devops.database.devops.userart.*
 
-@Database(entities = [Artist::class, ProductTagCrossRef::class, ShoppingCartProductCrossRef::class, TagProductCrossRef::class, Bet::class, Order::class, ProductDatabase::class, Review::class, ShoppingCart::class, Tag::class, UserArt::class], version = 3, exportSchema = false)
+@Database(entities = [ArtistDatabase::class, ProductTagCrossRef::class, ShoppingCartProductCrossRef::class, TagProductCrossRef::class, Bet::class, Order::class, ProductDatabase::class, Review::class, ShoppingCart::class, Tag::class, UserArt::class], version = 4, exportSchema = false)
 abstract class DevOpsDatabase : RoomDatabase() {
 
     abstract val artistDao: ArtistDao

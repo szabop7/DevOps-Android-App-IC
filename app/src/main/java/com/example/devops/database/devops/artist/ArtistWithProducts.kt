@@ -5,7 +5,7 @@ import androidx.room.Relation
 import com.example.devops.database.devops.product.ProductDatabase
 
 data class ArtistWithProducts(
-    @Embedded val artist: Artist,
+    @Embedded val artist: ArtistDatabase,
     @Relation(
         parentColumn = "artistId",
         entityColumn = "productId"

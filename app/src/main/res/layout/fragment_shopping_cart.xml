@@ -13,17 +13,49 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.878"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.892"
+            app:srcCompat="@drawable/checkout"
+            tools:ignore="SpeakableTextPresentCheck" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/product_list"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_marginBottom="35dp"
             android:foregroundGravity="center"
+            android:paddingBottom="30dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:context=".screens.shoppingcart.ShoppingCartFragment" />
+
+        <TextView
+            android:id="@+id/totalPrice"
+            style="@style/Title"
+            android:layout_width="414dp"
+            android:layout_height="42dp"
+            android:background="#E3E3E3"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.914" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

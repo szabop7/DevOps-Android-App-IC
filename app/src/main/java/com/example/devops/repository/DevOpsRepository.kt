@@ -2,8 +2,10 @@ package com.example.devops.repository
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Transformations
 import com.example.devops.database.devops.DevOpsDatabase
+import com.example.devops.database.devops.artist.asDomainModel
 import com.example.devops.database.devops.product.asDomainModel
 import com.example.devops.database.devops.shoppingcart.ShoppingCart
+import com.example.devops.domain.Artist
 import com.example.devops.domain.Product
 import com.example.devops.network.DevOpsApi
 import com.example.devops.network.asDatabaseModel
@@ -33,6 +35,12 @@ class DevOpsRepository(private val database: DevOpsDatabase) {
             }
         }
 
+        val artists: LiveData<List<Artist>> = Transformations.map(database.artistDao.getAllArtistsLive()) {
+            it.asDomainModel()
+        }
+
+
+
         // Database call
         suspend fun refreshProducts() {
             // switch context to IO thread
@@ -47,15 +55,21 @@ class DevOpsRepository(private val database: DevOpsDatabase) {
             }
         }
 
+        suspend fun refreshArtists() {
+            withContext(Dispatchers.IO) {
+                try {
+                    val artists = DevOpsApi.retrofitService.getArtistsAsync().await()
+                    database.artistDao.insertAll(*artists.asDatabaseModel())
+                } catch (e: Exception) {}
+            }
+        }
+
         // Database call
         suspend fun getProduct(productId: Long) {
             // switch context to IO thread
             withContext(Dispatchers.IO) {
                 try {
                     val product = DevOpsApi.retrofitService.getProductAsync(productId).await()
-                    // '*': kotlin spread operator.
-                    // Used for functions that expect a vararg param
-                    // just spreads the array into separate fields
                     database.productDao.insertAll(product.asDatabaseProduct())
                 } catch (e: Exception) {}
             }

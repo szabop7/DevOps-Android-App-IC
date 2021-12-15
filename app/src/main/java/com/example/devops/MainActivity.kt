@@ -1,6 +1,7 @@
 package com.example.devops
 
 import android.app.SearchManager
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
@@ -43,15 +44,15 @@ class MainActivity : AppCompatActivity() {
         NavigationUI.setupWithNavController(binding.bottomNavigation, navController)
 
         binding.navView.getHeaderView(0).findViewById<Button>(R.id.ButtonLogIn).setOnClickListener() { loginWithBrowser() }
-
         val logOutButton: MenuItem = binding.navView.menu.findItem(R.id.ButtonLogOut)
         logOutButton.setOnMenuItemClickListener { logout()
                     true }
 
-        account = Auth0(
-            "fFPxEdQJbyPirdQcuzrSNuYiz7tp8nLL",
-            "dev-g6aj--a8.us.auth0.com"
+        account =  Auth0 (
+                "fFPxEdQJbyPirdQcuzrSNuYiz7tp8nLL",
+        "dev-g6aj--a8.us.auth0.com"
         )
+        CredentialsManager.account = account
 
         logOutButton.isVisible = false
         binding.navView.menu.findItem(R.id.ProfileFragment).isVisible = false
@@ -100,7 +101,17 @@ class MainActivity : AppCompatActivity() {
         val token = CredentialsManager.getAccessToken(applicationContext)
         if (token != null) {
             // checking if the token works...
-            showUserProfile(token)
+            CredentialsManager.showUserProfile(token) {
+                // We have the user's profile!
+                if (it != null) {
+                    val email = it.email
+                    val name = it.name
+                    binding.navView.getHeaderView(0)
+                        .findViewById<TextView>(R.id.greetings_text).text = "Hello, $name"
+                    logButtonsVisibilityToggle(false)
+                    binding.navView.menu.findItem(R.id.ProfileFragment).isVisible = true
+                }
+            }
         } else {
             Toast.makeText(applicationContext, "Token doesn't exist", Toast.LENGTH_SHORT).show()
         }
@@ -111,6 +122,7 @@ class MainActivity : AppCompatActivity() {
             .withScheme("demo")
             .start(this, object : Callback<Void?, AuthenticationException> {
                 override fun onSuccess(payload: Void?) {
+                    CredentialsManager.deleteCredentials(applicationContext)
                     // The user has been logged out!
                     binding.navView.getHeaderView(0).findViewById<TextView>(R.id.greetings_text).text = getString(
                         R.string.hello_text)
@@ -124,26 +136,6 @@ class MainActivity : AppCompatActivity() {
             })
     }
 
-    private fun showUserProfile(accessToken: String) {
-        var client = AuthenticationAPIClient(account)
-
-        // With the access token, call `userInfo` and get the profile from Auth0.
-        client.userInfo(accessToken)
-            .start(object : Callback<UserProfile, AuthenticationException> {
-                override fun onFailure(exception: AuthenticationException) {
-                    // Something went wrong!
-                }
-
-                override fun onSuccess(profile: UserProfile) {
-                    // We have the user's profile!
-                    val email = profile.email
-                    val name = profile.name
-                    binding.navView.getHeaderView(0).findViewById<TextView>(R.id.greetings_text).text = "Hello, $name"
-                    logButtonsVisibilityToggle(false)
-                    binding.navView.menu.findItem(R.id.ProfileFragment).isVisible = true
-                }
-            })
-    }
 
     fun getUserMetadata(userId: String, accessToken: String) {
         // Get the user ID and call the full getUser Management API endpoint, to retrieve the full profile information

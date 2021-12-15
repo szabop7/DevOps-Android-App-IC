@@ -33,6 +33,8 @@ class ShoppingCartFragment : Fragment() {
         })
         binding.productList.adapter = adapter
         viewModel.shoppingCart.observe(viewLifecycleOwner, Observer {
+            val total = it.fold(0.0){sum, element -> sum + element.productPrice}
+            binding.totalPrice.text = "Total: $total €"
             adapter.submitList(it)
         })
 

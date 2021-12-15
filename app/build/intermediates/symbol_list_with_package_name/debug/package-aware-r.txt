@@ -1862,6 +1862,7 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable cancel
+drawable checkout
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -2056,7 +2057,6 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
-id button
 id buttonPanel
 id cache_measures
 id cancel_action
@@ -2085,6 +2085,7 @@ id collapseActionView
 id color
 id confirm_button
 id constraint
+id contactButton
 id container
 id content
 id contentPanel
@@ -2158,6 +2159,7 @@ id fixed
 id fl_shadow_container
 id flip
 id floating
+id floatingActionButton
 id forever
 id forward
 id fragment_container_view_tag
@@ -2461,6 +2463,7 @@ id title_template
 id toggle
 id top
 id topPanel
+id totalPrice
 id touch_outside
 id transitionToEnd
 id transitionToStart

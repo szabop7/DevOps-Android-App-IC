@@ -42,6 +42,14 @@ interface DevOpsApiService {
     fun getProductAsync(
         @Path("id") productId: Long
     ): Deferred<ApiProduct>
+
+    @GET("artist")
+    fun getArtistsAsync(): Deferred<ApiArtistContainer>
+
+    @GET("artist/{id}")
+    fun getArtistAsync(
+        @Path("id") artistId: Long
+    ): Deferred<ApiArtist>
 }
 
 object DevOpsApi {
