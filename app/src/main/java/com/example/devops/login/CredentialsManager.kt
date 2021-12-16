@@ -3,19 +3,13 @@ package com.example.devops.login
 import android.content.Context
 import com.auth0.android.result.Credentials
 import android.content.SharedPreferences
-import android.service.autofill.UserData
-import android.widget.TextView
-import androidx.security.crypto.EncryptedSharedPreferences
-import androidx.security.crypto.MasterKeys
 import com.auth0.android.Auth0
 import com.auth0.android.authentication.AuthenticationAPIClient
 import com.auth0.android.authentication.AuthenticationException
 import com.auth0.android.callback.Callback
 import com.auth0.android.result.UserProfile
-import com.example.devops.R
 
 class CredentialsManager {
-
 
     companion object {
         private val ACCESS_TOKEN = "access_token"

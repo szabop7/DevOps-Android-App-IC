@@ -33,7 +33,7 @@ data class ArtistDatabase(
     var artistIsYoungArtist: Boolean = false,
 
     @ColumnInfo(name = "artist_is_conformed")
-    var artistIsConformed: Boolean = false,
+    var artistIsConformed: Boolean = false
 )
 
 // convert Joke to ApiJoke

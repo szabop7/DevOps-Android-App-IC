@@ -9,5 +9,5 @@ data class Artist(
     var artistBank: String = "",
     var artistNationality: String = "",
     var artistIsYoungArtist: Boolean = false,
-    var artistIsConformed: Boolean = false,
+    var artistIsConformed: Boolean = false
 )

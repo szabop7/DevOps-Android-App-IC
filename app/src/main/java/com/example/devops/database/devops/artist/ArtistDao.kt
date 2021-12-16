@@ -2,7 +2,6 @@ package com.example.devops.database.devops.artist
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.example.devops.database.devops.product.ProductDatabase
 
 @Dao
 interface ArtistDao {

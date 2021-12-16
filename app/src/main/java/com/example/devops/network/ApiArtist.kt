@@ -1,6 +1,5 @@
 package com.example.devops.network
 
-
 import com.example.devops.database.devops.artist.ArtistDatabase
 import com.example.devops.domain.Artist
 import com.squareup.moshi.Json
@@ -38,7 +37,7 @@ data class ApiArtist(
 
     @Json(name = "is_conformed")
     var artistIsConformed: Boolean
-    )
+)
 
 /*
 * Convert network results into Domain artist

@@ -39,8 +39,6 @@ class DevOpsRepository(private val database: DevOpsDatabase) {
             it.asDomainModel()
         }
 
-
-
         // Database call
         suspend fun refreshProducts() {
             // switch context to IO thread

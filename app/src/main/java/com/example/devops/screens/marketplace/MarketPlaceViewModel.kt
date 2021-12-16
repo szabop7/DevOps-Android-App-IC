@@ -1,7 +1,6 @@
 package com.example.devops.screens.marketplace
 
 import android.app.Application
-import android.util.Log
 import androidx.lifecycle.*
 import com.example.devops.database.devops.DevOpsDatabase
 import com.example.devops.domain.Artist
@@ -37,7 +36,7 @@ class MarketPlaceViewModel(application: Application) : AndroidViewModel(applicat
         viewModelScope.launch {
             _status.value = DevOpsApiStatus.LOADING
             devOpsRepository.refreshProducts()
-            //devOpsRepository.refreshArtists()
+            // devOpsRepository.refreshArtists()
             _status.value = DevOpsApiStatus.DONE
         }
     }

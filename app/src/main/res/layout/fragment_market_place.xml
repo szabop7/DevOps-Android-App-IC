@@ -20,11 +20,12 @@
             android:layout_margin="0dp"
             android:hint="@string/search_for_art"
             android:iconifiedByDefault="false"
+            app:iconifiedByDefault="false"
             app:defaultQueryHint="Search for Art"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:queryHint="Search for Art" />
+            app:queryHint="@string/search_for_art" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/product_list"
