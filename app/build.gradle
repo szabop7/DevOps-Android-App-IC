@@ -29,7 +29,7 @@ android {
     defaultConfig {
         applicationId "com.example.devops"
         minSdk 24
-        targetSdk 30
+        targetSdk 31
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
