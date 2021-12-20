@@ -4,7 +4,7 @@ pipeline {
         githubPush()
     }
     stages {
-        stage('Configure'){
+        stage('configure'){
            steps{
                sh 'git stash'
                sh 'git pull'
@@ -28,6 +28,11 @@ pipeline {
         stage('Build Release App'){
              steps{
                sh './gradlew assembleRelease'
+             }
+        }
+        stage('Unit Tests'){
+             steps{
+               sh './gradlew test'
              }
         }
     }
