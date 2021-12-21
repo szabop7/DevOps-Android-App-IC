@@ -5,16 +5,22 @@ import androidx.lifecycle.*
 import com.example.devops.database.devops.DevOpsDatabase
 import com.example.devops.domain.Artist
 import com.example.devops.domain.Product
+import com.example.devops.domain.Tag
 import com.example.devops.repository.DevOpsRepository
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 
 enum class DevOpsApiStatus { LOADING, ERROR, DONE }
 
+data class MarketplaceFilter(
+    var text: String = "",
+    var tags: List<Long> = emptyList()
+)
+
 class MarketPlaceViewModel(application: Application) : AndroidViewModel(application) {
 
     // var products: LiveData<List<ProductDatabase>>
-    var filter = MutableLiveData<String>("")
+    var filter = MutableLiveData<MarketplaceFilter>(MarketplaceFilter())
 
     private val _status = MutableLiveData<DevOpsApiStatus>()
     val status: LiveData<DevOpsApiStatus>
@@ -23,7 +29,8 @@ class MarketPlaceViewModel(application: Application) : AndroidViewModel(applicat
     private val devOpsDatabase = DevOpsDatabase.getInstance(application.applicationContext)
     private val devOpsRepository = DevOpsRepository(devOpsDatabase)
 
-    val products: LiveData<List<Product>> = devOpsRepository.products
+    val products: LiveData<List<Product>> = devOpsRepository.productsWithTags
+    val tags: LiveData<List<Tag>> = devOpsRepository.tags
     val artists: LiveData<List<Artist>> = devOpsRepository.artists
 
     // This LiveData triggers onChanges when both filter or products change
@@ -45,16 +52,20 @@ class MarketPlaceViewModel(application: Application) : AndroidViewModel(applicat
      * Checks if a [Product] is currently filtered by [filter]
      * @return If the product should be visible with the given filter
      */
-    private fun productIsFiltered(product: Product, filter: String?): Boolean {
-        return filter == null || filter.isEmpty() ||
-                product.productName.contains(filter, true) ||
-                product.productDescription.contains(filter, true)
+    private fun productIsFiltered(product: Product, filter: MarketplaceFilter?): Boolean {
+        return filter == null ||
+                (
+                        (filter.text.isEmpty() ||
+                                product.productName.contains(filter.text, true) ||
+                                product.productDescription.contains(filter.text, true)
+                                ) &&
+                                (filter.tags.isEmpty() || (product.tagList.map { it.tagId }.containsAll(filter.tags))))
     }
 
     /***
      * Updates the listed products when the filter is changed
      */
-    private fun onFilterChange(newFilter: String) {
+    private fun onFilterChange(newFilter: MarketplaceFilter) {
         performProductChange(products.value, newFilter)
     }
 
@@ -72,15 +83,24 @@ class MarketPlaceViewModel(application: Application) : AndroidViewModel(applicat
         performProductChange(products.value, filter.value)
     }
 
-    private fun performProductChange(products: List<Product>?, filter: String?) {
+    private fun performProductChange(products: List<Product>?, filter: MarketplaceFilter?) {
         productsAndFilter.value = products?.filter {
             productIsFiltered(it, filter)
         }
     }
 
     // set the filter for allItemsFiltered
-    fun setFilter(newFilter: String) {
-        filter.postValue(newFilter) // apply the filter
+    fun setTextFilter(newFilter: String) {
+        val f = filter.value ?: MarketplaceFilter()
+        f.text = newFilter
+
+        filter.postValue(f) // apply the filter
+    }
+
+    fun setTagsFilter(tagIds: List<Int>) {
+        val f = filter.value ?: MarketplaceFilter()
+        f.tags = tagIds.map { it.toLong() }
+        filter.postValue(f)
     }
 
     override fun onCleared() {

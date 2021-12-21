@@ -1,10 +1,8 @@
 package com.example.devops.screens.detailview
 
 import android.app.Application
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.viewModelScope
+import android.util.Log
+import androidx.lifecycle.*
 import com.example.devops.database.devops.DevOpsDatabase
 import com.example.devops.domain.Product
 import com.example.devops.repository.DevOpsRepository
@@ -23,7 +21,16 @@ class DetailViewViewModel(id: Long, application: Application) : AndroidViewModel
     private val devOpsDatabase = DevOpsDatabase.getInstance(application.applicationContext)
     private val devOpsRepository = DevOpsRepository(devOpsDatabase)
 
-    val products: LiveData<List<Product>> = devOpsRepository.products
+    val product: LiveData<Product?> = Transformations.map(devOpsRepository.productsWithTags) {
+        Log.i("Lista", it.toString())
+        val p = it.firstOrNull() { product -> product.productId == id }
+        Log.i("prprr", p.toString())
+        p
+    }
+
+    val isInCart: LiveData<Boolean> = Transformations.map(devOpsRepository.shoppingCart) {
+        it.firstOrNull() { product -> product.productId == id } != null
+    }
 
     init {
         viewModelScope.launch {
@@ -40,16 +47,6 @@ class DetailViewViewModel(id: Long, application: Application) : AndroidViewModel
         viewModelScope.launch {
             devOpsRepository.addShoppingItem(product.productId)
         }
-    }
-
-    /**
-     * Checks if a [Product] is in the cart and
-     * @return boolean
-     */
-    fun checkIfInCart(product: Product): Boolean {
-        if (devOpsRepository.shoppingCart.value != null)
-            return devOpsRepository.shoppingCart.value!!.contains(product)
-        return false
     }
 
     override fun onCleared() {

@@ -45,7 +45,7 @@
             style="@style/Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/title_text" />
+            android:text="@{viewModel.product.productName}" />
 
         <TextView
             android:id="@+id/detail_view_artist_text"
@@ -66,7 +66,15 @@
             style="@style/Normal_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/description_text" />
+            android:text="@{viewModel.product.productDescription}" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/tagList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:singleSelection="false">
+
+        </com.google.android.material.chip.ChipGroup>
 
         <Button
             android:id="@+id/addToCartButton"
@@ -74,6 +82,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="100dp"
+            android:enabled="@{!viewModel.isInCart()}"
             android:text="@string/add_to_cart_text"
             android:textColor="#FFFFFF" />
     </LinearLayout>

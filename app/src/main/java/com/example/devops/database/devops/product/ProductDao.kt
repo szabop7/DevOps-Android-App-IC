@@ -29,6 +29,10 @@ interface ProductDao {
     @Query("SELECT * FROM product_table ORDER BY productId DESC")
     fun getAllProductsLive(): LiveData<List<ProductDatabase>>
 
+    @Transaction
+    @Query("SELECT * FROM product_table")
+    fun getProductsWithTagsLive(): LiveData<List<ProductWithTags>>
+
     @Query("SELECT * FROM product_table ORDER BY productId DESC LIMIT 1")
     suspend fun getLastProduct(): ProductDatabase?
 
@@ -50,4 +54,9 @@ interface ProductDao {
     @Transaction
     @Query("SELECT * FROM product_table")
     fun getProductsWithReviews(): List<ProductWithReviews>
+
+    // adding insert all with vararg
+    // replace strategy: upsert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertTagToProducts(vararg tagsCrossRef: ProductTagCrossRef)
 }

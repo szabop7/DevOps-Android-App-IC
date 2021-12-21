@@ -33,7 +33,10 @@ data class ApiProduct(
     var productWidth: Double,
 
     @Json(name = "height")
-    var productHeight: Double
+    var productHeight: Double,
+
+    @Json(name = "tags")
+    var tagList: List<ApiTag>
 )
 
 /*
@@ -49,7 +52,8 @@ fun ApiProductContainer.asDomainModel(): List<Product> {
             productDescription = it.productDescription,
             productIsAuction = it.productIsAuction,
             productWidth = it.productWidth,
-            productHeight = it.productHeight
+            productHeight = it.productHeight,
+            tagList = it.tagList.map { it.asDomainModel() }
         )
     }
 }

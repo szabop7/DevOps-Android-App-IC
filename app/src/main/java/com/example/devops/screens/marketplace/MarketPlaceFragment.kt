@@ -12,6 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.example.devops.R
 import com.example.devops.databinding.FragmentMarketPlaceBinding
+import com.google.android.material.chip.Chip
 
 class MarketPlaceFragment : Fragment() {
 
@@ -44,13 +45,37 @@ class MarketPlaceFragment : Fragment() {
 
         binding.productList.adapter = adapter
 
+        viewModel.tags.observe(viewLifecycleOwner, Observer {
+            // Retrieve the current filter list as a list of ints
+            val ids = viewModel.filter.value?.tags?.let { it.map { it.toInt() } } ?: emptyList()
+            binding.filters.removeAllViews()
+            for (tag in it) {
+                val chip = Chip(context)
+                chip.isCheckable = true
+                chip.text = tag.tagName
+                chip.id = tag.tagId.toInt()
+                chip.setOnClickListener {
+                    viewModel.setTagsFilter(binding.filters.checkedChipIds)
+                }
+                binding.filters.addView(chip)
+            }
+
+            // For each id in the filter, check only if found
+            for (id in ids) {
+                val child = binding.filters.findViewById<Chip>(id)
+                if (child != null) {
+                    binding.filters.check(id)
+                }
+            }
+        })
+
         viewModel.productsAndFilter.observe(viewLifecycleOwner, Observer {
             adapter.submitList(it)
         })
 
         binding.searchBar.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextChange(qString: String): Boolean {
-                viewModel.setFilter(qString)
+                viewModel.setTextFilter(qString)
                 return true
             }
             override fun onQueryTextSubmit(qString: String): Boolean {

@@ -1,10 +1,7 @@
 package com.example.devops.screens.shoppingcart
 
 import android.app.Application
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import com.example.devops.database.devops.DevOpsDatabase
 import com.example.devops.domain.Product
 import com.example.devops.repository.DevOpsRepository
@@ -19,6 +16,9 @@ class ShoppingCartViewModel(application: Application) : AndroidViewModel(applica
     private val devOpsRepository = DevOpsRepository(devOpsDatabase)
 
     val shoppingCart: LiveData<List<Product>> = devOpsRepository.shoppingCart
+    val isShoppingCartWithItems: LiveData<Boolean> = Transformations.map(shoppingCart) {
+        it.isNotEmpty()
+    }
 
     init {
         viewModelScope.launch {

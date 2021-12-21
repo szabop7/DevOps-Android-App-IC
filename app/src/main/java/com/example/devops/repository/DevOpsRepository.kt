@@ -3,13 +3,17 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.Transformations
 import com.example.devops.database.devops.DevOpsDatabase
 import com.example.devops.database.devops.artist.asDomainModel
+import com.example.devops.database.devops.product.ProductTagCrossRef
 import com.example.devops.database.devops.product.asDomainModel
 import com.example.devops.database.devops.shoppingcart.ShoppingCart
+import com.example.devops.database.devops.tag.asDomainModel
 import com.example.devops.domain.Artist
 import com.example.devops.domain.Product
+import com.example.devops.domain.Tag
 import com.example.devops.network.DevOpsApi
 import com.example.devops.network.asDatabaseModel
 import com.example.devops.network.asDatabaseProduct
+import com.example.devops.network.asDatabaseTag
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
@@ -27,12 +31,24 @@ class DevOpsRepository(private val database: DevOpsDatabase) {
             it.asDomainModel()
         }
 
+        // Network call
+        // get products from the database, but transform them with map
+        val productsWithTags: LiveData<List<Product>> = Transformations.map(database.productDao.getProductsWithTagsLive()) {
+            it.map { it.asDomainModel() }
+        }
+
         val shoppingCart: LiveData<List<Product>> = Transformations.map(database.shoppingCartDao.getShoppingCartsWithProductsLive()) {
             if (it.isNotEmpty()) {
                 it[0].productDatabases.asDomainModel()
             } else {
                 emptyList<Product>()
             }
+        }
+
+        // Network call
+        // get products from the database, but transform them with map
+        val tags: LiveData<List<Tag>> = Transformations.map(database.tagDao.getAllTagsLive()) {
+            it.asDomainModel()
         }
 
         val artists: LiveData<List<Artist>> = Transformations.map(database.artistDao.getAllArtistsLive()) {
@@ -48,7 +64,13 @@ class DevOpsRepository(private val database: DevOpsDatabase) {
                     // '*': kotlin spread operator.
                     // Used for functions that expect a vararg param
                     // just spreads the array into separate fields
-                    database.productDao.insertAll(*products.asDatabaseModel())
+                    val dbProducts = products.asDatabaseModel()
+                    database.productDao.insertAll(*dbProducts)
+                    for (product in products.apiProducts) {
+                        val tags = product.tagList.map { it.asDatabaseTag() }
+                        database.tagDao.insertAll(*tags.toTypedArray())
+                        database.productDao.insertTagToProducts(*tags.map { ProductTagCrossRef(product.productId, it.tagId) }.toTypedArray())
+                    }
                 } catch (e: Exception) {}
             }
         }

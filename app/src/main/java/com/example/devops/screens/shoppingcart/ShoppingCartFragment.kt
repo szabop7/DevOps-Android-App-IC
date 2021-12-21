@@ -1,5 +1,7 @@
 package com.example.devops.screens.shoppingcart
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +12,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.devops.R
 import com.example.devops.databinding.FragmentShoppingCartBinding
+import com.example.devops.network.BASE_URL
 
 class ShoppingCartFragment : Fragment() {
     private val viewModel: ShoppingCartViewModel by lazy {
@@ -37,6 +40,13 @@ class ShoppingCartFragment : Fragment() {
             binding.totalPrice.text = "Total: $total €"
             adapter.submitList(it)
         })
+
+        binding.floatingActionButton.setOnClickListener {
+            val url = "$BASE_URL/checkout"
+            val i = Intent(Intent.ACTION_VIEW)
+            i.data = Uri.parse(url)
+            startActivity(i)
+        }
 
         return binding.root
     }

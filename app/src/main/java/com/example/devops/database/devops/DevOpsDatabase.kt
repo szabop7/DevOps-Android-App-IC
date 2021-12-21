@@ -16,12 +16,12 @@ import com.example.devops.database.devops.review.ReviewDao
 import com.example.devops.database.devops.shoppingcart.ShoppingCart
 import com.example.devops.database.devops.shoppingcart.ShoppingCartDao
 import com.example.devops.database.devops.shoppingcart.ShoppingCartProductCrossRef
-import com.example.devops.database.devops.tag.Tag
+import com.example.devops.database.devops.tag.TagDatabase
 import com.example.devops.database.devops.tag.TagDao
 import com.example.devops.database.devops.tag.TagProductCrossRef
 import com.example.devops.database.devops.userart.*
 
-@Database(entities = [ArtistDatabase::class, ProductTagCrossRef::class, ShoppingCartProductCrossRef::class, TagProductCrossRef::class, Bet::class, Order::class, ProductDatabase::class, Review::class, ShoppingCart::class, Tag::class, UserArt::class], version = 4, exportSchema = false)
+@Database(entities = [ArtistDatabase::class, ProductTagCrossRef::class, ShoppingCartProductCrossRef::class, TagProductCrossRef::class, Bet::class, Order::class, ProductDatabase::class, Review::class, ShoppingCart::class, TagDatabase::class, UserArt::class], version = 4, exportSchema = false)
 abstract class DevOpsDatabase : RoomDatabase() {
 
     abstract val artistDao: ArtistDao

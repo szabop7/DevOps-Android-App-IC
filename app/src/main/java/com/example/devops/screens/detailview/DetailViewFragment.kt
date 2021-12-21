@@ -2,6 +2,7 @@ package com.example.devops.screens.detailview
 
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,6 +15,7 @@ import com.example.devops.R
 import com.example.devops.adapters.SliderAdapterDetailView
 import com.example.devops.databinding.FragmentDetailViewBinding
 import com.example.devops.domain.Product
+import com.google.android.material.chip.Chip
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType
 import com.smarteist.autoimageslider.SliderAnimations
 import com.smarteist.autoimageslider.SliderView
@@ -66,10 +68,16 @@ class DetailViewFragment : Fragment() {
         sliderView?.setAutoCycle(true)
         sliderView?.startAutoCycle()
 
-        viewModel.products.observe(viewLifecycleOwner, Observer {
-            val product = it.find { product -> product.productId == args.productId }
-            if (product != null) {
-                setProductDetails(product)
+        viewModel.product.observe(viewLifecycleOwner, Observer {
+            Log.i("Product", it.toString())
+            it?.let { setProductDetails(it) }
+        })
+
+        viewModel.isInCart.observe(viewLifecycleOwner, Observer {
+            binding.addToCartButton.text = if (it) {
+                "Already in cart"
+            } else {
+                "Add to cart"
             }
         })
 
@@ -81,25 +89,18 @@ class DetailViewFragment : Fragment() {
      */
     private fun setProductDetails(p: Product) {
         product = p
-        binding.detailViewTitleText.text = p.productName
-        binding.detailViewDescriptionText.text = p.productDescription
         binding.detailViewPriceText.text = p.productPrice.toString() + " €"
         val sliderItemDetailView = SliderItemDetailView(
             p.productDescription,
             p.productImgPath
         )
-        if (viewModel.checkIfInCart(product!!)) {
-            disableCartButton()
+        binding.tagList.removeAllViews()
+        for (tag in p.tagList) {
+            val chip = Chip(context)
+            chip.text = tag.tagName
+            binding.tagList.addView(chip)
         }
         adapter!!.renewItems(mutableListOf(sliderItemDetailView))
-    }
-
-    /**
-     * Disables the add to cart button once you have added the product to the shopping cart
-     */
-    private fun disableCartButton() {
-        binding.addToCartButton.isEnabled = false
-        binding.addToCartButton.text = "Already in Cart"
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -107,7 +108,6 @@ class DetailViewFragment : Fragment() {
 
         binding.addToCartButton.setOnClickListener {
             if (product != null) {
-                disableCartButton()
                 viewModel.addToCart(product!!)
             }
         }

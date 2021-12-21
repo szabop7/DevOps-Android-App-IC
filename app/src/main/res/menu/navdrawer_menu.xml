@@ -12,9 +12,11 @@
                 android:title="@string/trends_text" />
             <item
                 android:icon="@drawable/outline_trending_up_black_24dp"
+                android:enabled="false"
                 android:title="@string/bestselling_artist_text" />
             <item
                 android:id="@+id/GalleryFragment"
+                android:enabled="false"
                 android:icon="@drawable/outline_star_black_24dp"
                 android:title="@string/sponsored_text" />
             <item
@@ -27,9 +29,11 @@
         android:icon="@drawable/outline_store_black_24dp">
         <menu>
             <item
+                android:enabled="false"
                 android:icon="@drawable/outline_event_available_black_24dp"
                 android:title="@string/open_text" />
             <item
+                android:enabled="false"
                 android:icon="@drawable/outline_groups_black_24dp"
                 android:title="@string/popular_text" />
         </menu>
@@ -39,10 +43,12 @@
         android:checkableBehavior="single">
         <item
             android:id="@+id/youngArtFragment"
+            android:enabled="false"
             android:icon="@drawable/outline_palette_black_24dp"
             android:title="@string/young_art_text" />
         <item
             android:title="@string/upload_text"
+            android:enabled="false"
             android:icon="@drawable/outline_upgrade_black_24dp"/>
     </group>
     <item

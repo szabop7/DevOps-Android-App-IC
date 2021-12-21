@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.devops.databinding.ListItemProductMarketPlaceBinding
 import com.example.devops.domain.Product
+import com.google.android.material.chip.Chip
 
 class ProductMarketPlaceAdapter(private val clickListener: ProductListener) : ListAdapter<Product, ViewHolder>(ProductDiffCallback()) {
 
@@ -26,6 +27,14 @@ class ViewHolder(val binding: ListItemProductMarketPlaceBinding) : RecyclerView.
     fun bind(clickListener: ProductListener, item: Product) {
         binding.productDescriptionTextview.text = item.productDescription
         binding.productTitleTextview.text = item.productName
+
+        binding.tagList.removeAllViews()
+        // Remove possible remaining tags, and read them
+        for (tag in item.tagList) {
+            val chip = Chip(binding.root.context)
+            chip.text = tag.tagName
+            binding.tagList.addView(chip)
+        }
 
         binding.product = item
         binding.clickListener = clickListener

@@ -13,6 +13,21 @@
         android:layout_height="match_parent"
         >
 
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/filters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/product_list"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search_bar"
+            app:layout_constraintVertical_bias="0.411"
+            app:chipSpacingHorizontal="1dp"
+            app:chipSpacingVertical="1dp"
+            app:chipSpacing="1dp"
+            app:singleSelection="false" />
+
         <androidx.appcompat.widget.SearchView
             android:id="@+id/search_bar"
             android:layout_width="408dp"
@@ -27,6 +42,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:queryHint="@string/search_for_art" />
 
+
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/product_list"
             android:layout_width="0dp"
@@ -39,7 +56,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/search_bar"
+            app:layout_constraintTop_toBottomOf="@+id/filters"
             app:spanCount="2"
             tools:context=".screens.marketplace.MarketPlaceFragment" />
 
