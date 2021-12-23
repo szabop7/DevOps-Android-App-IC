@@ -101,6 +101,12 @@ class DetailViewFragment : Fragment() {
             binding.tagList.addView(chip)
         }
         adapter!!.renewItems(mutableListOf(sliderItemDetailView))
+                adapter!!.renewItems(mutableListOf(
+                       sliderItemDetailView,
+                        SliderItemDetailView(
+                                drawableId = R.drawable.more_soon
+                                    ),
+                    ))
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

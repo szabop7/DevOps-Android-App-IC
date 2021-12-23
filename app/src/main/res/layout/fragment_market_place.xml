@@ -17,32 +17,33 @@
             android:id="@+id/filters"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:chipSpacing="1dp"
+            app:chipSpacingHorizontal="1dp"
+            app:chipSpacingVertical="1dp"
             app:layout_constraintBottom_toTopOf="@+id/product_list"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/search_bar"
             app:layout_constraintVertical_bias="0.411"
-            app:chipSpacingHorizontal="1dp"
-            app:chipSpacingVertical="1dp"
-            app:chipSpacing="1dp"
             app:singleSelection="false" />
+
 
         <androidx.appcompat.widget.SearchView
             android:id="@+id/search_bar"
-            android:layout_width="408dp"
+            android:layout_width="395dp"
             android:layout_height="34dp"
             android:layout_margin="0dp"
             android:hint="@string/search_for_art"
             android:iconifiedByDefault="false"
-            app:iconifiedByDefault="false"
             app:defaultQueryHint="Search for Art"
+            app:iconifiedByDefault="false"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:queryHint="@string/search_for_art" />
-
-
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/product_list"

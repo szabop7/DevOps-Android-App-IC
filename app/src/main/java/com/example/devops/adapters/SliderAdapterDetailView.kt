@@ -52,15 +52,17 @@ class SliderAdapterDetailView(context: Context) :
 
     override fun onBindViewHolder(viewHolder: SliderAdapterVH, position: Int) {
         val sliderItem: SliderItemDetailView = mSliderItems[position]
-        viewHolder.textViewDescription.setText(sliderItem.description)
-        viewHolder.textViewDescription.textSize = 16f
-        viewHolder.textViewDescription.setTextColor(Color.WHITE)
-        val imageUrl = BASE_URL + sliderItem.imageUrl
-        val imgUri = imageUrl.toUri().buildUpon()?.scheme("http")?.build()
-        Glide.with(context)
-            .load(imgUri)
-            .dontAnimate()
-            .into(viewHolder.imageViewBackground)
+        viewHolder.textViewDescription.visibility = View.GONE
+        if (sliderItem.drawableId != null) {
+                        viewHolder.imageViewBackground.setImageDrawable(context.getDrawable(sliderItem.drawableId!!))
+                    } else {
+                        val imageUrl = BASE_URL + sliderItem.imageUrl
+                        val imgUri = imageUrl.toUri().buildUpon()?.scheme("http")?.build()
+                        Glide.with(context)
+                            .load(imgUri)
+                            .dontAnimate()
+                            .into(viewHolder.imageViewBackground)
+                    }
     }
 
     override fun getCount(): Int {
