@@ -52,15 +52,18 @@ class MarketPlaceViewModel(application: Application) : AndroidViewModel(applicat
      * Checks if a [Product] is currently filtered by [filter]
      * @return If the product should be visible with the given filter
      */
-    private fun productIsFiltered(product: Product, filter: MarketplaceFilter?): Boolean {
-        return filter == null ||
-                (
-                        (filter.text.isEmpty() ||
-                                product.productName.contains(filter.text, true) ||
-                                product.productDescription.contains(filter.text, true)
-                                ) &&
-                                (filter.tags.isEmpty() || (product.tagList.map { it.tagId }.containsAll(filter.tags))))
+    companion object {
+        public fun productIsFiltered(product: Product, filter: MarketplaceFilter?): Boolean {
+            return filter == null ||
+                    (
+                            (filter.text.isEmpty() ||
+                                    product.productName.contains(filter.text, true) ||
+                                    product.productDescription.contains(filter.text, true)
+                                    ) &&
+                                    (filter.tags.isEmpty() || (product.tagList.map { it.tagId }.containsAll(filter.tags))))
+        }
     }
+
 
     /***
      * Updates the listed products when the filter is changed

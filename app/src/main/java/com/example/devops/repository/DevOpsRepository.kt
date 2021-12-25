@@ -34,7 +34,7 @@ class DevOpsRepository(private val database: DevOpsDatabase) {
         // Network call
         // get products from the database, but transform them with map
         val productsWithTags: LiveData<List<Product>> = Transformations.map(database.productDao.getProductsWithTagsLive()) {
-            it.map { it.asDomainModel() }
+            it.asDomainModel()
         }
 
         val shoppingCart: LiveData<List<Product>> = Transformations.map(database.shoppingCartDao.getShoppingCartsWithProductsLive()) {

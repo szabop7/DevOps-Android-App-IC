@@ -8,6 +8,9 @@ import androidx.test.platform.app.InstrumentationRegistry
 import com.example.devops.database.devops.DevOpsDatabase
 import com.example.devops.database.devops.product.ProductDatabase
 import com.example.devops.database.devops.product.ProductDao
+import com.example.devops.database.devops.product.ProductTagCrossRef
+import com.example.devops.database.devops.product.asDomainModel
+import com.example.devops.database.devops.tag.TagDatabase
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals
 import org.junit.After
@@ -50,18 +53,24 @@ class DevOpsDatabaseTest {
     @Test
     @Throws(Exception::class)
     fun insertAndGetProduct() = runBlocking {
-        val productDatabase = ProductDatabase(productName = "alicia")
+        val productDatabase = ProductDatabase(productName = "product")
         productDao.insert(productDatabase)
         val lastProduct = productDao.getLastProduct()
-        assertEquals("alicia", lastProduct?.productName)
+        assertEquals("product", lastProduct?.productName)
     }
 
-    /*@Test
+    @Test
     @Throws(Exception::class)
-    fun insertAndGetProductFromShoppingCart() = runBlocking {
-        val product = Product()
-        productDao.
-        val lastProduct = productDao.getLastProduct()
-        assertEquals(lastProduct?.productName, "")
-    }*/
+    fun products_tagRelationship() = runBlocking {
+        db.productDao.insert(ProductDatabase(1, productName = "Test"))
+        db.tagDao.insert(TagDatabase(1, "Yay"))
+        db.productDao.insertTagToProducts(ProductTagCrossRef(1, 1))
+
+        val products = db.productDao.getProductsWithTags().asDomainModel()
+        assertEquals(1, products.size)
+        val product = products[0]
+        assertEquals(1, product.productId)
+        assertEquals(1, product.tagList.size)
+        assertEquals(1, product.tagList[0].tagId)
+    }
 }

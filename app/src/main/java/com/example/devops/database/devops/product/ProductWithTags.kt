@@ -33,3 +33,10 @@ fun ProductWithTags.asDomainModel(): Product {
         tagList = tagDatabases.asDomainModel()
     )
 }
+
+// convert Joke to ApiJoke
+fun List<ProductWithTags>.asDomainModel(): List<Product> {
+    return map {
+        it.asDomainModel()
+    }
+}
