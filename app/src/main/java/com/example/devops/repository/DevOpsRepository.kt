@@ -25,13 +25,7 @@ import kotlinx.coroutines.withContext
 
 class DevOpsRepository(private val database: DevOpsDatabase) {
 
-        // Network call
-        // get products from the database, but transform them with map
-        val products: LiveData<List<Product>> = Transformations.map(database.productDao.getAllProductsLive()) {
-            it.asDomainModel()
-        }
-
-        // Network call
+    // Network call
         // get products from the database, but transform them with map
         val productsWithTags: LiveData<List<Product>> = Transformations.map(database.productDao.getProductsWithTagsLive()) {
             it.asDomainModel()
@@ -41,7 +35,7 @@ class DevOpsRepository(private val database: DevOpsDatabase) {
             if (it.isNotEmpty()) {
                 it[0].productDatabases.asDomainModel()
             } else {
-                emptyList<Product>()
+                emptyList()
             }
         }
 
@@ -75,16 +69,7 @@ class DevOpsRepository(private val database: DevOpsDatabase) {
             }
         }
 
-        suspend fun refreshArtists() {
-            withContext(Dispatchers.IO) {
-                try {
-                    val artists = DevOpsApi.retrofitService.getArtistsAsync().await()
-                    database.artistDao.insertAll(*artists.asDatabaseModel())
-                } catch (e: Exception) {}
-            }
-        }
-
-        // Database call
+    // Database call
         suspend fun getProduct(productId: Long) {
             // switch context to IO thread
             withContext(Dispatchers.IO) {
@@ -107,7 +92,7 @@ class DevOpsRepository(private val database: DevOpsDatabase) {
         }
 
         suspend fun removeShoppingItem(productId: Long) {
-            var shoppingCart = database.shoppingCartDao.get(1)
+            val shoppingCart = database.shoppingCartDao.get(1)
             if (shoppingCart != null) {
                 database.shoppingCartDao.removeShoppingCartItem(1, productId)
             }

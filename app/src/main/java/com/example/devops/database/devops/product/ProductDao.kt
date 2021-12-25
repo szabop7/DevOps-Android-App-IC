@@ -24,9 +24,6 @@ interface ProductDao {
     suspend fun clear()
 
     @Query("SELECT * FROM product_table ORDER BY productId DESC")
-    suspend fun getAllProducts(): List<ProductDatabase>
-
-    @Query("SELECT * FROM product_table ORDER BY productId DESC")
     fun getAllProductsLive(): LiveData<List<ProductDatabase>>
 
     @Transaction

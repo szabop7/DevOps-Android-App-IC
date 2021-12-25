@@ -17,9 +17,6 @@ interface UserArtDao {
     @Query("DELETE FROM user_art_table")
     suspend fun clear()
 
-    @Query("SELECT * FROM user_art_table ORDER BY userArtId DESC")
-    suspend fun getAllUserArts(): List<UserArt>
-
     @Query("SELECT * FROM user_art_table ORDER BY userArtId DESC LIMIT 1")
     suspend fun getLastUserArt(): UserArt?
 

@@ -25,9 +25,6 @@ interface TagDao {
     @Query("DELETE FROM tag_table")
     suspend fun clear()
 
-    @Query("SELECT * FROM tag_table ORDER BY tagId DESC")
-    suspend fun getAllTags(): List<TagDatabase>
-
     @Query("SELECT * FROM tag_table ORDER BY tagId DESC LIMIT 1")
     suspend fun getLastTag(): TagDatabase?
 

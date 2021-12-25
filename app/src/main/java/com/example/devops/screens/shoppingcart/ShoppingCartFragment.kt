@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.devops.R
 import com.example.devops.databinding.FragmentShoppingCartBinding
@@ -25,7 +24,7 @@ class ShoppingCartFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_shopping_cart, container, false)
 
         binding.viewModel = viewModel
@@ -35,7 +34,7 @@ class ShoppingCartFragment : Fragment() {
             onClickListener(productId)
         })
         binding.productList.adapter = adapter
-        viewModel.shoppingCart.observe(viewLifecycleOwner, Observer {
+        viewModel.shoppingCart.observe(viewLifecycleOwner, {
             val total = it.fold(0.0) { sum, element -> sum + element.productPrice }
             binding.totalPrice.text = "Total: $total €"
             adapter.submitList(it)

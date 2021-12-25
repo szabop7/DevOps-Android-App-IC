@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.appcompat.widget.SearchView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.example.devops.R
@@ -23,10 +22,6 @@ class MarketPlaceFragment : Fragment() {
     }
 
     private lateinit var binding: FragmentMarketPlaceBinding
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -45,9 +40,9 @@ class MarketPlaceFragment : Fragment() {
 
         binding.productList.adapter = adapter
 
-        viewModel.tags.observe(viewLifecycleOwner, Observer {
+        viewModel.tags.observe(viewLifecycleOwner, { it ->
             // Retrieve the current filter list as a list of ints
-            val ids = viewModel.filter.value?.tags?.let { it.map { it.toInt() } } ?: emptyList()
+            val ids = viewModel.filter.value?.tags?.let { it -> it.map { it.toInt() } } ?: emptyList()
             binding.filters.removeAllViews()
             for (tag in it) {
                 val chip = Chip(context)
@@ -69,7 +64,7 @@ class MarketPlaceFragment : Fragment() {
             }
         })
 
-        viewModel.productsAndFilter.observe(viewLifecycleOwner, Observer {
+        viewModel.productsAndFilter.observe(viewLifecycleOwner, {
             adapter.submitList(it)
         })
 
@@ -88,9 +83,5 @@ class MarketPlaceFragment : Fragment() {
     private fun onClickListener(productId: Long) {
         val action = MarketPlaceFragmentDirections.actionMarketPlaceFragmentToDetailViewFragment(productId)
         view?.findNavController()?.navigate(action)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
     }
 }

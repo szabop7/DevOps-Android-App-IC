@@ -1,7 +1,6 @@
 package com.example.devops.network
 
 import com.example.devops.database.devops.artist.ArtistDatabase
-import com.example.devops.domain.Artist
 import com.squareup.moshi.Json
 
 data class ApiArtistContainer(
@@ -40,25 +39,6 @@ data class ApiArtist(
 )
 
 /*
-* Convert network results into Domain artist
-* */
-fun ApiArtistContainer.asDomainModel(): List<Artist> {
-    return apiArtist.map {
-        Artist(
-            artistId = it.artistId,
-            artistFirstName = it.artistFirstName,
-            artistLastName = it.artistLastName,
-            artistEmail = it.artistEmail,
-            artistBic = it.artistBic,
-            artistBank = it.artistBank,
-            artistNationality = it.artistNationality,
-            artistIsYoungArtist = it.artistIsYoungArtist,
-            artistIsConformed = it.artistIsConformed
-        )
-    }
-}
-
-/*
 * Convert network result into Database artists
 *
 * returns an array that can be used in the insert call as vararg
@@ -82,16 +62,3 @@ fun ApiArtistContainer.asDatabaseModel(): Array<ArtistDatabase> {
 /*
 * Convert a single api artist to a database product
 * */
-fun ApiArtist.asDatabaseProduct(): ArtistDatabase {
-    return ArtistDatabase(
-        artistId = artistId,
-        artistFirstName = artistFirstName,
-        artistLastName = artistLastName,
-        artistEmail = artistEmail,
-        artistBic = artistBic,
-        artistBank = artistBank,
-        artistNationality = artistNationality,
-        artistIsYoungArtist = artistIsYoungArtist,
-        artistIsConformed = artistIsConformed
-    )
-}

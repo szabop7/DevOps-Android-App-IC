@@ -19,9 +19,6 @@ interface ReviewDao {
     @Query("DELETE FROM review_table")
     suspend fun clear()
 
-    @Query("SELECT * FROM review_table ORDER BY reviewId DESC")
-    suspend fun getAllReviews(): List<Review>
-
     @Query("SELECT * FROM review_table ORDER BY reviewId DESC LIMIT 1")
     suspend fun getLastReview(): Review?
 

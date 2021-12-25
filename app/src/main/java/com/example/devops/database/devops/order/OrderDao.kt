@@ -19,9 +19,6 @@ interface OrderDao {
     @Query("DELETE FROM order_table")
     suspend fun clear()
 
-    @Query("SELECT * FROM order_table ORDER BY orderId DESC")
-    suspend fun getAllOrders(): List<Order>
-
     @Query("SELECT * FROM order_table ORDER BY orderId DESC LIMIT 1")
     suspend fun getLastOrder(): Order?
 

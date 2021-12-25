@@ -14,18 +14,14 @@ import androidx.navigation.findNavController
 class ProfileLogInFragment : Fragment() {
     private lateinit var binding: FragmentProfileLogInBinding
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_profile_log_in, container, false)
         binding.lifecycleOwner = viewLifecycleOwner
-        binding.ButtonLogIn.setOnClickListener() { sendLoginIntent() }
+        binding.ButtonLogIn.setOnClickListener { sendLoginIntent() }
         // Inflate the layout for this fragment
         return binding.root
     }

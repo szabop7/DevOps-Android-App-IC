@@ -1,7 +1,6 @@
 package com.example.devops.network
 
 import com.example.devops.database.devops.product.ProductDatabase
-import com.example.devops.domain.Product
 import com.squareup.moshi.Json
 
 data class ApiProductContainer(
@@ -38,25 +37,6 @@ data class ApiProduct(
     @Json(name = "tags")
     var tagList: List<ApiTag>
 )
-
-/*
-* Convert network results into Domain products
-* */
-fun ApiProductContainer.asDomainModel(): List<Product> {
-    return apiProducts.map {
-        Product(
-            productId = it.productId,
-            productName = it.productName,
-            productPrice = it.productPrice,
-            productImgPath = it.productImgPath,
-            productDescription = it.productDescription,
-            productIsAuction = it.productIsAuction,
-            productWidth = it.productWidth,
-            productHeight = it.productHeight,
-            tagList = it.tagList.map { it.asDomainModel() }
-        )
-    }
-}
 
 /*
 * Convert network result into Database products

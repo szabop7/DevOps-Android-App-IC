@@ -6,7 +6,6 @@ import androidx.room.Relation
 import com.example.devops.database.devops.tag.TagDatabase
 import com.example.devops.database.devops.tag.asDomainModel
 import com.example.devops.domain.Product
-import com.example.devops.network.asDomainModel
 
 class ProductWithTags(
     @Embedded val productDatabase: ProductDatabase,

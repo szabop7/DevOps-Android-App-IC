@@ -7,20 +7,16 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
-import com.example.devops.databinding.ActivityMainBinding
 import com.auth0.android.Auth0
 import com.auth0.android.authentication.AuthenticationException
+import com.auth0.android.callback.Callback
 import com.auth0.android.provider.WebAuthProvider
 import com.auth0.android.result.Credentials
-import com.auth0.android.callback.Callback
-import com.auth0.android.management.ManagementException
-import com.auth0.android.management.UsersAPIClient
-import com.auth0.android.result.UserProfile
+import com.example.devops.databinding.ActivityMainBinding
 import com.example.devops.login.CredentialsManager
 import com.example.devops.screens.bindingutils.setImageUrlAsImageView
 
@@ -58,7 +54,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupLoginUI() {
-        binding.navView.getHeaderView(0).findViewById<Button>(R.id.ButtonLogIn).setOnClickListener() { loginWithBrowser {} }
+        binding.navView.getHeaderView(0).findViewById<Button>(R.id.ButtonLogIn).setOnClickListener { loginWithBrowser {} }
         binding.navView.menu.findItem(R.id.ButtonLogOut).setOnMenuItemClickListener { logout()
             true }
 
@@ -144,50 +140,6 @@ class MainActivity : AppCompatActivity() {
             })
     }
 
-    fun getUserMetadata(userId: String, accessToken: String) {
-        // Get the user ID and call the full getUser Management API endpoint, to retrieve the full profile information
-        // Create the user API client using the account details and the access token from Credentials
-        val usersClient = UsersAPIClient(account, accessToken)
-
-        // Get the full user profile
-        usersClient
-            .getProfile(userId)
-            .start(object : Callback<UserProfile, ManagementException> {
-                override fun onFailure(exception: ManagementException) {
-                    // Something went wrong!
-                }
-
-                override fun onSuccess(profile: UserProfile) {
-                    // Retrieve the "country" field, if one appears in the metadata
-                    val country = profile.getUserMetadata()["country"] as String?
-                }
-            })
-    }
-
-    fun patchUserMetadata(userId: String, accessToken: String) {
-        // Create the UsersAPIClient with the account details
-        // and the access token from the Credentials object
-        val usersClient = UsersAPIClient(account, accessToken)
-
-        // Create a map of data to update the user metadata with.
-        // In this case, we're adding/updating a custom "country" field
-        val metadata = mapOf("country" to "United States")
-
-        // Call updateMetadata with the id of the user to update, and the map of data
-        usersClient.updateMetadata(userId, metadata)
-            .start(object : Callback<UserProfile, ManagementException> {
-                override fun onFailure(exception: ManagementException) {
-                    // Something went wrong!
-                }
-
-                override fun onSuccess(profile: UserProfile) {
-                    // The metadata was updated and we're given the updated user profile.
-                    // Retrieve the "country" field, if one appears in the metadata
-                    val country = profile.getUserMetadata()["country"] as String?
-                }
-            })
-    }
-
     fun logButtonsVisibilityToggle(bool: Boolean) {
         var buttonVisLogIn: Int = View.VISIBLE
         var profilePictureVis: Int = View.INVISIBLE
@@ -204,25 +156,5 @@ class MainActivity : AppCompatActivity() {
             findItem(R.id.ProfileFragment).isVisible = !bool
             findItem(R.id.ButtonLogOut).isVisible = !bool
         }
-    }
-
-    override fun onStart() {
-        super.onStart()
-    }
-
-    override fun onResume() {
-        super.onResume()
-    }
-
-    override fun onPause() {
-        super.onPause()
-    }
-
-    override fun onStop() {
-        super.onStop()
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
     }
 }

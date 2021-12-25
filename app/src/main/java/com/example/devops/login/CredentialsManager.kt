@@ -12,8 +12,8 @@ import com.auth0.android.result.UserProfile
 class CredentialsManager {
 
     companion object {
-        private val ACCESS_TOKEN = "access_token"
-        public var account: Auth0? = null
+        private const val ACCESS_TOKEN = "access_token"
+        var account: Auth0? = null
 
         private fun getSharedPreferences(context: Context): SharedPreferences {
             return context.getSharedPreferences("USER_LOGIN", Context.MODE_PRIVATE)
@@ -33,9 +33,9 @@ class CredentialsManager {
             return getSharedPreferences(context).getString(ACCESS_TOKEN, null)
         }
 
-        public fun showUserProfile(accessToken: String, listener: (UserProfile?) -> Unit) {
+        fun showUserProfile(accessToken: String, listener: (UserProfile?) -> Unit) {
             if (account != null) {
-                var client = AuthenticationAPIClient(account!!)
+                val client = AuthenticationAPIClient(account!!)
 
                 // With the access token, call `userInfo` and get the profile from Auth0.
                 client.userInfo(accessToken)

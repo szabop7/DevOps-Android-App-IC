@@ -12,7 +12,7 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 private const val BASE_API = "http://10.0.2.2:5000/api/"
-public const val BASE_URL = "http://10.0.2.2:5000"
+const val BASE_URL = "http://10.0.2.2:5000"
 
 // create moshi object
 private val moshi = Moshi.Builder()
@@ -43,13 +43,6 @@ interface DevOpsApiService {
         @Path("id") productId: Long
     ): Deferred<ApiProduct>
 
-    @GET("artist")
-    fun getArtistsAsync(): Deferred<ApiArtistContainer>
-
-    @GET("artist/{id}")
-    fun getArtistAsync(
-        @Path("id") artistId: Long
-    ): Deferred<ApiArtist>
 }
 
 object DevOpsApi {

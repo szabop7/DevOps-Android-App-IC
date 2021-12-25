@@ -10,7 +10,7 @@ import com.example.devops.repository.DevOpsRepository
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 
-enum class DevOpsApiStatus { LOADING, ERROR, DONE }
+enum class DevOpsApiStatus { LOADING, DONE }
 
 data class MarketplaceFilter(
     var text: String = "",
@@ -20,18 +20,16 @@ data class MarketplaceFilter(
 class MarketPlaceViewModel(application: Application) : AndroidViewModel(application) {
 
     // var products: LiveData<List<ProductDatabase>>
-    var filter = MutableLiveData<MarketplaceFilter>(MarketplaceFilter())
+    var filter = MutableLiveData(MarketplaceFilter())
 
     private val _status = MutableLiveData<DevOpsApiStatus>()
-    val status: LiveData<DevOpsApiStatus>
-        get() = _status
 
     private val devOpsDatabase = DevOpsDatabase.getInstance(application.applicationContext)
     private val devOpsRepository = DevOpsRepository(devOpsDatabase)
 
-    val products: LiveData<List<Product>> = devOpsRepository.productsWithTags
+    private val products: LiveData<List<Product>> = devOpsRepository.productsWithTags
     val tags: LiveData<List<Tag>> = devOpsRepository.tags
-    val artists: LiveData<List<Artist>> = devOpsRepository.artists
+    private val artists: LiveData<List<Artist>> = devOpsRepository.artists
 
     // This LiveData triggers onChanges when both filter or products change
     val productsAndFilter = MediatorLiveData<List<Product>>()
@@ -53,7 +51,7 @@ class MarketPlaceViewModel(application: Application) : AndroidViewModel(applicat
      * @return If the product should be visible with the given filter
      */
     companion object {
-        public fun productIsFiltered(product: Product, filter: MarketplaceFilter?): Boolean {
+        fun productIsFiltered(product: Product, filter: MarketplaceFilter?): Boolean {
             return filter == null ||
                     (
                             (filter.text.isEmpty() ||
@@ -63,7 +61,6 @@ class MarketPlaceViewModel(application: Application) : AndroidViewModel(applicat
                                     (filter.tags.isEmpty() || (product.tagList.map { it.tagId }.containsAll(filter.tags))))
         }
     }
-
 
     /***
      * Updates the listed products when the filter is changed

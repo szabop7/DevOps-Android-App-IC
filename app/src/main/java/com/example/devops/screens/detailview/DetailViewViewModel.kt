@@ -15,21 +15,17 @@ import kotlinx.coroutines.launch
  */
 class DetailViewViewModel(id: Long, application: Application) : AndroidViewModel(application) {
     private val _status = MutableLiveData<DevOpsApiStatus>()
-    val status: LiveData<DevOpsApiStatus>
-        get() = _status
 
     private val devOpsDatabase = DevOpsDatabase.getInstance(application.applicationContext)
     private val devOpsRepository = DevOpsRepository(devOpsDatabase)
 
     val product: LiveData<Product?> = Transformations.map(devOpsRepository.productsWithTags) {
-        Log.i("Lista", it.toString())
-        val p = it.firstOrNull() { product -> product.productId == id }
-        Log.i("prprr", p.toString())
+        val p = it.firstOrNull { product -> product.productId == id }
         p
     }
 
     val isInCart: LiveData<Boolean> = Transformations.map(devOpsRepository.shoppingCart) {
-        it.firstOrNull() { product -> product.productId == id } != null
+        it.firstOrNull { product -> product.productId == id } != null
     }
 
     init {

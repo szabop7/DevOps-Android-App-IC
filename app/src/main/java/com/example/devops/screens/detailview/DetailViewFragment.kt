@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.navArgs
 import com.example.devops.R
@@ -47,7 +46,7 @@ class DetailViewFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_detail_view, container, false)
 
@@ -61,19 +60,19 @@ class DetailViewFragment : Fragment() {
         sliderView?.setSliderAdapter(adapter!!)
         sliderView?.setIndicatorAnimation(IndicatorAnimationType.WORM) // set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
         sliderView?.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION)
-        sliderView?.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH)
-        sliderView?.setIndicatorSelectedColor(Color.WHITE)
-        sliderView?.setIndicatorUnselectedColor(Color.GRAY)
-        sliderView?.setScrollTimeInSec(3)
-        sliderView?.setAutoCycle(true)
+        sliderView?.autoCycleDirection = SliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH
+        sliderView?.indicatorSelectedColor = Color.WHITE
+        sliderView?.indicatorUnselectedColor = Color.GRAY
+        sliderView?.scrollTimeInSec = 3
+        sliderView?.isAutoCycle = true
         sliderView?.startAutoCycle()
 
-        viewModel.product.observe(viewLifecycleOwner, Observer {
+        viewModel.product.observe(viewLifecycleOwner, {
             Log.i("Product", it.toString())
             it?.let { setProductDetails(it) }
         })
 
-        viewModel.isInCart.observe(viewLifecycleOwner, Observer {
+        viewModel.isInCart.observe(viewLifecycleOwner, {
             binding.addToCartButton.text = if (it) {
                 "Already in cart"
             } else {
@@ -102,10 +101,10 @@ class DetailViewFragment : Fragment() {
         }
         adapter!!.renewItems(mutableListOf(sliderItemDetailView))
                 adapter!!.renewItems(mutableListOf(
-                       sliderItemDetailView,
-                        SliderItemDetailView(
+                    sliderItemDetailView,
+                    SliderItemDetailView(
                                 drawableId = R.drawable.more_soon
-                                    ),
+                                    )
                     ))
     }
 

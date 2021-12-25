@@ -19,9 +19,6 @@ interface BetDao {
     @Query("DELETE FROM bet_table")
     suspend fun clear()
 
-    @Query("SELECT * FROM bet_table ORDER BY betId DESC")
-    suspend fun getAllBets(): List<Bet>
-
     @Query("SELECT * FROM bet_table ORDER BY betId DESC LIMIT 1")
     suspend fun getLastBet(): Bet?
 

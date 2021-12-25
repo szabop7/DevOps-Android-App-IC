@@ -23,9 +23,6 @@ interface ArtistDao {
     @Query("DELETE FROM artist_table")
     suspend fun clear()
 
-    @Query("SELECT * FROM artist_table ORDER BY artistId DESC")
-    suspend fun getAllArtists(): List<ArtistDatabase>
-
     @Query("SELECT * FROM artist_table ORDER BY artistId DESC LIMIT 1")
     suspend fun getLastArtist(): ArtistDatabase?
 

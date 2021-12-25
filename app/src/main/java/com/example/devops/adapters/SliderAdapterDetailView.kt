@@ -2,7 +2,6 @@ package com.example.devops.adapters
 
 import com.example.devops.R
 import android.content.Context
-import android.graphics.Color
 
 import android.widget.TextView
 
@@ -21,9 +20,8 @@ import com.example.devops.screens.detailview.SliderItemDetailView
 /**
  * Slider adapter
  */
-class SliderAdapterDetailView(context: Context) :
+class SliderAdapterDetailView(private val context: Context) :
     SliderViewAdapter<SliderAdapterDetailView.SliderAdapterVH>() {
-    private val context: Context = context
     private var mSliderItems: MutableList<SliderItemDetailView> = ArrayList()
 
     /**
@@ -31,16 +29,6 @@ class SliderAdapterDetailView(context: Context) :
      */
     fun renewItems(sliderItems: MutableList<SliderItemDetailView>) {
         mSliderItems = sliderItems
-        notifyDataSetChanged()
-    }
-
-    fun deleteItem(position: Int) {
-        mSliderItems.removeAt(position)
-        notifyDataSetChanged()
-    }
-
-    fun addItem(sliderItem: SliderItemDetailView) {
-        mSliderItems.add(sliderItem)
         notifyDataSetChanged()
     }
 
@@ -72,13 +60,11 @@ class SliderAdapterDetailView(context: Context) :
 
     inner class SliderAdapterVH(itemView: View) : ViewHolder(itemView) {
 
-        var imageViewBackground: ImageView
-        var imageGifContainer: ImageView
+        var imageViewBackground: ImageView = itemView.findViewById(R.id.iv_auto_image_slider)
+        private var imageGifContainer: ImageView = itemView.findViewById(R.id.iv_gif_container)
         var textViewDescription: TextView
 
         init {
-            imageViewBackground = itemView.findViewById(R.id.iv_auto_image_slider)
-            imageGifContainer = itemView.findViewById(R.id.iv_gif_container)
             textViewDescription = itemView.findViewById(R.id.tv_auto_image_slider)
         }
     }
